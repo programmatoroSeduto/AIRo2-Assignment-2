@@ -5,7 +5,10 @@
 Get the prerequisites:
 ```sh
 sudo apt-get install cmake coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev doxygen bison flex
+
+sudo apt-get install coinor-libcbc-dev coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev
 ```
+https://zoomadmin.com/HowToInstall/UbuntuPackage/coinor-cbc
 
 Create a new directory:
 ```sh
@@ -50,3 +53,5 @@ To run the planner with the external solver:
 ```
 
 For more detailed information, please visit our Wiki Page. 
+
+

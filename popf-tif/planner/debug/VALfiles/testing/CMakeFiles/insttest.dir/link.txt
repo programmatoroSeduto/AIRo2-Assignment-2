@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/insttest.dir/pat/insttest.o  -o insttest  ../parsing/libParsePDDL.a ../libInst.a 
