@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/fixyywrap.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/fixyywrap.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/lex.yy.cc
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/lex.yy.cc
 inttypes.h
 -
 iostream
@@ -30,7 +30,7 @@ fstream
 unistd.h
 -
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp
 cstdlib
 -
 cstdio
@@ -40,16 +40,10 @@ fstream
 ctype.h
 -
 ptree.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/ptree.h
 parse_error.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/parse_error.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/parse_error.h
 libintl.h
--
-limits.h
--
-stdint.h
--
-stddef.h
 -
 stddef.h
 -
@@ -70,31 +64,31 @@ cstdio
 iostream
 -
 lex.yy.cc
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/lex.yy.cc
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/lex.yy.cc
 fixyywrap.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/fixyywrap.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/fixyywrap.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.cpp
 iostream
 -
 DebugWriteController.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
 WriteController.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/WriteController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/WriteController.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/VisitController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/VisitController.h
 ptree.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/WriteController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/WriteController.h
 ptree.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/parse_error.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/parse_error.h
 string
 -
 cstdio
@@ -102,21 +96,21 @@ cstdio
 iostream
 -
 ptree.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.cpp
 ptree.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
 macros.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
 DebugWriteController.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/DebugWriteController.h
 VisitController.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/VisitController.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/VisitController.h
 memory
 -
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/ptree.h
 list
 -
 memory
@@ -126,15 +120,15 @@ map
 string
 -
 sStack.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/sStack.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/sStack.h
 macros.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/macros.h
 parse_error.h
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/parse_error.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/parse_error.h
 iostream
 -
 
-/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/sStack.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/sStack.h
 deque
 -
 

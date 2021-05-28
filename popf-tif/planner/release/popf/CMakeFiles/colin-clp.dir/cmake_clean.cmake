@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/colin-clp.dir/popfMain.o"
   "CMakeFiles/colin-clp.dir/solver-clp.o"
-  "colin-clp"
   "colin-clp.pdb"
+  "colin-clp"
 )
 
 # Per-language clean rules from dependency scanning.

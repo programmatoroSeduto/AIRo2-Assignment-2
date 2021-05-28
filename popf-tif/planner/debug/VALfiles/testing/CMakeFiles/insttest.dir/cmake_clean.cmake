@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/insttest.dir/pat/insttest.o"
-  "insttest"
   "insttest.pdb"
+  "insttest"
 )
 
 # Per-language clean rules from dependency scanning.

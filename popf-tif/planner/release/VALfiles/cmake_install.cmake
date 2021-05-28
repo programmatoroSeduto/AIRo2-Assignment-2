@@ -1,4 +1,4 @@
-# Install script for directory: /home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles
+# Install script for directory: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/cmake_install.cmake")
-  include("/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/testing/cmake_install.cmake")
+  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/cmake_install.cmake")
+  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/testing/cmake_install.cmake")
 
 endif()
 

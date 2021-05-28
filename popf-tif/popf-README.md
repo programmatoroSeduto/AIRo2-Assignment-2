@@ -4,11 +4,14 @@
 
 Get the prerequisites:
 ```sh
+sudo apt-get install build-essential
 sudo apt-get install cmake coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev doxygen bison flex
 
-sudo apt-get install coinor-libcbc-dev coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev
+sudo apt-get install cmake coinor-libcbc-dev coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev bison flex
 ```
 https://zoomadmin.com/HowToInstall/UbuntuPackage/coinor-cbc
+sudo apt-get install zlib1g-dev
+https://askubuntu.com/questions/716945/usr-bin-ld-cannot-find-lz
 
 Create a new directory:
 ```sh

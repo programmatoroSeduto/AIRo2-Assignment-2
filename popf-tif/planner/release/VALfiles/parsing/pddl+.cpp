@@ -1,9 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.5.1.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2020 Free Software Foundation,
-   Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -41,14 +40,11 @@
    define necessary library symbols; they are noted "INFRINGES ON
    USER NAME SPACE" below.  */
 
-/* Undocumented macros, especially those whose name start with YY_,
-   are private implementation details.  Do not rely on them.  */
-
 /* Identify Bison output.  */
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "3.5.1"
+#define YYBISON_VERSION "3.0.4"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -65,8 +61,8 @@
 
 
 
-/* First part of user prologue.  */
-#line 17 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+/* Copy the first part of user declarations.  */
+#line 17 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:339  */
 
 /*
 Error reporting:
@@ -128,26 +124,13 @@ extern int yylex();
 using namespace VAL;
 
 
-#line 132 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 128 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:339  */
 
-# ifndef YY_CAST
-#  ifdef __cplusplus
-#   define YY_CAST(Type, Val) static_cast<Type> (Val)
-#   define YY_REINTERPRET_CAST(Type, Val) reinterpret_cast<Type> (Val)
-#  else
-#   define YY_CAST(Type, Val) ((Type) (Val))
-#   define YY_REINTERPRET_CAST(Type, Val) ((Type) (Val))
-#  endif
-# endif
 # ifndef YY_NULLPTR
-#  if defined __cplusplus
-#   if 201103L <= __cplusplus
-#    define YY_NULLPTR nullptr
-#   else
-#    define YY_NULLPTR 0
-#   endif
+#  if defined __cplusplus && 201103L <= __cplusplus
+#   define YY_NULLPTR nullptr
 #  else
-#   define YY_NULLPTR ((void*)0)
+#   define YY_NULLPTR 0
 #  endif
 # endif
 
@@ -287,9 +270,10 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+
 union YYSTYPE
 {
-#line 79 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 79 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:355  */
 
     parse_category* t_parse_category;
 
@@ -360,9 +344,9 @@ union YYSTYPE
 
     var_symbol_table * vtab;
 
-#line 364 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
-
+#line 348 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:355  */
 };
+
 typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -375,81 +359,36 @@ int yyparse (void);
 
 
 
+/* Copy the second part of user declarations.  */
 
+#line 365 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:358  */
 
 #ifdef short
 # undef short
 #endif
 
-/* On compilers that do not define __PTRDIFF_MAX__ etc., make sure
-   <limits.h> and (if available) <stdint.h> are included
-   so that the code can choose integer types of a good width.  */
-
-#ifndef __PTRDIFF_MAX__
-# include <limits.h> /* INFRINGES ON USER NAME SPACE */
-# if defined __STDC_VERSION__ && 199901 <= __STDC_VERSION__
-#  include <stdint.h> /* INFRINGES ON USER NAME SPACE */
-#  define YY_STDINT_H
-# endif
+#ifdef YYTYPE_UINT8
+typedef YYTYPE_UINT8 yytype_uint8;
+#else
+typedef unsigned char yytype_uint8;
 #endif
 
-/* Narrow types that promote to a signed type and that can represent a
-   signed or unsigned integer of at least N bits.  In tables they can
-   save space and decrease cache pressure.  Promoting to a signed type
-   helps avoid bugs in integer arithmetic.  */
-
-#ifdef __INT_LEAST8_MAX__
-typedef __INT_LEAST8_TYPE__ yytype_int8;
-#elif defined YY_STDINT_H
-typedef int_least8_t yytype_int8;
+#ifdef YYTYPE_INT8
+typedef YYTYPE_INT8 yytype_int8;
 #else
 typedef signed char yytype_int8;
 #endif
 
-#ifdef __INT_LEAST16_MAX__
-typedef __INT_LEAST16_TYPE__ yytype_int16;
-#elif defined YY_STDINT_H
-typedef int_least16_t yytype_int16;
+#ifdef YYTYPE_UINT16
+typedef YYTYPE_UINT16 yytype_uint16;
 #else
-typedef short yytype_int16;
+typedef unsigned short int yytype_uint16;
 #endif
 
-#if defined __UINT_LEAST8_MAX__ && __UINT_LEAST8_MAX__ <= __INT_MAX__
-typedef __UINT_LEAST8_TYPE__ yytype_uint8;
-#elif (!defined __UINT_LEAST8_MAX__ && defined YY_STDINT_H \
-       && UINT_LEAST8_MAX <= INT_MAX)
-typedef uint_least8_t yytype_uint8;
-#elif !defined __UINT_LEAST8_MAX__ && UCHAR_MAX <= INT_MAX
-typedef unsigned char yytype_uint8;
+#ifdef YYTYPE_INT16
+typedef YYTYPE_INT16 yytype_int16;
 #else
-typedef short yytype_uint8;
-#endif
-
-#if defined __UINT_LEAST16_MAX__ && __UINT_LEAST16_MAX__ <= __INT_MAX__
-typedef __UINT_LEAST16_TYPE__ yytype_uint16;
-#elif (!defined __UINT_LEAST16_MAX__ && defined YY_STDINT_H \
-       && UINT_LEAST16_MAX <= INT_MAX)
-typedef uint_least16_t yytype_uint16;
-#elif !defined __UINT_LEAST16_MAX__ && USHRT_MAX <= INT_MAX
-typedef unsigned short yytype_uint16;
-#else
-typedef int yytype_uint16;
-#endif
-
-#ifndef YYPTRDIFF_T
-# if defined __PTRDIFF_TYPE__ && defined __PTRDIFF_MAX__
-#  define YYPTRDIFF_T __PTRDIFF_TYPE__
-#  define YYPTRDIFF_MAXIMUM __PTRDIFF_MAX__
-# elif defined PTRDIFF_MAX
-#  ifndef ptrdiff_t
-#   include <stddef.h> /* INFRINGES ON USER NAME SPACE */
-#  endif
-#  define YYPTRDIFF_T ptrdiff_t
-#  define YYPTRDIFF_MAXIMUM PTRDIFF_MAX
-# else
-#  define YYPTRDIFF_T long
-#  define YYPTRDIFF_MAXIMUM LONG_MAX
-# endif
+typedef short int yytype_int16;
 #endif
 
 #ifndef YYSIZE_T
@@ -457,27 +396,15 @@ typedef int yytype_uint16;
 #  define YYSIZE_T __SIZE_TYPE__
 # elif defined size_t
 #  define YYSIZE_T size_t
-# elif defined __STDC_VERSION__ && 199901 <= __STDC_VERSION__
+# elif ! defined YYSIZE_T
 #  include <stddef.h> /* INFRINGES ON USER NAME SPACE */
 #  define YYSIZE_T size_t
 # else
-#  define YYSIZE_T unsigned
+#  define YYSIZE_T unsigned int
 # endif
 #endif
 
-#define YYSIZE_MAXIMUM                                  \
-  YY_CAST (YYPTRDIFF_T,                                 \
-           (YYPTRDIFF_MAXIMUM < YY_CAST (YYSIZE_T, -1)  \
-            ? YYPTRDIFF_MAXIMUM                         \
-            : YY_CAST (YYSIZE_T, -1)))
-
-#define YYSIZEOF(X) YY_CAST (YYPTRDIFF_T, sizeof (X))
-
-/* Stored state numbers (used for stacks). */
-typedef yytype_int16 yy_state_t;
-
-/* State numbers in computations.  */
-typedef int yy_state_fast_t;
+#define YYSIZE_MAXIMUM ((YYSIZE_T) -1)
 
 #ifndef YY_
 # if defined YYENABLE_NLS && YYENABLE_NLS
@@ -491,19 +418,30 @@ typedef int yy_state_fast_t;
 # endif
 #endif
 
-#ifndef YY_ATTRIBUTE_PURE
-# if defined __GNUC__ && 2 < __GNUC__ + (96 <= __GNUC_MINOR__)
-#  define YY_ATTRIBUTE_PURE __attribute__ ((__pure__))
+#ifndef YY_ATTRIBUTE
+# if (defined __GNUC__                                               \
+      && (2 < __GNUC__ || (__GNUC__ == 2 && 96 <= __GNUC_MINOR__)))  \
+     || defined __SUNPRO_C && 0x5110 <= __SUNPRO_C
+#  define YY_ATTRIBUTE(Spec) __attribute__(Spec)
 # else
-#  define YY_ATTRIBUTE_PURE
+#  define YY_ATTRIBUTE(Spec) /* empty */
 # endif
 #endif
 
+#ifndef YY_ATTRIBUTE_PURE
+# define YY_ATTRIBUTE_PURE   YY_ATTRIBUTE ((__pure__))
+#endif
+
 #ifndef YY_ATTRIBUTE_UNUSED
-# if defined __GNUC__ && 2 < __GNUC__ + (7 <= __GNUC_MINOR__)
-#  define YY_ATTRIBUTE_UNUSED __attribute__ ((__unused__))
+# define YY_ATTRIBUTE_UNUSED YY_ATTRIBUTE ((__unused__))
+#endif
+
+#if !defined _Noreturn \
+     && (!defined __STDC_VERSION__ || __STDC_VERSION__ < 201112)
+# if defined _MSC_VER && 1200 <= _MSC_VER
+#  define _Noreturn __declspec (noreturn)
 # else
-#  define YY_ATTRIBUTE_UNUSED
+#  define _Noreturn YY_ATTRIBUTE ((__noreturn__))
 # endif
 #endif
 
@@ -514,13 +452,13 @@ typedef int yy_state_fast_t;
 # define YYUSE(E) /* empty */
 #endif
 
-#if defined __GNUC__ && ! defined __ICC && 407 <= __GNUC__ * 100 + __GNUC_MINOR__
+#if defined __GNUC__ && 407 <= __GNUC__ * 100 + __GNUC_MINOR__
 /* Suppress an incorrect diagnostic about yylval being uninitialized.  */
-# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN                            \
-    _Pragma ("GCC diagnostic push")                                     \
-    _Pragma ("GCC diagnostic ignored \"-Wuninitialized\"")              \
+# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN \
+    _Pragma ("GCC diagnostic push") \
+    _Pragma ("GCC diagnostic ignored \"-Wuninitialized\"")\
     _Pragma ("GCC diagnostic ignored \"-Wmaybe-uninitialized\"")
-# define YY_IGNORE_MAYBE_UNINITIALIZED_END      \
+# define YY_IGNORE_MAYBE_UNINITIALIZED_END \
     _Pragma ("GCC diagnostic pop")
 #else
 # define YY_INITIAL_VALUE(Value) Value
@@ -533,20 +471,6 @@ typedef int yy_state_fast_t;
 # define YY_INITIAL_VALUE(Value) /* Nothing. */
 #endif
 
-#if defined __cplusplus && defined __GNUC__ && ! defined __ICC && 6 <= __GNUC__
-# define YY_IGNORE_USELESS_CAST_BEGIN                          \
-    _Pragma ("GCC diagnostic push")                            \
-    _Pragma ("GCC diagnostic ignored \"-Wuseless-cast\"")
-# define YY_IGNORE_USELESS_CAST_END            \
-    _Pragma ("GCC diagnostic pop")
-#endif
-#ifndef YY_IGNORE_USELESS_CAST_BEGIN
-# define YY_IGNORE_USELESS_CAST_BEGIN
-# define YY_IGNORE_USELESS_CAST_END
-#endif
-
-
-#define YY_ASSERT(E) ((void) (0 && (E)))
 
 #if ! defined yyoverflow || YYERROR_VERBOSE
 
@@ -623,17 +547,17 @@ void free (void *); /* INFRINGES ON USER NAME SPACE */
 /* A type that is properly aligned for any stack member.  */
 union yyalloc
 {
-  yy_state_t yyss_alloc;
+  yytype_int16 yyss_alloc;
   YYSTYPE yyvs_alloc;
 };
 
 /* The size of the maximum gap between one aligned stack and the next.  */
-# define YYSTACK_GAP_MAXIMUM (YYSIZEOF (union yyalloc) - 1)
+# define YYSTACK_GAP_MAXIMUM (sizeof (union yyalloc) - 1)
 
 /* The size of an array large to enough to hold all stacks, each with
    N elements.  */
 # define YYSTACK_BYTES(N) \
-     ((N) * (YYSIZEOF (yy_state_t) + YYSIZEOF (YYSTYPE)) \
+     ((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \
       + YYSTACK_GAP_MAXIMUM)
 
 # define YYCOPY_NEEDED 1
@@ -646,11 +570,11 @@ union yyalloc
 # define YYSTACK_RELOCATE(Stack_alloc, Stack)                           \
     do                                                                  \
       {                                                                 \
-        YYPTRDIFF_T yynewbytes;                                         \
+        YYSIZE_T yynewbytes;                                            \
         YYCOPY (&yyptr->Stack_alloc, Stack, yysize);                    \
         Stack = &yyptr->Stack_alloc;                                    \
-        yynewbytes = yystacksize * YYSIZEOF (*Stack) + YYSTACK_GAP_MAXIMUM; \
-        yyptr += yynewbytes / YYSIZEOF (*yyptr);                        \
+        yynewbytes = yystacksize * sizeof (*Stack) + YYSTACK_GAP_MAXIMUM; \
+        yyptr += yynewbytes / sizeof (*yyptr);                          \
       }                                                                 \
     while (0)
 
@@ -662,12 +586,12 @@ union yyalloc
 # ifndef YYCOPY
 #  if defined __GNUC__ && 1 < __GNUC__
 #   define YYCOPY(Dst, Src, Count) \
-      __builtin_memcpy (Dst, Src, YY_CAST (YYSIZE_T, (Count)) * sizeof (*(Src)))
+      __builtin_memcpy (Dst, Src, (Count) * sizeof (*(Src)))
 #  else
 #   define YYCOPY(Dst, Src, Count)              \
       do                                        \
         {                                       \
-          YYPTRDIFF_T yyi;                      \
+          YYSIZE_T yyi;                         \
           for (yyi = 0; yyi < (Count); yyi++)   \
             (Dst)[yyi] = (Src)[yyi];            \
         }                                       \
@@ -690,18 +614,17 @@ union yyalloc
 /* YYNSTATES -- Number of states.  */
 #define YYNSTATES  789
 
+/* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
+   by yylex, with out-of-bounds checking.  */
 #define YYUNDEFTOK  2
 #define YYMAXUTOK   366
 
-
-/* YYTRANSLATE(TOKEN-NUM) -- Symbol number corresponding to TOKEN-NUM
-   as returned by yylex, with out-of-bounds checking.  */
 #define YYTRANSLATE(YYX)                                                \
-  (0 <= (YYX) && (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
+  ((unsigned int) (YYX) <= YYMAXUTOK ? yytranslate[YYX] : YYUNDEFTOK)
 
 /* YYTRANSLATE[TOKEN-NUM] -- Symbol number corresponding to TOKEN-NUM
-   as returned by yylex.  */
-static const yytype_int8 yytranslate[] =
+   as returned by yylex, without out-of-bounds checking.  */
+static const yytype_uint8 yytranslate[] =
 {
        0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -744,7 +667,7 @@ static const yytype_int8 yytranslate[] =
 
 #if YYDEBUG
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
-static const yytype_int16 yyrline[] =
+static const yytype_uint16 yyrline[] =
 {
        0,   252,   252,   253,   254,   258,   264,   271,   272,   273,
      274,   276,   278,   280,   283,   288,   295,   302,   303,   308,
@@ -851,7 +774,7 @@ static const char *const yytname[] =
 # ifdef YYPRINT
 /* YYTOKNUM[NUM] -- (External) token number corresponding to the
    (internal) symbol number NUM (which must be that of a token).  */
-static const yytype_int16 yytoknum[] =
+static const yytype_uint16 yytoknum[] =
 {
        0,   256,   257,   258,   259,   260,   261,   262,   263,   264,
      265,   266,   267,   268,   269,   270,   271,   272,   273,   274,
@@ -868,14 +791,14 @@ static const yytype_int16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF (-531)
+#define YYPACT_NINF -531
 
-#define yypact_value_is_default(Yyn) \
-  ((Yyn) == YYPACT_NINF)
+#define yypact_value_is_default(Yystate) \
+  (!!((Yystate) == (-531)))
 
-#define YYTABLE_NINF (-73)
+#define YYTABLE_NINF -73
 
-#define yytable_value_is_error(Yyn) \
+#define yytable_value_is_error(Yytable_value) \
   0
 
   /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
@@ -966,7 +889,7 @@ static const yytype_int16 yypact[] =
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
      Performed when YYTABLE does not specify something else to do.  Zero
      means the default is an error.  */
-static const yytype_int16 yydefact[] =
+static const yytype_uint16 yydefact[] =
 {
      333,     0,     0,   340,   339,     0,     2,     3,     4,   333,
      335,   337,     0,     0,    43,   333,   333,     1,     0,   330,
@@ -1408,7 +1331,7 @@ static const yytype_uint8 yyr1[] =
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
-static const yytype_int8 yyr2[] =
+static const yytype_uint8 yyr2[] =
 {
        0,     2,     1,     1,     1,     5,     4,     2,     2,     2,
        2,     2,     2,     1,     4,     4,     4,     2,     0,     2,
@@ -1460,22 +1383,22 @@ static const yytype_int8 yyr2[] =
 
 #define YYRECOVERING()  (!!yyerrstatus)
 
-#define YYBACKUP(Token, Value)                                    \
-  do                                                              \
-    if (yychar == YYEMPTY)                                        \
-      {                                                           \
-        yychar = (Token);                                         \
-        yylval = (Value);                                         \
-        YYPOPSTACK (yylen);                                       \
-        yystate = *yyssp;                                         \
-        goto yybackup;                                            \
-      }                                                           \
-    else                                                          \
-      {                                                           \
-        yyerror (YY_("syntax error: cannot back up")); \
-        YYERROR;                                                  \
-      }                                                           \
-  while (0)
+#define YYBACKUP(Token, Value)                                  \
+do                                                              \
+  if (yychar == YYEMPTY)                                        \
+    {                                                           \
+      yychar = (Token);                                         \
+      yylval = (Value);                                         \
+      YYPOPSTACK (yylen);                                       \
+      yystate = *yyssp;                                         \
+      goto yybackup;                                            \
+    }                                                           \
+  else                                                          \
+    {                                                           \
+      yyerror (YY_("syntax error: cannot back up")); \
+      YYERROR;                                                  \
+    }                                                           \
+while (0)
 
 /* Error token number */
 #define YYTERROR        1
@@ -1515,39 +1438,37 @@ do {                                                                      \
 } while (0)
 
 
-/*-----------------------------------.
-| Print this symbol's value on YYO.  |
-`-----------------------------------*/
+/*----------------------------------------.
+| Print this symbol's value on YYOUTPUT.  |
+`----------------------------------------*/
 
 static void
-yy_symbol_value_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep)
+yy_symbol_value_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)
 {
-  FILE *yyoutput = yyo;
-  YYUSE (yyoutput);
+  FILE *yyo = yyoutput;
+  YYUSE (yyo);
   if (!yyvaluep)
     return;
 # ifdef YYPRINT
   if (yytype < YYNTOKENS)
-    YYPRINT (yyo, yytoknum[yytype], *yyvaluep);
+    YYPRINT (yyoutput, yytoknum[yytype], *yyvaluep);
 # endif
-  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   YYUSE (yytype);
-  YY_IGNORE_MAYBE_UNINITIALIZED_END
 }
 
 
-/*---------------------------.
-| Print this symbol on YYO.  |
-`---------------------------*/
+/*--------------------------------.
+| Print this symbol on YYOUTPUT.  |
+`--------------------------------*/
 
 static void
-yy_symbol_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep)
+yy_symbol_print (FILE *yyoutput, int yytype, YYSTYPE const * const yyvaluep)
 {
-  YYFPRINTF (yyo, "%s %s (",
+  YYFPRINTF (yyoutput, "%s %s (",
              yytype < YYNTOKENS ? "token" : "nterm", yytname[yytype]);
 
-  yy_symbol_value_print (yyo, yytype, yyvaluep);
-  YYFPRINTF (yyo, ")");
+  yy_symbol_value_print (yyoutput, yytype, yyvaluep);
+  YYFPRINTF (yyoutput, ")");
 }
 
 /*------------------------------------------------------------------.
@@ -1556,7 +1477,7 @@ yy_symbol_print (FILE *yyo, int yytype, YYSTYPE const * const yyvaluep)
 `------------------------------------------------------------------*/
 
 static void
-yy_stack_print (yy_state_t *yybottom, yy_state_t *yytop)
+yy_stack_print (yytype_int16 *yybottom, yytype_int16 *yytop)
 {
   YYFPRINTF (stderr, "Stack now");
   for (; yybottom <= yytop; yybottom++)
@@ -1579,20 +1500,20 @@ do {                                                            \
 `------------------------------------------------*/
 
 static void
-yy_reduce_print (yy_state_t *yyssp, YYSTYPE *yyvsp, int yyrule)
+yy_reduce_print (yytype_int16 *yyssp, YYSTYPE *yyvsp, int yyrule)
 {
-  int yylno = yyrline[yyrule];
+  unsigned long int yylno = yyrline[yyrule];
   int yynrhs = yyr2[yyrule];
   int yyi;
-  YYFPRINTF (stderr, "Reducing stack by rule %d (line %d):\n",
+  YYFPRINTF (stderr, "Reducing stack by rule %d (line %lu):\n",
              yyrule - 1, yylno);
   /* The symbols being reduced.  */
   for (yyi = 0; yyi < yynrhs; yyi++)
     {
       YYFPRINTF (stderr, "   $%d = ", yyi + 1);
       yy_symbol_print (stderr,
-                       yystos[+yyssp[yyi + 1 - yynrhs]],
-                       &yyvsp[(yyi + 1) - (yynrhs)]
+                       yystos[yyssp[yyi + 1 - yynrhs]],
+                       &(yyvsp[(yyi + 1) - (yynrhs)])
                                               );
       YYFPRINTF (stderr, "\n");
     }
@@ -1636,13 +1557,13 @@ int yydebug;
 
 # ifndef yystrlen
 #  if defined __GLIBC__ && defined _STRING_H
-#   define yystrlen(S) (YY_CAST (YYPTRDIFF_T, strlen (S)))
+#   define yystrlen strlen
 #  else
 /* Return the length of YYSTR.  */
-static YYPTRDIFF_T
+static YYSIZE_T
 yystrlen (const char *yystr)
 {
-  YYPTRDIFF_T yylen;
+  YYSIZE_T yylen;
   for (yylen = 0; yystr[yylen]; yylen++)
     continue;
   return yylen;
@@ -1678,12 +1599,12 @@ yystpcpy (char *yydest, const char *yysrc)
    backslash-backslash).  YYSTR is taken from yytname.  If YYRES is
    null, do not copy; instead, return the length of what the result
    would have been.  */
-static YYPTRDIFF_T
+static YYSIZE_T
 yytnamerr (char *yyres, const char *yystr)
 {
   if (*yystr == '"')
     {
-      YYPTRDIFF_T yyn = 0;
+      YYSIZE_T yyn = 0;
       char const *yyp = yystr;
 
       for (;;)
@@ -1696,10 +1617,7 @@ yytnamerr (char *yyres, const char *yystr)
           case '\\':
             if (*++yyp != '\\')
               goto do_not_strip_quotes;
-            else
-              goto append;
-
-          append:
+            /* Fall through.  */
           default:
             if (yyres)
               yyres[yyn] = *yyp;
@@ -1714,10 +1632,10 @@ yytnamerr (char *yyres, const char *yystr)
     do_not_strip_quotes: ;
     }
 
-  if (yyres)
-    return yystpcpy (yyres, yystr) - yyres;
-  else
+  if (! yyres)
     return yystrlen (yystr);
+
+  return yystpcpy (yyres, yystr) - yyres;
 }
 # endif
 
@@ -1730,19 +1648,19 @@ yytnamerr (char *yyres, const char *yystr)
    *YYMSG_ALLOC to the required number of bytes.  Return 2 if the
    required number of bytes is too large to store.  */
 static int
-yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
-                yy_state_t *yyssp, int yytoken)
+yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,
+                yytype_int16 *yyssp, int yytoken)
 {
+  YYSIZE_T yysize0 = yytnamerr (YY_NULLPTR, yytname[yytoken]);
+  YYSIZE_T yysize = yysize0;
   enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
   /* Internationalized format string. */
   const char *yyformat = YY_NULLPTR;
-  /* Arguments of yyformat: reported tokens (one for the "unexpected",
-     one per "expected"). */
+  /* Arguments of yyformat. */
   char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
-  /* Actual size of YYARG. */
+  /* Number of reported tokens (one for the "unexpected", one per
+     "expected"). */
   int yycount = 0;
-  /* Cumulated lengths of YYARG.  */
-  YYPTRDIFF_T yysize = 0;
 
   /* There are many possibilities here to consider:
      - If this state is a consistent state with a default action, then
@@ -1769,9 +1687,7 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
   */
   if (yytoken != YYEMPTY)
     {
-      int yyn = yypact[+*yyssp];
-      YYPTRDIFF_T yysize0 = yytnamerr (YY_NULLPTR, yytname[yytoken]);
-      yysize = yysize0;
+      int yyn = yypact[*yyssp];
       yyarg[yycount++] = yytname[yytoken];
       if (!yypact_value_is_default (yyn))
         {
@@ -1796,12 +1712,11 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
                   }
                 yyarg[yycount++] = yytname[yyx];
                 {
-                  YYPTRDIFF_T yysize1
-                    = yysize + yytnamerr (YY_NULLPTR, yytname[yyx]);
-                  if (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM)
-                    yysize = yysize1;
-                  else
+                  YYSIZE_T yysize1 = yysize + yytnamerr (YY_NULLPTR, yytname[yyx]);
+                  if (! (yysize <= yysize1
+                         && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
                     return 2;
+                  yysize = yysize1;
                 }
               }
         }
@@ -1813,7 +1728,6 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
       case N:                               \
         yyformat = S;                       \
       break
-    default: /* Avoid compiler warnings. */
       YYCASE_(0, YY_("syntax error"));
       YYCASE_(1, YY_("syntax error, unexpected %s"));
       YYCASE_(2, YY_("syntax error, unexpected %s, expecting %s"));
@@ -1824,13 +1738,10 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
     }
 
   {
-    /* Don't count the "%s"s in the final size, but reserve room for
-       the terminator.  */
-    YYPTRDIFF_T yysize1 = yysize + (yystrlen (yyformat) - 2 * yycount) + 1;
-    if (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM)
-      yysize = yysize1;
-    else
+    YYSIZE_T yysize1 = yysize + yystrlen (yyformat);
+    if (! (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
       return 2;
+    yysize = yysize1;
   }
 
   if (*yymsg_alloc < yysize)
@@ -1856,8 +1767,8 @@ yysyntax_error (YYPTRDIFF_T *yymsg_alloc, char **yymsg,
         }
       else
         {
-          ++yyp;
-          ++yyformat;
+          yyp++;
+          yyformat++;
         }
   }
   return 0;
@@ -1900,7 +1811,7 @@ int yynerrs;
 int
 yyparse (void)
 {
-    yy_state_fast_t yystate;
+    int yystate;
     /* Number of tokens to shift before error messages enabled.  */
     int yyerrstatus;
 
@@ -1912,16 +1823,16 @@ yyparse (void)
        to reallocate them elsewhere.  */
 
     /* The state stack.  */
-    yy_state_t yyssa[YYINITDEPTH];
-    yy_state_t *yyss;
-    yy_state_t *yyssp;
+    yytype_int16 yyssa[YYINITDEPTH];
+    yytype_int16 *yyss;
+    yytype_int16 *yyssp;
 
     /* The semantic value stack.  */
     YYSTYPE yyvsa[YYINITDEPTH];
     YYSTYPE *yyvs;
     YYSTYPE *yyvsp;
 
-    YYPTRDIFF_T yystacksize;
+    YYSIZE_T yystacksize;
 
   int yyn;
   int yyresult;
@@ -1935,7 +1846,7 @@ yyparse (void)
   /* Buffer for error messages, and its allocated size.  */
   char yymsgbuf[128];
   char *yymsg = yymsgbuf;
-  YYPTRDIFF_T yymsg_alloc = sizeof yymsgbuf;
+  YYSIZE_T yymsg_alloc = sizeof yymsgbuf;
 #endif
 
 #define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N))
@@ -1956,54 +1867,46 @@ yyparse (void)
   yychar = YYEMPTY; /* Cause a token to be read.  */
   goto yysetstate;
 
-
 /*------------------------------------------------------------.
-| yynewstate -- push a new state, which is found in yystate.  |
+| yynewstate -- Push a new state, which is found in yystate.  |
 `------------------------------------------------------------*/
-yynewstate:
+ yynewstate:
   /* In all cases, when you get here, the value and location stacks
      have just been pushed.  So pushing a state here evens the stacks.  */
   yyssp++;
 
-
-/*--------------------------------------------------------------------.
-| yysetstate -- set current state (the top of the stack) to yystate.  |
-`--------------------------------------------------------------------*/
-yysetstate:
-  YYDPRINTF ((stderr, "Entering state %d\n", yystate));
-  YY_ASSERT (0 <= yystate && yystate < YYNSTATES);
-  YY_IGNORE_USELESS_CAST_BEGIN
-  *yyssp = YY_CAST (yy_state_t, yystate);
-  YY_IGNORE_USELESS_CAST_END
+ yysetstate:
+  *yyssp = yystate;
 
   if (yyss + yystacksize - 1 <= yyssp)
-#if !defined yyoverflow && !defined YYSTACK_RELOCATE
-    goto yyexhaustedlab;
-#else
     {
       /* Get the current used size of the three stacks, in elements.  */
-      YYPTRDIFF_T yysize = yyssp - yyss + 1;
+      YYSIZE_T yysize = yyssp - yyss + 1;
 
-# if defined yyoverflow
+#ifdef yyoverflow
       {
         /* Give user a chance to reallocate the stack.  Use copies of
            these so that the &'s don't force the real ones into
            memory.  */
-        yy_state_t *yyss1 = yyss;
         YYSTYPE *yyvs1 = yyvs;
+        yytype_int16 *yyss1 = yyss;
 
         /* Each stack pointer address is followed by the size of the
            data in use in that stack, in bytes.  This used to be a
            conditional around just the two extra args, but that might
            be undefined if yyoverflow is a macro.  */
         yyoverflow (YY_("memory exhausted"),
-                    &yyss1, yysize * YYSIZEOF (*yyssp),
-                    &yyvs1, yysize * YYSIZEOF (*yyvsp),
+                    &yyss1, yysize * sizeof (*yyssp),
+                    &yyvs1, yysize * sizeof (*yyvsp),
                     &yystacksize);
+
         yyss = yyss1;
         yyvs = yyvs1;
       }
-# else /* defined YYSTACK_RELOCATE */
+#else /* no yyoverflow */
+# ifndef YYSTACK_RELOCATE
+      goto yyexhaustedlab;
+# else
       /* Extend the stack our own way.  */
       if (YYMAXDEPTH <= yystacksize)
         goto yyexhaustedlab;
@@ -2012,43 +1915,42 @@ yysetstate:
         yystacksize = YYMAXDEPTH;
 
       {
-        yy_state_t *yyss1 = yyss;
+        yytype_int16 *yyss1 = yyss;
         union yyalloc *yyptr =
-          YY_CAST (union yyalloc *,
-                   YYSTACK_ALLOC (YY_CAST (YYSIZE_T, YYSTACK_BYTES (yystacksize))));
+          (union yyalloc *) YYSTACK_ALLOC (YYSTACK_BYTES (yystacksize));
         if (! yyptr)
           goto yyexhaustedlab;
         YYSTACK_RELOCATE (yyss_alloc, yyss);
         YYSTACK_RELOCATE (yyvs_alloc, yyvs);
-# undef YYSTACK_RELOCATE
+#  undef YYSTACK_RELOCATE
         if (yyss1 != yyssa)
           YYSTACK_FREE (yyss1);
       }
 # endif
+#endif /* no yyoverflow */
 
       yyssp = yyss + yysize - 1;
       yyvsp = yyvs + yysize - 1;
 
-      YY_IGNORE_USELESS_CAST_BEGIN
-      YYDPRINTF ((stderr, "Stack size increased to %ld\n",
-                  YY_CAST (long, yystacksize)));
-      YY_IGNORE_USELESS_CAST_END
+      YYDPRINTF ((stderr, "Stack size increased to %lu\n",
+                  (unsigned long int) yystacksize));
 
       if (yyss + yystacksize - 1 <= yyssp)
         YYABORT;
     }
-#endif /* !defined yyoverflow && !defined YYSTACK_RELOCATE */
+
+  YYDPRINTF ((stderr, "Entering state %d\n", yystate));
 
   if (yystate == YYFINAL)
     YYACCEPT;
 
   goto yybackup;
 
-
 /*-----------.
 | yybackup.  |
 `-----------*/
 yybackup:
+
   /* Do appropriate processing given the current state.  Read a
      lookahead token if we need one and don't already have one.  */
 
@@ -2098,13 +2000,15 @@ yybackup:
 
   /* Shift the lookahead token.  */
   YY_SYMBOL_PRINT ("Shifting", yytoken, &yylval, &yylloc);
+
+  /* Discard the shifted token.  */
+  yychar = YYEMPTY;
+
   yystate = yyn;
   YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   *++yyvsp = yylval;
   YY_IGNORE_MAYBE_UNINITIALIZED_END
 
-  /* Discard the shifted token.  */
-  yychar = YYEMPTY;
   goto yynewstate;
 
 
@@ -2119,7 +2023,7 @@ yydefault:
 
 
 /*-----------------------------.
-| yyreduce -- do a reduction.  |
+| yyreduce -- Do a reduction.  |
 `-----------------------------*/
 yyreduce:
   /* yyn is the number of a rule to reduce with.  */
@@ -2139,229 +2043,229 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-  case 2:
-#line 252 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              {top_thing= (yyvsp[0].t_domain); current_analysis->the_domain= (yyvsp[0].t_domain);}
-#line 2146 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+        case 2:
+#line 252 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {top_thing= (yyvsp[0].t_domain); current_analysis->the_domain= (yyvsp[0].t_domain);}
+#line 2050 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 253 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              {top_thing= (yyvsp[0].t_problem); current_analysis->the_problem= (yyvsp[0].t_problem);}
-#line 2152 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 253 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {top_thing= (yyvsp[0].t_problem); current_analysis->the_problem= (yyvsp[0].t_problem);}
+#line 2056 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 254 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              {top_thing= (yyvsp[0].t_plan); }
-#line 2158 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 254 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {top_thing= (yyvsp[0].t_plan); }
+#line 2062 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 259 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_domain)= (yyvsp[-1].t_domain); (yyval.t_domain)->name= (yyvsp[-2].cp);delete [] (yyvsp[-2].cp);
+#line 259 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[-1].t_domain); (yyval.t_domain)->name= (yyvsp[-2].cp);delete [] (yyvsp[-2].cp);
 	if (types_used && !types_defined) {
 		yyerrok; log_error(E_FATAL,"Syntax error in domain - no :types section, but types used in definitions."); 
 	}
 	}
-#line 2168 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2072 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 265 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_domain)=static_cast<domain*>(NULL);
+#line 265 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_domain)=static_cast<domain*>(NULL);
        	log_error(E_FATAL,"Syntax error in domain"); }
-#line 2175 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2079 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 271 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->req= (yyvsp[-1].t_pddl_req_flag);}
-#line 2181 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 271 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->req= (yyvsp[-1].t_pddl_req_flag);}
+#line 2085 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 272 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {types_defined = true; (yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->types= (yyvsp[-1].t_type_list);}
-#line 2187 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 272 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {types_defined = true; (yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->types= (yyvsp[-1].t_type_list);}
+#line 2091 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 273 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->constants= (yyvsp[-1].t_const_symbol_list);}
-#line 2193 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 273 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[0].t_domain); (yyval.t_domain)->constants= (yyvsp[-1].t_const_symbol_list);}
+#line 2097 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 274 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= (yyvsp[0].t_domain); 
+#line 274 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[0].t_domain); 
                                        (yyval.t_domain)->predicates= (yyvsp[-1].t_pred_decl_list); }
-#line 2200 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2104 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 276 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= (yyvsp[0].t_domain); 
+#line 276 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[0].t_domain); 
                                        (yyval.t_domain)->functions= (yyvsp[-1].t_func_decl_list); }
-#line 2207 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2111 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 278 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= (yyvsp[0].t_domain);
+#line 278 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= (yyvsp[0].t_domain);
    										(yyval.t_domain)->constraints = (yyvsp[-1].t_con_goal);}
-#line 2214 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2118 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 280 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                      {(yyval.t_domain)= new domain((yyvsp[0].t_structure_store)); }
-#line 2220 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 280 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_domain)= new domain((yyvsp[0].t_structure_store)); }
+#line 2124 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 283 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                     {(yyval.cp)=(yyvsp[-1].cp);}
-#line 2226 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 283 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.cp)=(yyvsp[-1].cp);}
+#line 2130 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 289 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 289 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {
 	// Stash in analysis object --- we need to refer to it during parse
 	//   but domain object is not created yet,
 	current_analysis->req |= (yyvsp[-1].t_pddl_req_flag);
 	(yyval.t_pddl_req_flag)=(yyvsp[-1].t_pddl_req_flag);
     }
-#line 2237 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2141 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 296 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-      {yyerrok; 
+#line 296 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
        log_error(E_FATAL,"Syntax error in requirements declaration.");
        (yyval.t_pddl_req_flag)= 0; }
-#line 2245 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2149 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 302 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                         { (yyval.t_pddl_req_flag)= (yyvsp[-1].t_pddl_req_flag) | (yyvsp[0].t_pddl_req_flag); }
-#line 2251 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 302 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pddl_req_flag)= (yyvsp[-1].t_pddl_req_flag) | (yyvsp[0].t_pddl_req_flag); }
+#line 2155 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 303 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                         { (yyval.t_pddl_req_flag)= 0; }
-#line 2257 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 303 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pddl_req_flag)= 0; }
+#line 2161 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 309 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-           {(yyval.t_pred_decl_list)=(yyvsp[0].t_pred_decl_list); (yyval.t_pred_decl_list)->push_front((yyvsp[-1].t_pred_decl));}
-#line 2263 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 309 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pred_decl_list)=(yyvsp[0].t_pred_decl_list); (yyval.t_pred_decl_list)->push_front((yyvsp[-1].t_pred_decl));}
+#line 2167 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 311 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {  (yyval.t_pred_decl_list)=new pred_decl_list;
+#line 311 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  (yyval.t_pred_decl_list)=new pred_decl_list;
            (yyval.t_pred_decl_list)->push_front((yyvsp[0].t_pred_decl)); }
-#line 2270 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2174 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 316 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_pred_decl)= new pred_decl((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_var_symbol_list),current_analysis->var_tab_stack.pop());}
-#line 2276 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 316 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pred_decl)= new pred_decl((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_var_symbol_list),current_analysis->var_tab_stack.pop());}
+#line 2180 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 318 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {yyerrok; 
+#line 318 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
         // hope someone makes this error someday
         log_error(E_FATAL,"Syntax error in predicate declaration.");
 	(yyval.t_pred_decl)= NULL; }
-#line 2285 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2189 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 326 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_put((yyvsp[0].cp));
+#line 326 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_put((yyvsp[0].cp));
            current_analysis->var_tab_stack.push(
            				current_analysis->buildPredTab());
            delete [] (yyvsp[0].cp); }
-#line 2294 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2198 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 333 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_ref("="); 
+#line 333 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_ref("="); 
 	      requires(E_EQUALITY); }
-#line 2301 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2205 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 335 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
-#line 2307 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 335 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
+#line 2211 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 343 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
-#line 2313 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 343 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_pred_symbol)=current_analysis->pred_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
+#line 2217 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 349 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-           {(yyval.t_func_decl_list)=(yyvsp[-1].t_func_decl_list); (yyval.t_func_decl_list)->push_back((yyvsp[0].t_func_decl));}
-#line 2319 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 349 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_func_decl_list)=(yyvsp[-1].t_func_decl_list); (yyval.t_func_decl_list)->push_back((yyvsp[0].t_func_decl));}
+#line 2223 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 350 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 { (yyval.t_func_decl_list)=new func_decl_list; }
-#line 2325 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 350 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_decl_list)=new func_decl_list; }
+#line 2229 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 355 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_func_decl)= new func_decl((yyvsp[-3].t_func_symbol),(yyvsp[-2].t_var_symbol_list),current_analysis->var_tab_stack.pop());}
-#line 2331 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 355 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_func_decl)= new func_decl((yyvsp[-3].t_func_symbol),(yyvsp[-2].t_var_symbol_list),current_analysis->var_tab_stack.pop());}
+#line 2235 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 357 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; 
+#line 357 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
 	 log_error(E_FATAL,"Syntax error in functor declaration.");
 	 (yyval.t_func_decl)= NULL; }
-#line 2339 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2243 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 363 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                  {(yyval.t_dummy) = NULL;}
-#line 2345 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 363 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_dummy) = NULL;}
+#line 2249 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 32:
-#line 363 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                            {(yyval.t_dummy)=NULL;}
-#line 2351 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 363 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_dummy)=NULL;}
+#line 2255 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 367 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_func_symbol)=current_analysis->func_tab.symbol_put((yyvsp[0].cp));
+#line 367 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_symbol)=current_analysis->func_tab.symbol_put((yyvsp[0].cp));
            current_analysis->var_tab_stack.push(
            		current_analysis->buildFuncTab()); 
            delete [] (yyvsp[0].cp); }
-#line 2360 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2264 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 34:
-#line 380 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 380 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
       (yyval.t_var_symbol_list)= (yyvsp[-3].t_var_symbol_list);
       (yyval.t_var_symbol_list)->set_types((yyvsp[-1].t_type));           /* Set types for variables */
       (yyval.t_var_symbol_list)->splice((yyval.t_var_symbol_list)->end(),*(yyvsp[0].t_var_symbol_list));   /* Join lists */ 
@@ -2369,12 +2273,12 @@ yyreduce:
       requires(E_TYPING);
       types_used = true;
    }
-#line 2373 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2277 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 389 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 389 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
       (yyval.t_var_symbol_list)= (yyvsp[-3].t_var_symbol_list);
       (yyval.t_var_symbol_list)->set_either_types((yyvsp[-1].t_type_list));    /* Set types for variables */
       (yyval.t_var_symbol_list)->splice((yyval.t_var_symbol_list)->end(),*(yyvsp[0].t_var_symbol_list));   /* Join lists */ 
@@ -2382,32 +2286,32 @@ yyreduce:
       requires(E_TYPING);
       types_used = true;
    }
-#line 2386 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2290 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 36:
-#line 398 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {
+#line 398 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {
        (yyval.t_var_symbol_list)= (yyvsp[0].t_var_symbol_list);
    }
-#line 2394 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2298 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 410 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     {(yyval.t_var_symbol_list)=(yyvsp[0].t_var_symbol_list); (yyvsp[0].t_var_symbol_list)->push_front((yyvsp[-1].t_var_symbol)); }
-#line 2400 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 410 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_var_symbol_list)=(yyvsp[0].t_var_symbol_list); (yyvsp[0].t_var_symbol_list)->push_front((yyvsp[-1].t_var_symbol)); }
+#line 2304 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 411 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              {(yyval.t_var_symbol_list)= new var_symbol_list; }
-#line 2406 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 411 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_var_symbol_list)= new var_symbol_list; }
+#line 2310 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 418 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 418 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
       (yyval.t_const_symbol_list)= (yyvsp[-3].t_const_symbol_list);
       (yyvsp[-3].t_const_symbol_list)->set_types((yyvsp[-1].t_type));           /* Set types for constants */
       (yyvsp[-3].t_const_symbol_list)->splice((yyvsp[-3].t_const_symbol_list)->end(),*(yyvsp[0].t_const_symbol_list)); /* Join lists */ 
@@ -2415,12 +2319,12 @@ yyreduce:
       requires(E_TYPING);
       types_used = true;
    }
-#line 2419 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2323 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 427 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 427 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
       (yyval.t_const_symbol_list)= (yyvsp[-3].t_const_symbol_list);
       (yyvsp[-3].t_const_symbol_list)->set_either_types((yyvsp[-1].t_type_list));
       (yyvsp[-3].t_const_symbol_list)->splice((yyvsp[-3].t_const_symbol_list)->end(),*(yyvsp[0].t_const_symbol_list));
@@ -2428,155 +2332,155 @@ yyreduce:
       requires(E_TYPING);
       types_used = true;
    }
-#line 2432 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2336 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 436 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_const_symbol_list)= (yyvsp[0].t_const_symbol_list);}
-#line 2438 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 436 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)= (yyvsp[0].t_const_symbol_list);}
+#line 2342 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 441 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                  {(yyval.t_const_symbol_list)=(yyvsp[0].t_const_symbol_list); (yyvsp[0].t_const_symbol_list)->push_front((yyvsp[-1].t_const_symbol));}
-#line 2444 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 441 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)=(yyvsp[0].t_const_symbol_list); (yyvsp[0].t_const_symbol_list)->push_front((yyvsp[-1].t_const_symbol));}
+#line 2348 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 442 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               {(yyval.t_const_symbol_list)=new const_symbol_list;}
-#line 2450 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 442 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)=new const_symbol_list;}
+#line 2354 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 446 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                          {(yyval.t_const_symbol_list)=(yyvsp[0].t_const_symbol_list); (yyvsp[0].t_const_symbol_list)->push_front((yyvsp[-1].t_const_symbol));}
-#line 2456 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 446 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)=(yyvsp[0].t_const_symbol_list); (yyvsp[0].t_const_symbol_list)->push_front((yyvsp[-1].t_const_symbol));}
+#line 2360 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 45:
-#line 447 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               {(yyval.t_const_symbol_list)=new const_symbol_list;}
-#line 2462 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 447 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)=new const_symbol_list;}
+#line 2366 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 46:
-#line 456 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 456 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
        (yyval.t_type_list)= (yyvsp[-3].t_type_list);
        (yyval.t_type_list)->set_types((yyvsp[-1].t_type));           /* Set types for constants */
        (yyval.t_type_list)->splice((yyval.t_type_list)->end(),*(yyvsp[0].t_type_list)); /* Join lists */ 
        delete (yyvsp[0].t_type_list);                   /* Delete (now empty) list */
    }
-#line 2473 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2377 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 47:
-#line 463 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   {  
+#line 463 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {  
    // This parse needs to be excluded, we think (DPL&MF: 6/9/01)
        (yyval.t_type_list)= (yyvsp[-3].t_type_list);
        (yyval.t_type_list)->set_either_types((yyvsp[-1].t_type_list));
        (yyval.t_type_list)->splice((yyvsp[-3].t_type_list)->end(),*(yyvsp[0].t_type_list));
        delete (yyvsp[0].t_type_list);
    }
-#line 2485 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2389 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 48:
-#line 472 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-      { (yyval.t_type_list)= (yyvsp[0].t_type_list); }
-#line 2491 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 472 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_type_list)= (yyvsp[0].t_type_list); }
+#line 2395 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 49:
-#line 478 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         {(yyval.t_parameter_symbol_list)=(yyvsp[-1].t_parameter_symbol_list); (yyval.t_parameter_symbol_list)->push_back((yyvsp[0].t_const_symbol)); }
-#line 2497 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 478 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_parameter_symbol_list)=(yyvsp[-1].t_parameter_symbol_list); (yyval.t_parameter_symbol_list)->push_back((yyvsp[0].t_const_symbol)); }
+#line 2401 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 50:
-#line 480 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         {(yyval.t_parameter_symbol_list)=(yyvsp[-2].t_parameter_symbol_list); (yyval.t_parameter_symbol_list)->push_back((yyvsp[0].t_var_symbol)); }
-#line 2503 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 480 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_parameter_symbol_list)=(yyvsp[-2].t_parameter_symbol_list); (yyval.t_parameter_symbol_list)->push_back((yyvsp[0].t_var_symbol)); }
+#line 2407 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 51:
-#line 481 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_parameter_symbol_list)= new parameter_symbol_list;}
-#line 2509 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 481 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_parameter_symbol_list)= new parameter_symbol_list;}
+#line 2413 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 488 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_var_symbol)= current_analysis->var_tab_stack.top()->symbol_put((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
-#line 2515 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 488 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_var_symbol)= current_analysis->var_tab_stack.top()->symbol_put((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
+#line 2419 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 494 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_var_symbol)= current_analysis->var_tab_stack.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
-#line 2521 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 494 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_var_symbol)= current_analysis->var_tab_stack.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
+#line 2425 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 54:
-#line 498 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_const_symbol)= current_analysis->const_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
-#line 2527 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 498 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_const_symbol)= current_analysis->const_tab.symbol_get((yyvsp[0].cp)); delete [] (yyvsp[0].cp); }
+#line 2431 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 55:
-#line 502 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         { (yyval.t_const_symbol)= current_analysis->const_tab.symbol_put((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
-#line 2533 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 502 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_const_symbol)= current_analysis->const_tab.symbol_put((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
+#line 2437 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 56:
-#line 507 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_type_list)= (yyvsp[-1].t_type_list); }
-#line 2539 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 507 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_type_list)= (yyvsp[-1].t_type_list); }
+#line 2443 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 57:
-#line 512 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_type)= current_analysis->pddl_type_tab.symbol_ref((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
-#line 2545 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 512 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_type)= current_analysis->pddl_type_tab.symbol_ref((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
+#line 2449 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 58:
-#line 519 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_type)= current_analysis->pddl_type_tab.symbol_ref((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
-#line 2551 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 519 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_type)= current_analysis->pddl_type_tab.symbol_ref((yyvsp[0].cp)); delete [] (yyvsp[0].cp);}
+#line 2455 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 59:
-#line 524 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_type_list)= (yyvsp[-1].t_type_list); (yyval.t_type_list)->push_back((yyvsp[0].t_type));}
-#line 2557 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 524 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_type_list)= (yyvsp[-1].t_type_list); (yyval.t_type_list)->push_back((yyvsp[0].t_type));}
+#line 2461 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 60:
-#line 525 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_type_list)= new pddl_type_list;}
-#line 2563 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 525 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_type_list)= new pddl_type_list;}
+#line 2467 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 61:
-#line 530 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_type_list)= (yyvsp[-1].t_type_list); (yyval.t_type_list)->push_back((yyvsp[0].t_type));}
-#line 2569 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 530 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_type_list)= (yyvsp[-1].t_type_list); (yyval.t_type_list)->push_back((yyvsp[0].t_type));}
+#line 2473 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 62:
-#line 531 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_type_list)= new pddl_type_list;}
-#line 2575 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 531 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_type_list)= new pddl_type_list;}
+#line 2479 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 63:
-#line 536 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-5].t_effect_lists);
+#line 536 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-5].t_effect_lists);
 	  (yyval.t_effect_lists)->assign_effects.push_back(new assignment((yyvsp[-2].t_func_term),E_ASSIGN,(yyvsp[-1].t_num_expression)));  
           if((yyvsp[-2].t_func_term)->getFunction()->getName()=="total-cost")
           {
@@ -2588,1244 +2492,1244 @@ yyreduce:
           	requires(E_NFLUENTS); 
           }
 	}
-#line 2592 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2496 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 64:
-#line 549 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect)); }
-#line 2598 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 549 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect)); }
+#line 2502 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 65:
-#line 551 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect)); }
-#line 2604 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 551 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect)); }
+#line 2508 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 66:
-#line 553 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->timed_effects.push_back((yyvsp[0].t_timed_effect)); }
-#line 2610 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 553 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->timed_effects.push_back((yyvsp[0].t_timed_effect)); }
+#line 2514 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 67:
-#line 555 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists;}
-#line 2616 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 555 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists;}
+#line 2520 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 68:
-#line 560 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-   { requires(E_TIMED_INITIAL_LITERALS); 
+#line 560 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { requires(E_TIMED_INITIAL_LITERALS); 
    		(yyval.t_timed_effect)=new timed_initial_literal((yyvsp[-1].t_effect_lists),(yyvsp[-2].fval));}
-#line 2623 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2527 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 69:
-#line 565 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                  {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->append_effects((yyvsp[-1].t_effect_lists)); delete (yyvsp[-1].t_effect_lists);}
-#line 2629 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 565 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->append_effects((yyvsp[-1].t_effect_lists)); delete (yyvsp[-1].t_effect_lists);}
+#line 2533 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 70:
-#line 566 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                  {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->cond_effects.push_front((yyvsp[-1].t_cond_effect)); 
+#line 566 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->cond_effects.push_front((yyvsp[-1].t_cond_effect)); 
                                       requires(E_COND_EFFS);}
-#line 2636 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2540 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 71:
-#line 568 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                  {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->forall_effects.push_front((yyvsp[-1].t_forall_effect));
+#line 568 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=(yyvsp[0].t_effect_lists); (yyval.t_effect_lists)->forall_effects.push_front((yyvsp[-1].t_forall_effect));
                                       requires(E_COND_EFFS);}
-#line 2643 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2547 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 72:
-#line 570 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                  {(yyval.t_effect_lists)=new effect_lists(); }
-#line 2649 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 570 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists(); }
+#line 2553 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 73:
-#line 579 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
-#line 2655 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 579 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
+#line 2559 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 74:
-#line 580 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2661 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 580 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2565 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 75:
-#line 581 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2667 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 581 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2571 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 76:
-#line 582 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->cond_effects.push_front((yyvsp[0].t_cond_effect));}
-#line 2673 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 582 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->cond_effects.push_front((yyvsp[0].t_cond_effect));}
+#line 2577 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 77:
-#line 583 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->forall_effects.push_front((yyvsp[0].t_forall_effect));}
-#line 2679 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 583 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->forall_effects.push_front((yyvsp[0].t_forall_effect));}
+#line 2583 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 78:
-#line 587 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                         {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists);}
-#line 2685 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 587 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists);}
+#line 2589 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 79:
-#line 588 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                      {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
-#line 2691 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 588 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
+#line 2595 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 80:
-#line 593 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2697 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 593 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2601 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 81:
-#line 595 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2703 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 595 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2607 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 82:
-#line 597 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->assign_effects.push_front((yyvsp[0].t_assignment));
+#line 597 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->assign_effects.push_front((yyvsp[0].t_assignment));
          requires(E_NFLUENTS);}
-#line 2710 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2614 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 83:
-#line 603 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect));}
-#line 2716 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 603 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect));}
+#line 2620 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 84:
-#line 604 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect));}
-#line 2722 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 604 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect));}
+#line 2626 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 85:
-#line 605 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->assign_effects.push_back((yyvsp[0].t_assignment));
+#line 605 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->assign_effects.push_back((yyvsp[0].t_assignment));
                                      requires(E_NFLUENTS); }
-#line 2729 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2633 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 86:
-#line 607 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 { (yyval.t_effect_lists)= new effect_lists; }
-#line 2735 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 607 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; }
+#line 2639 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 87:
-#line 612 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
-#line 2741 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 612 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
+#line 2645 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 88:
-#line 614 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_effect_lists)=NULL;
+#line 614 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_effect_lists)=NULL;
 	 log_error(E_FATAL,"Syntax error in (and ...)");
 	}
-#line 2749 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2653 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 89:
-#line 622 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
-#line 2755 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 622 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
+#line 2659 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 90:
-#line 627 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists; 
+#line 627 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; 
           (yyval.t_effect_lists)->forall_effects.push_back(
 	       new forall_effect((yyvsp[-1].t_effect_lists), (yyvsp[-3].t_var_symbol_list), current_analysis->var_tab_stack.pop())); 
           requires(E_COND_EFFS);}
-#line 2764 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2668 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 91:
-#line 632 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists;
+#line 632 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists;
 	  (yyval.t_effect_lists)->cond_effects.push_back(
 	       new cond_effect((yyvsp[-2].t_goal),(yyvsp[-1].t_effect_lists)));
           requires(E_COND_EFFS); }
-#line 2773 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2677 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 92:
-#line 637 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists;
+#line 637 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists;
 	  (yyval.t_effect_lists)->cond_assign_effects.push_back(
 	       new cond_effect((yyvsp[-2].t_goal),(yyvsp[-1].t_effect_lists)));
           requires(E_COND_EFFS); }
-#line 2782 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2686 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 93:
-#line 642 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=new effect_lists;
+#line 642 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=new effect_lists;
           (yyval.t_effect_lists)->timed_effects.push_back((yyvsp[0].t_timed_effect)); }
-#line 2789 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2693 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 94:
-#line 645 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists;
+#line 645 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists;
 	  (yyval.t_effect_lists)->assign_effects.push_front((yyvsp[0].t_assignment));
           requires(E_NFLUENTS); }
-#line 2797 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2701 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 95:
-#line 651 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                             { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
-#line 2803 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 651 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
+#line 2707 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 96:
-#line 652 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_effect_lists)= new effect_lists; }
-#line 2809 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 652 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; }
+#line 2713 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 97:
-#line 657 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect((yyvsp[-1].t_effect_lists),E_AT_START);}
-#line 2815 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 657 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect((yyvsp[-1].t_effect_lists),E_AT_START);}
+#line 2719 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 98:
-#line 659 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect((yyvsp[-1].t_effect_lists),E_AT_END);}
-#line 2821 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 659 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect((yyvsp[-1].t_effect_lists),E_AT_END);}
+#line 2725 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 99:
-#line 661 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
+#line 661 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_timed_effect)->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression))); }
-#line 2829 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2733 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 100:
-#line 665 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
+#line 665 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_timed_effect)->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression))); }
-#line 2837 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2741 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 101:
-#line 669 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_timed_effect)=NULL;
+#line 669 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_timed_effect)=NULL;
 	log_error(E_FATAL,"Syntax error in timed effect"); }
-#line 2844 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2748 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 102:
-#line 675 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
+#line 675 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_timed_effect)->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression))); }
-#line 2852 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2756 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 103:
-#line 679 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
+#line 679 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_timed_effect)=new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_timed_effect)->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression))); }
-#line 2860 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2764 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 104:
-#line 683 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_timed_effect)=NULL;
+#line 683 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_timed_effect)=NULL;
 	log_error(E_FATAL,"Syntax error in conditional continuous effect"); }
-#line 2867 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2771 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 105:
-#line 689 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
-#line 2873 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 689 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); }
+#line 2777 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 106:
-#line 694 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists; 
+#line 694 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; 
           (yyval.t_effect_lists)->forall_effects.push_back(
 	       new forall_effect((yyvsp[-1].t_effect_lists), (yyvsp[-3].t_var_symbol_list), current_analysis->var_tab_stack.pop())); 
           requires(E_COND_EFFS);}
-#line 2882 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2786 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 107:
-#line 699 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)= new effect_lists;
+#line 699 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists;
 	  (yyval.t_effect_lists)->cond_assign_effects.push_back(
 	       new cond_effect((yyvsp[-2].t_goal),(yyvsp[-1].t_effect_lists)));
           requires(E_COND_EFFS); }
-#line 2891 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2795 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 108:
-#line 704 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_effect_lists)=new effect_lists;
+#line 704 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=new effect_lists;
           (yyval.t_effect_lists)->timed_effects.push_back((yyvsp[0].t_timed_effect)); }
-#line 2898 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2802 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 109:
-#line 709 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                               { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
-#line 2904 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 709 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
+#line 2808 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 110:
-#line 710 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_effect_lists)= new effect_lists; }
-#line 2910 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 710 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; }
+#line 2814 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 111:
-#line 714 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                            {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists);}
-#line 2916 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 714 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists);}
+#line 2820 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 112:
-#line 715 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                         {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
-#line 2922 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 715 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[0].t_effect_lists);}
+#line 2826 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 113:
-#line 720 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2928 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 720 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->del_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2832 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 114:
-#line 722 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
-#line 2934 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 722 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->add_effects.push_front((yyvsp[0].t_simple_effect));}
+#line 2838 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 115:
-#line 724 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->assign_effects.push_front((yyvsp[0].t_assignment));
+#line 724 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; (yyval.t_effect_lists)->assign_effects.push_front((yyvsp[0].t_assignment));
          requires(E_NFLUENTS);}
-#line 2941 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2845 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 116:
-#line 730 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                       {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect));}
-#line 2947 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 730 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->del_effects.push_back((yyvsp[0].t_simple_effect));}
+#line 2851 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 117:
-#line 731 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                       {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect));}
-#line 2953 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 731 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->add_effects.push_back((yyvsp[0].t_simple_effect));}
+#line 2857 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 118:
-#line 732 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                       {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->assign_effects.push_back((yyvsp[0].t_assignment));
+#line 732 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)= (yyvsp[-1].t_effect_lists); (yyval.t_effect_lists)->assign_effects.push_back((yyvsp[0].t_assignment));
                                      requires(E_NFLUENTS); }
-#line 2960 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2864 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 119:
-#line 734 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 { (yyval.t_effect_lists)= new effect_lists; }
-#line 2966 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 734 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; }
+#line 2870 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 120:
-#line 740 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_ASSIGN,(yyvsp[-1].t_expression)); }
-#line 2972 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 740 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_ASSIGN,(yyvsp[-1].t_expression)); }
+#line 2876 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 121:
-#line 742 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression)); }
-#line 2978 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 742 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression)); }
+#line 2882 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 122:
-#line 744 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression)); }
-#line 2984 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 744 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression)); }
+#line 2888 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 123:
-#line 746 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_UP,(yyvsp[-1].t_expression)); }
-#line 2990 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 746 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_UP,(yyvsp[-1].t_expression)); }
+#line 2894 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 124:
-#line 748 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_DOWN,(yyvsp[-1].t_expression)); }
-#line 2996 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 748 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_DOWN,(yyvsp[-1].t_expression)); }
+#line 2900 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 125:
-#line 753 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; 
+#line 753 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; 
          timed_effect * te = new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_effect_lists)->timed_effects.push_front(te);
          te->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression))); }
-#line 3006 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2910 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 126:
-#line 759 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_effect_lists)=new effect_lists; 
+#line 759 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=new effect_lists; 
          timed_effect * te = new timed_effect(new effect_lists,E_CONTINUOUS);
          (yyval.t_effect_lists)->timed_effects.push_front(te);
          te->effs->assign_effects.push_front(
 	     new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression))); }
-#line 3016 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2920 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 127:
-#line 765 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_effect_lists) = (yyvsp[-1].t_effect_lists);}
-#line 3022 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 765 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists) = (yyvsp[-1].t_effect_lists);}
+#line 2926 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 128:
-#line 769 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                               { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
-#line 3028 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 769 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists); (yyvsp[-1].t_effect_lists)->append_effects((yyvsp[0].t_effect_lists)); delete (yyvsp[0].t_effect_lists); }
+#line 2932 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 129:
-#line 770 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_effect_lists)= new effect_lists; }
-#line 3034 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 770 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_effect_lists)= new effect_lists; }
+#line 2938 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 130:
-#line 774 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                     {(yyval.t_expression)= (yyvsp[0].t_expression);}
-#line 3040 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 774 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= (yyvsp[0].t_expression);}
+#line 2944 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 131:
-#line 775 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                   {(yyval.t_expression)= new special_val_expr(E_DURATION_VAR);
+#line 775 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= new special_val_expr(E_DURATION_VAR);
                     requires( E_DURATION_INEQUALITIES );}
-#line 3047 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 2951 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 132:
-#line 777 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             { (yyval.t_expression)=(yyvsp[0].t_num_expression); }
-#line 3053 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 777 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)=(yyvsp[0].t_num_expression); }
+#line 2957 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 133:
-#line 778 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              { (yyval.t_expression)= (yyvsp[0].t_func_term); }
-#line 3059 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 778 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= (yyvsp[0].t_func_term); }
+#line 2963 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 134:
-#line 783 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new plus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
-#line 3065 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 783 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new plus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
+#line 2969 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 135:
-#line 785 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new minus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
-#line 3071 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 785 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new minus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
+#line 2975 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 136:
-#line 787 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
-#line 3077 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 787 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
+#line 2981 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 137:
-#line 789 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new div_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
-#line 3083 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 789 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new div_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); }
+#line 2987 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 138:
-#line 794 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list)); }
-#line 3089 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 794 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list)); }
+#line 2993 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 139:
-#line 796 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_goal)= new timed_goal(new comparison((yyvsp[-4].t_comparison_op),
+#line 796 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal)= new timed_goal(new comparison((yyvsp[-4].t_comparison_op),
         			new special_val_expr(E_DURATION_VAR),(yyvsp[-1].t_expression)),E_AT_START); }
-#line 3096 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3000 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 140:
-#line 799 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_goal) = new timed_goal(new comparison((yyvsp[-5].t_comparison_op),
+#line 799 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal) = new timed_goal(new comparison((yyvsp[-5].t_comparison_op),
 					new special_val_expr(E_DURATION_VAR),(yyvsp[-2].t_expression)),E_AT_START);}
-#line 3103 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3007 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 141:
-#line 802 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_goal) = new timed_goal(new comparison((yyvsp[-5].t_comparison_op),
+#line 802 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal) = new timed_goal(new comparison((yyvsp[-5].t_comparison_op),
 					new special_val_expr(E_DURATION_VAR),(yyvsp[-2].t_expression)),E_AT_END);}
-#line 3110 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3014 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 142:
-#line 807 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.t_comparison_op)= E_LESSEQ; requires(E_DURATION_INEQUALITIES);}
-#line 3116 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 807 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_comparison_op)= E_LESSEQ; requires(E_DURATION_INEQUALITIES);}
+#line 3020 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 143:
-#line 808 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.t_comparison_op)= E_GREATEQ; requires(E_DURATION_INEQUALITIES);}
-#line 3122 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 808 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_comparison_op)= E_GREATEQ; requires(E_DURATION_INEQUALITIES);}
+#line 3026 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 144:
-#line 809 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.t_comparison_op)= E_EQUALS; }
-#line 3128 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 809 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_comparison_op)= E_EQUALS; }
+#line 3032 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 145:
-#line 817 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.t_expression)= (yyvsp[0].t_expression); }
-#line 3134 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 817 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= (yyvsp[0].t_expression); }
+#line 3038 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 146:
-#line 822 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_goal)); }
-#line 3140 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 822 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_goal)); }
+#line 3044 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 147:
-#line 824 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_goal_list)= new goal_list; }
-#line 3146 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 824 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal_list)= new goal_list; }
+#line 3050 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 148:
-#line 829 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_simple_effect)= new simple_effect((yyvsp[-1].t_proposition)); }
-#line 3152 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 829 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_simple_effect)= new simple_effect((yyvsp[-1].t_proposition)); }
+#line 3056 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 149:
-#line 834 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_simple_effect)= new simple_effect((yyvsp[0].t_proposition)); }
-#line 3158 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 834 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_simple_effect)= new simple_effect((yyvsp[0].t_proposition)); }
+#line 3062 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 150:
-#line 841 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_simple_effect)= new simple_effect((yyvsp[-1].t_proposition)); }
-#line 3164 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 841 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_simple_effect)= new simple_effect((yyvsp[-1].t_proposition)); }
+#line 3068 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 151:
-#line 846 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_simple_effect)= new simple_effect((yyvsp[0].t_proposition)); }
-#line 3170 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 846 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_simple_effect)= new simple_effect((yyvsp[0].t_proposition)); }
+#line 3074 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 152:
-#line 851 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_forall_effect)= new forall_effect((yyvsp[-1].t_effect_lists), (yyvsp[-3].t_var_symbol_list), current_analysis->var_tab_stack.pop());}
-#line 3176 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 851 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_forall_effect)= new forall_effect((yyvsp[-1].t_effect_lists), (yyvsp[-3].t_var_symbol_list), current_analysis->var_tab_stack.pop());}
+#line 3080 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 153:
-#line 856 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_cond_effect)= new cond_effect((yyvsp[-2].t_goal),(yyvsp[-1].t_effect_lists)); }
-#line 3182 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 856 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_cond_effect)= new cond_effect((yyvsp[-2].t_goal),(yyvsp[-1].t_effect_lists)); }
+#line 3086 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 154:
-#line 861 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_ASSIGN,(yyvsp[-1].t_expression)); }
-#line 3188 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 861 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_ASSIGN,(yyvsp[-1].t_expression)); }
+#line 3092 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 155:
-#line 863 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression)); }
-#line 3194 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 863 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_INCREASE,(yyvsp[-1].t_expression)); }
+#line 3098 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 156:
-#line 865 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression)); }
-#line 3200 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 865 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_DECREASE,(yyvsp[-1].t_expression)); }
+#line 3104 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 157:
-#line 867 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_UP,(yyvsp[-1].t_expression)); }
-#line 3206 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 867 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_UP,(yyvsp[-1].t_expression)); }
+#line 3110 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 158:
-#line 869 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-     { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_DOWN,(yyvsp[-1].t_expression)); }
-#line 3212 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 869 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_assignment)= new assignment((yyvsp[-2].t_func_term),E_SCALE_DOWN,(yyvsp[-1].t_expression)); }
+#line 3116 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 159:
-#line 874 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new uminus_expression((yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
-#line 3218 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 874 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new uminus_expression((yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
+#line 3122 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 160:
-#line 876 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new plus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
-#line 3224 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 876 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new plus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
+#line 3128 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 161:
-#line 878 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new minus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
-#line 3230 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 878 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new minus_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
+#line 3134 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 162:
-#line 880 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
-#line 3236 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 880 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
+#line 3140 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 163:
-#line 882 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_expression)= new div_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
-#line 3242 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 882 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new div_expression((yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); requires(E_NFLUENTS); }
+#line 3146 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 164:
-#line 883 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             { (yyval.t_expression)=(yyvsp[0].t_num_expression); }
-#line 3248 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 883 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)=(yyvsp[0].t_num_expression); }
+#line 3152 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 165:
-#line 884 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              { (yyval.t_expression)= (yyvsp[0].t_func_term); requires(E_NFLUENTS); }
-#line 3254 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 884 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= (yyvsp[0].t_func_term); requires(E_NFLUENTS); }
+#line 3158 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 166:
-#line 889 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_expression)= new mul_expression(new special_val_expr(E_HASHT),(yyvsp[-1].t_expression)); }
-#line 3260 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 889 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new mul_expression(new special_val_expr(E_HASHT),(yyvsp[-1].t_expression)); }
+#line 3164 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 167:
-#line 891 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression), new special_val_expr(E_HASHT)); }
-#line 3266 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 891 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new mul_expression((yyvsp[-2].t_expression), new special_val_expr(E_HASHT)); }
+#line 3170 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 168:
-#line 893 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_expression)= new special_val_expr(E_HASHT); }
-#line 3272 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 893 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new special_val_expr(E_HASHT); }
+#line 3176 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 169:
-#line 898 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              { (yyval.t_num_expression)=new int_expression((yyvsp[0].ival));   }
-#line 3278 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 898 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_num_expression)=new int_expression((yyvsp[0].ival));   }
+#line 3182 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 170:
-#line 899 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-              { (yyval.t_num_expression)=new float_expression((yyvsp[0].fval)); }
-#line 3284 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 899 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_num_expression)=new float_expression((yyvsp[0].fval)); }
+#line 3188 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 171:
-#line 903 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
-#line 3290 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 903 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
+#line 3194 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 172:
-#line 906 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
-#line 3296 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 906 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
+#line 3200 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 173:
-#line 908 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[0].cp)),
+#line 908 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[0].cp)),
                             new parameter_symbol_list); delete [] (yyvsp[0].cp);}
-#line 3303 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3207 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 174:
-#line 926 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
-#line 3309 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 926 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
+#line 3213 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 175:
-#line 928 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
-#line 3315 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 928 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[-2].cp)), (yyvsp[-1].t_parameter_symbol_list)); delete [] (yyvsp[-2].cp); }
+#line 3219 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 176:
-#line 930 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[0].cp)),
+#line 930 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_func_term)=new func_term( current_analysis->func_tab.symbol_get((yyvsp[0].cp)),
                             new parameter_symbol_list); delete [] (yyvsp[0].cp);}
-#line 3322 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3226 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 177:
-#line 935 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_comparison_op)= E_GREATER; }
-#line 3328 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 935 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_comparison_op)= E_GREATER; }
+#line 3232 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 178:
-#line 936 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_comparison_op)= E_GREATEQ; }
-#line 3334 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 936 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_comparison_op)= E_GREATEQ; }
+#line 3238 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 179:
-#line 937 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_comparison_op)= E_LESS; }
-#line 3340 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 937 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_comparison_op)= E_LESS; }
+#line 3244 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 180:
-#line 938 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_comparison_op)= E_LESSEQ; }
-#line 3346 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 938 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_comparison_op)= E_LESSEQ; }
+#line 3250 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 181:
-#line 939 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_comparison_op)= E_EQUALS; }
-#line 3352 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 939 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_comparison_op)= E_EQUALS; }
+#line 3256 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 182:
-#line 952 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal)= (yyvsp[0].t_goal);}
-#line 3358 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 952 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= (yyvsp[0].t_goal);}
+#line 3262 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 183:
-#line 959 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
-#line 3364 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 959 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
+#line 3268 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 184:
-#line 962 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());
+#line 962 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());
         requires(E_UNIV_PRECS);}
-#line 3371 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3275 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 185:
-#line 964 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                            {(yyval.t_goal) = new conj_goal(new goal_list);}
-#line 3377 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 964 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal) = new conj_goal(new goal_list);}
+#line 3281 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 186:
-#line 965 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                        {(yyval.t_goal) = new conj_goal(new goal_list);}
-#line 3383 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 965 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal) = new conj_goal(new goal_list);}
+#line 3287 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 187:
-#line 970 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new preference((yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
-#line 3389 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 970 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new preference((yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
+#line 3293 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 188:
-#line 972 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new preference((yyvsp[-2].cp),(yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
-#line 3395 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 972 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new preference((yyvsp[-2].cp),(yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
+#line 3299 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 189:
-#line 974 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
-#line 3401 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 974 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
+#line 3305 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 190:
-#line 977 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_con_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
+#line 977 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
                 requires(E_UNIV_PRECS);}
-#line 3408 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3312 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 191:
-#line 980 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_con_goal) = (yyvsp[0].t_con_goal);}
-#line 3414 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 980 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = (yyvsp[0].t_con_goal);}
+#line 3318 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 192:
-#line 985 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new preference((yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
-#line 3420 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 985 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new preference((yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
+#line 3324 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 193:
-#line 987 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new preference((yyvsp[-2].cp),(yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
-#line 3426 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 987 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new preference((yyvsp[-2].cp),(yyvsp[-1].t_con_goal));requires(E_PREFERENCES);}
+#line 3330 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 194:
-#line 989 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
-#line 3432 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 989 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new conj_goal((yyvsp[-1].t_goal_list));}
+#line 3336 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 195:
-#line 992 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_con_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
+#line 992 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal)= new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
                 requires(E_UNIV_PRECS);}
-#line 3439 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3343 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 196:
-#line 998 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_con_goal));}
-#line 3445 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 998 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_con_goal));}
+#line 3349 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 197:
-#line 1000 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
-#line 3451 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1000 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
+#line 3355 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 198:
-#line 1005 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new preference((yyvsp[-1].t_goal)); requires(E_PREFERENCES);}
-#line 3457 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1005 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new preference((yyvsp[-1].t_goal)); requires(E_PREFERENCES);}
+#line 3361 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 199:
-#line 1007 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new preference((yyvsp[-2].cp),(yyvsp[-1].t_goal)); requires(E_PREFERENCES);}
-#line 3463 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1007 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new preference((yyvsp[-2].cp),(yyvsp[-1].t_goal)); requires(E_PREFERENCES);}
+#line 3367 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 200:
-#line 1011 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)=(yyvsp[0].t_goal);}
-#line 3469 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1011 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)=(yyvsp[0].t_goal);}
+#line 3373 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 201:
-#line 1016 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal_list) = (yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
-#line 3475 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1016 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list) = (yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
+#line 3379 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 202:
-#line 1018 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal_list) = new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
-#line 3481 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1018 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list) = new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_con_goal));}
+#line 3385 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 203:
-#line 1023 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal)= new conj_goal((yyvsp[-1].t_goal_list));}
-#line 3487 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1023 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal)= new conj_goal((yyvsp[-1].t_goal_list));}
+#line 3391 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 204:
-#line 1025 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
+#line 1025 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new qfied_goal(E_FORALL,(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_con_goal),current_analysis->var_tab_stack.pop());
         requires(E_UNIV_PRECS);}
-#line 3494 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3398 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 205:
-#line 1028 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_ATEND,(yyvsp[-1].t_goal));}
-#line 3500 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1028 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_ATEND,(yyvsp[-1].t_goal));}
+#line 3404 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 206:
-#line 1030 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_ALWAYS,(yyvsp[-1].t_goal));}
-#line 3506 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1030 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_ALWAYS,(yyvsp[-1].t_goal));}
+#line 3410 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 207:
-#line 1032 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_SOMETIME,(yyvsp[-1].t_goal));}
-#line 3512 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1032 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_SOMETIME,(yyvsp[-1].t_goal));}
+#line 3416 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 208:
-#line 1034 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_WITHIN,(yyvsp[-1].t_goal),NULL,(yyvsp[-2].t_num_expression)->double_value(),0.0);delete (yyvsp[-2].t_num_expression);}
-#line 3518 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1034 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_WITHIN,(yyvsp[-1].t_goal),NULL,(yyvsp[-2].t_num_expression)->double_value(),0.0);delete (yyvsp[-2].t_num_expression);}
+#line 3422 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 209:
-#line 1036 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_ATMOSTONCE,(yyvsp[-1].t_goal));}
-#line 3524 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1036 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_ATMOSTONCE,(yyvsp[-1].t_goal));}
+#line 3428 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 210:
-#line 1038 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_SOMETIMEAFTER,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal));}
-#line 3530 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1038 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_SOMETIMEAFTER,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal));}
+#line 3434 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 211:
-#line 1040 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_SOMETIMEBEFORE,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal));}
-#line 3536 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1040 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_SOMETIMEBEFORE,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal));}
+#line 3440 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 212:
-#line 1042 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_ALWAYSWITHIN,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal),(yyvsp[-3].t_num_expression)->double_value(),0.0);delete (yyvsp[-3].t_num_expression);}
-#line 3542 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1042 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_ALWAYSWITHIN,(yyvsp[-1].t_goal),(yyvsp[-2].t_goal),(yyvsp[-3].t_num_expression)->double_value(),0.0);delete (yyvsp[-3].t_num_expression);}
+#line 3446 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 213:
-#line 1044 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_HOLDDURING,(yyvsp[-1].t_goal),NULL,(yyvsp[-2].t_num_expression)->double_value(),(yyvsp[-3].t_num_expression)->double_value());delete (yyvsp[-3].t_num_expression);delete (yyvsp[-2].t_num_expression);}
-#line 3548 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1044 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_HOLDDURING,(yyvsp[-1].t_goal),NULL,(yyvsp[-2].t_num_expression)->double_value(),(yyvsp[-3].t_num_expression)->double_value());delete (yyvsp[-3].t_num_expression);delete (yyvsp[-2].t_num_expression);}
+#line 3452 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 214:
-#line 1046 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = new constraint_goal(E_HOLDAFTER,(yyvsp[-1].t_goal),NULL,0.0,(yyvsp[-2].t_num_expression)->double_value());delete (yyvsp[-2].t_num_expression);}
-#line 3554 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1046 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = new constraint_goal(E_HOLDAFTER,(yyvsp[-1].t_goal),NULL,0.0,(yyvsp[-2].t_num_expression)->double_value());delete (yyvsp[-2].t_num_expression);}
+#line 3458 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 215:
-#line 1051 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new simple_goal((yyvsp[0].t_proposition),E_POS);}
-#line 3560 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1051 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new simple_goal((yyvsp[0].t_proposition),E_POS);}
+#line 3464 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 216:
-#line 1053 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new neg_goal((yyvsp[-1].t_goal));simple_goal * s = dynamic_cast<simple_goal *>((yyvsp[-1].t_goal));
+#line 1053 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new neg_goal((yyvsp[-1].t_goal));simple_goal * s = dynamic_cast<simple_goal *>((yyvsp[-1].t_goal));
        if(s && s->getProp()->head->getName()=="=") {requires(E_EQUALITY);} 
        else{requires(E_NEGATIVE_PRECONDITIONS);};}
-#line 3568 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3472 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 217:
-#line 1057 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list));}
-#line 3574 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1057 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list));}
+#line 3478 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 218:
-#line 1059 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new disj_goal((yyvsp[-1].t_goal_list));
+#line 1059 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new disj_goal((yyvsp[-1].t_goal_list));
         requires(E_DISJUNCTIVE_PRECONDS);}
-#line 3581 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3485 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 219:
-#line 1062 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new imply_goal((yyvsp[-2].t_goal),(yyvsp[-1].t_goal));
+#line 1062 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new imply_goal((yyvsp[-2].t_goal),(yyvsp[-1].t_goal));
         requires(E_DISJUNCTIVE_PRECONDS);}
-#line 3588 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3492 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 220:
-#line 1066 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new qfied_goal((yyvsp[-5].t_quantifier),(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
-#line 3594 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1066 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new qfied_goal((yyvsp[-5].t_quantifier),(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
+#line 3498 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 221:
-#line 1069 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new qfied_goal((yyvsp[-5].t_quantifier),(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
-#line 3600 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1069 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new qfied_goal((yyvsp[-5].t_quantifier),(yyvsp[-3].t_var_symbol_list),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
+#line 3504 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 222:
-#line 1071 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_goal)= new comparison((yyvsp[-3].t_comparison_op),(yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); 
+#line 1071 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new comparison((yyvsp[-3].t_comparison_op),(yyvsp[-2].t_expression),(yyvsp[-1].t_expression)); 
         requires(E_NFLUENTS);}
-#line 3607 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3511 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 223:
-#line 1077 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_goal));}
-#line 3613 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1077 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_goal));}
+#line 3517 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 224:
-#line 1079 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_goal));}
-#line 3619 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1079 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_goal));}
+#line 3523 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 225:
-#line 1084 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_goal));}
-#line 3625 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1084 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyvsp[-1].t_goal_list)->push_back((yyvsp[0].t_goal));}
+#line 3529 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 226:
-#line 1086 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_goal));}
-#line 3631 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1086 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal_list)= new goal_list; (yyval.t_goal_list)->push_back((yyvsp[0].t_goal));}
+#line 3535 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 227:
-#line 1096 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_quantifier)=E_FORALL; 
+#line 1096 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_quantifier)=E_FORALL; 
         current_analysis->var_tab_stack.push(
         		current_analysis->buildForallTab());}
-#line 3639 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3543 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 228:
-#line 1103 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_quantifier)=E_EXISTS;
+#line 1103 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_quantifier)=E_EXISTS;
         current_analysis->var_tab_stack.push(
         	current_analysis->buildExistsTab());}
-#line 3647 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3551 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 229:
-#line 1110 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_proposition)=new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_parameter_symbol_list));}
-#line 3653 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1110 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_proposition)=new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_parameter_symbol_list));}
+#line 3557 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 230:
-#line 1115 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         {(yyval.t_proposition) = new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_var_symbol_list));}
-#line 3659 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1115 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_proposition) = new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_var_symbol_list));}
+#line 3563 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 231:
-#line 1120 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_proposition)=new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_parameter_symbol_list));}
-#line 3665 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1120 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_proposition)=new proposition((yyvsp[-2].t_pred_symbol),(yyvsp[-1].t_parameter_symbol_list));}
+#line 3569 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 232:
-#line 1125 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_pred_decl_list)= (yyvsp[-1].t_pred_decl_list);}
-#line 3671 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1125 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pred_decl_list)= (yyvsp[-1].t_pred_decl_list);}
+#line 3575 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 233:
-#line 1127 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_pred_decl_list)=NULL;
+#line 1127 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_pred_decl_list)=NULL;
 	 log_error(E_FATAL,"Syntax error in (:predicates ...)");
 	}
-#line 3679 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3583 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 234:
-#line 1134 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_func_decl_list)= (yyvsp[-1].t_func_decl_list);}
-#line 3685 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1134 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_func_decl_list)= (yyvsp[-1].t_func_decl_list);}
+#line 3589 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 235:
-#line 1136 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_func_decl_list)=NULL;
+#line 1136 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_func_decl_list)=NULL;
 	 log_error(E_FATAL,"Syntax error in (:functions ...)");
 	}
-#line 3693 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3597 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 236:
-#line 1143 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = (yyvsp[-1].t_con_goal);}
-#line 3699 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1143 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = (yyvsp[-1].t_con_goal);}
+#line 3603 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 237:
-#line 1145 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1145 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {yyerrok; (yyval.t_con_goal)=NULL;
       log_error(E_FATAL,"Syntax error in (:constraints ...)");
       }
-#line 3707 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3611 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 238:
-#line 1152 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_con_goal) = (yyvsp[-1].t_con_goal);}
-#line 3713 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1152 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_con_goal) = (yyvsp[-1].t_con_goal);}
+#line 3617 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 239:
-#line 1154 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         {yyerrok; (yyval.t_con_goal)=NULL;
+#line 1154 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_con_goal)=NULL;
       log_error(E_FATAL,"Syntax error in (:constraints ...)");
       }
-#line 3721 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3625 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 240:
-#line 1160 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                     { (yyval.t_structure_store)=(yyvsp[-1].t_structure_store); (yyval.t_structure_store)->push_back((yyvsp[0].t_structure_def)); }
-#line 3727 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1160 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_store)=(yyvsp[-1].t_structure_store); (yyval.t_structure_store)->push_back((yyvsp[0].t_structure_def)); }
+#line 3631 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 241:
-#line 1161 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                     { (yyval.t_structure_store)= new structure_store; (yyval.t_structure_store)->push_back((yyvsp[0].t_structure_def)); }
-#line 3733 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1161 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_store)= new structure_store; (yyval.t_structure_store)->push_back((yyvsp[0].t_structure_def)); }
+#line 3637 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 242:
-#line 1165 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                          { (yyval.t_structure_def)= (yyvsp[0].t_action_def); }
-#line 3739 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1165 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_def)= (yyvsp[0].t_action_def); }
+#line 3643 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 243:
-#line 1166 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                          { (yyval.t_structure_def)= (yyvsp[0].t_event_def); requires(E_TIME); }
-#line 3745 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1166 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_def)= (yyvsp[0].t_event_def); requires(E_TIME); }
+#line 3649 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 244:
-#line 1167 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                          { (yyval.t_structure_def)= (yyvsp[0].t_process_def); requires(E_TIME); }
-#line 3751 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1167 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_def)= (yyvsp[0].t_process_def); requires(E_TIME); }
+#line 3655 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 245:
-#line 1168 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                          { (yyval.t_structure_def)= (yyvsp[0].t_durative_action_def); requires(E_DURATIVE_ACTIONS); }
-#line 3757 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1168 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_def)= (yyvsp[0].t_durative_action_def); requires(E_DURATIVE_ACTIONS); }
+#line 3661 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 246:
-#line 1169 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                          { (yyval.t_structure_def)= (yyvsp[0].t_derivation_rule); requires(E_DERIVED_PREDICATES);}
-#line 3763 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1169 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_structure_def)= (yyvsp[0].t_derivation_rule); requires(E_DERIVED_PREDICATES);}
+#line 3667 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 247:
-#line 1173 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-            {(yyval.t_dummy)= 0; 
+#line 1173 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_dummy)= 0; 
     	current_analysis->var_tab_stack.push(
     					current_analysis->buildRuleTab());}
-#line 3771 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3675 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 248:
-#line 1184 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_derivation_rule) = new derivation_rule((yyvsp[-2].t_proposition),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
-#line 3777 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1184 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_derivation_rule) = new derivation_rule((yyvsp[-2].t_proposition),(yyvsp[-1].t_goal),current_analysis->var_tab_stack.pop());}
+#line 3681 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 249:
-#line 1196 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1196 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     { (yyval.t_action_def)= current_analysis->buildAction(current_analysis->op_tab.symbol_put((yyvsp[-9].cp)),
 			(yyvsp[-6].t_var_symbol_list),(yyvsp[-3].t_goal),(yyvsp[-1].t_effect_lists),
 			current_analysis->var_tab_stack.pop()); delete [] (yyvsp[-9].cp); }
-#line 3785 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3689 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 250:
-#line 1200 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; 
+#line 1200 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
 	 log_error(E_FATAL,"Syntax error in action declaration.");
 	 (yyval.t_action_def)= NULL; }
-#line 3793 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3697 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 251:
-#line 1213 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1213 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {(yyval.t_event_def)= current_analysis->buildEvent(current_analysis->op_tab.symbol_put((yyvsp[-9].cp)),
 		   (yyvsp[-6].t_var_symbol_list),(yyvsp[-3].t_goal),(yyvsp[-1].t_effect_lists),
 		   current_analysis->var_tab_stack.pop()); delete [] (yyvsp[-9].cp);}
-#line 3801 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3705 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 252:
-#line 1218 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; 
+#line 1218 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
 	 log_error(E_FATAL,"Syntax error in event declaration.");
 	 (yyval.t_event_def)= NULL; }
-#line 3809 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3713 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 253:
-#line 1230 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1230 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {(yyval.t_process_def)= current_analysis->buildProcess(current_analysis->op_tab.symbol_put((yyvsp[-9].cp)),
 		     (yyvsp[-6].t_var_symbol_list),(yyvsp[-3].t_goal),(yyvsp[-1].t_effect_lists),
                      current_analysis->var_tab_stack.pop()); delete [] (yyvsp[-9].cp);}
-#line 3817 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3721 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 254:
-#line 1234 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; 
+#line 1234 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
 	 log_error(E_FATAL,"Syntax error in process declaration.");
 	 (yyval.t_process_def)= NULL; }
-#line 3825 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3729 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 255:
-#line 1246 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1246 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     { (yyval.t_durative_action_def)= (yyvsp[-1].t_durative_action_def);
       (yyval.t_durative_action_def)->name= current_analysis->op_tab.symbol_put((yyvsp[-8].cp));
       (yyval.t_durative_action_def)->symtab= current_analysis->var_tab_stack.pop();
@@ -3833,188 +3737,188 @@ yyreduce:
       (yyval.t_durative_action_def)->dur_constraint= (yyvsp[-2].t_goal); 
       delete [] (yyvsp[-8].cp);
     }
-#line 3837 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3741 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 256:
-#line 1255 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; 
+#line 1255 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
 	 log_error(E_FATAL,"Syntax error in durative-action declaration.");
 	 (yyval.t_durative_action_def)= NULL; }
-#line 3845 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3749 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 257:
-#line 1262 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_durative_action_def)=(yyvsp[-2].t_durative_action_def); (yyval.t_durative_action_def)->effects=(yyvsp[0].t_effect_lists);}
-#line 3851 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1262 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_durative_action_def)=(yyvsp[-2].t_durative_action_def); (yyval.t_durative_action_def)->effects=(yyvsp[0].t_effect_lists);}
+#line 3755 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 258:
-#line 1264 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_durative_action_def)=(yyvsp[-2].t_durative_action_def); (yyval.t_durative_action_def)->precondition=(yyvsp[0].t_goal);}
-#line 3857 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1264 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_durative_action_def)=(yyvsp[-2].t_durative_action_def); (yyval.t_durative_action_def)->precondition=(yyvsp[0].t_goal);}
+#line 3761 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 259:
-#line 1265 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_durative_action_def)= current_analysis->buildDurativeAction();}
-#line 3863 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1265 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_durative_action_def)= current_analysis->buildDurativeAction();}
+#line 3767 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 260:
-#line 1270 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_goal)=(yyvsp[0].t_goal); }
-#line 3869 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1270 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal)=(yyvsp[0].t_goal); }
+#line 3773 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 261:
-#line 1272 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list)); }
-#line 3875 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1272 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal)= new conj_goal((yyvsp[-1].t_goal_list)); }
+#line 3779 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 262:
-#line 1277 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_goal)); }
-#line 3881 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1277 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal_list)=(yyvsp[-1].t_goal_list); (yyval.t_goal_list)->push_back((yyvsp[0].t_goal)); }
+#line 3785 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 263:
-#line 1279 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_goal_list)= new goal_list; }
-#line 3887 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1279 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_goal_list)= new goal_list; }
+#line 3791 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 264:
-#line 1284 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_AT_START);}
-#line 3893 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1284 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_AT_START);}
+#line 3797 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 265:
-#line 1286 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_AT_END);}
-#line 3899 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1286 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_AT_END);}
+#line 3803 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 266:
-#line 1288 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_OVER_ALL);}
-#line 3905 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1288 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)= new timed_goal((yyvsp[-1].t_goal),E_OVER_ALL);}
+#line 3809 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 267:
-#line 1290 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {timed_goal * tg = dynamic_cast<timed_goal *>((yyvsp[-1].t_goal));
+#line 1290 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {timed_goal * tg = dynamic_cast<timed_goal *>((yyvsp[-1].t_goal));
 		(yyval.t_goal) = new timed_goal(new preference((yyvsp[-2].cp),tg->clearGoal()),tg->getTime());
 			delete tg;
 			requires(E_PREFERENCES);}
-#line 3914 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3818 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 268:
-#line 1295 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_goal) = new preference((yyvsp[-1].t_goal));requires(E_PREFERENCES);}
-#line 3920 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1295 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal) = new preference((yyvsp[-1].t_goal));requires(E_PREFERENCES);}
+#line 3824 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 269:
-#line 1299 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-         {(yyval.t_dummy)= 0; current_analysis->var_tab_stack.push(
+#line 1299 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_dummy)= 0; current_analysis->var_tab_stack.push(
     				current_analysis->buildOpTab());}
-#line 3927 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3831 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 270:
-#line 1304 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_EQUALITY;}
-#line 3933 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1304 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_EQUALITY;}
+#line 3837 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 271:
-#line 1305 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_STRIPS;}
-#line 3939 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1305 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_STRIPS;}
+#line 3843 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 272:
-#line 1307 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_TYPING;}
-#line 3945 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1307 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_TYPING;}
+#line 3849 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 273:
-#line 1309 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                 {(yyval.t_pddl_req_flag)= E_NEGATIVE_PRECONDITIONS;}
-#line 3951 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1309 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_NEGATIVE_PRECONDITIONS;}
+#line 3855 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 274:
-#line 1311 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_DISJUNCTIVE_PRECONDS;}
-#line 3957 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1311 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_DISJUNCTIVE_PRECONDS;}
+#line 3861 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 275:
-#line 1312 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_EXT_PRECS;}
-#line 3963 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1312 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_EXT_PRECS;}
+#line 3867 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 276:
-#line 1313 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_UNIV_PRECS;}
-#line 3969 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1313 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_UNIV_PRECS;}
+#line 3873 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 277:
-#line 1314 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_COND_EFFS;}
-#line 3975 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1314 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_COND_EFFS;}
+#line 3879 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 278:
-#line 1315 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_NFLUENTS | E_OFLUENTS;}
-#line 3981 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1315 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_NFLUENTS | E_OFLUENTS;}
+#line 3885 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 279:
-#line 1317 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_DURATIVE_ACTIONS;}
-#line 3987 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1317 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_DURATIVE_ACTIONS;}
+#line 3891 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 280:
-#line 1318 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_TIME |
+#line 1318 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_TIME |
                       E_NFLUENTS |
                       E_DURATIVE_ACTIONS; }
-#line 3995 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3899 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 281:
-#line 1321 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)=E_ACTIONCOSTS | E_NFLUENTS;}
-#line 4001 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1321 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)=E_ACTIONCOSTS | E_NFLUENTS;}
+#line 3905 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 282:
-#line 1324 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                   {(yyval.t_pddl_req_flag)=E_OFLUENTS;}
-#line 4007 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1324 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)=E_OFLUENTS;}
+#line 3911 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 283:
-#line 1325 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                    {(yyval.t_pddl_req_flag)=E_NFLUENTS;}
-#line 4013 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1325 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)=E_NFLUENTS;}
+#line 3917 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 284:
-#line 1327 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_STRIPS |
+#line 1327 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_STRIPS |
 		      E_TYPING | 
 		      E_NEGATIVE_PRECONDITIONS |
 		      E_DISJUNCTIVE_PRECONDS |
@@ -4022,368 +3926,367 @@ yyreduce:
 		      E_EXT_PRECS |
 		      E_UNIV_PRECS |
 		      E_COND_EFFS;}
-#line 4026 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3930 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 285:
-#line 1336 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_EXT_PRECS |
+#line 1336 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_EXT_PRECS |
 		      E_UNIV_PRECS;}
-#line 4033 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3937 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 286:
-#line 1340 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_DURATION_INEQUALITIES;}
-#line 4039 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1340 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_DURATION_INEQUALITIES;}
+#line 3943 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 287:
-#line 1343 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                 {(yyval.t_pddl_req_flag)= E_CONTINUOUS_EFFECTS;}
-#line 4045 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1343 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag)= E_CONTINUOUS_EFFECTS;}
+#line 3949 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 288:
-#line 1345 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                 {(yyval.t_pddl_req_flag) = E_DERIVED_PREDICATES;}
-#line 4051 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1345 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag) = E_DERIVED_PREDICATES;}
+#line 3955 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 289:
-#line 1347 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                {(yyval.t_pddl_req_flag) = E_TIMED_INITIAL_LITERALS;}
-#line 4057 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1347 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag) = E_TIMED_INITIAL_LITERALS;}
+#line 3961 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 290:
-#line 1349 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                {(yyval.t_pddl_req_flag) = E_PREFERENCES;}
-#line 4063 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1349 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag) = E_PREFERENCES;}
+#line 3967 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 291:
-#line 1351 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_pddl_req_flag) = E_CONSTRAINTS;}
-#line 4069 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1351 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_pddl_req_flag) = E_CONSTRAINTS;}
+#line 3973 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 292:
-#line 1353 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-      {log_error(E_WARNING,"Unrecognised requirements declaration ");
+#line 1353 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {log_error(E_WARNING,"Unrecognised requirements declaration ");
        (yyval.t_pddl_req_flag)= 0; delete [] (yyvsp[0].cp);}
-#line 4076 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3980 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 293:
-#line 1359 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1359 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {(yyval.t_const_symbol_list)=(yyvsp[-1].t_const_symbol_list);}
-#line 4082 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3986 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 294:
-#line 1363 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1363 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
     {(yyval.t_type_list)=(yyvsp[-1].t_type_list); requires(E_TYPING);}
-#line 4088 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 3992 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 295:
-#line 1373 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-            {(yyval.t_problem)=(yyvsp[-1].t_problem); (yyval.t_problem)->name = (yyvsp[-7].cp); (yyval.t_problem)->domain_name = (yyvsp[-3].cp);
+#line 1373 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[-1].t_problem); (yyval.t_problem)->name = (yyvsp[-7].cp); (yyval.t_problem)->domain_name = (yyvsp[-3].cp);
 		if (types_used && !types_defined) {
 			yyerrok; log_error(E_FATAL,"Syntax error in problem file - types used, but no :types section in domain file."); 
 		}
 
 	}
-#line 4099 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4003 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 296:
-#line 1380 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {yyerrok; (yyval.t_problem)=NULL;
+#line 1380 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; (yyval.t_problem)=NULL;
        	log_error(E_FATAL,"Syntax error in problem definition."); }
-#line 4106 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4010 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 297:
-#line 1386 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                         {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->req= (yyvsp[-1].t_pddl_req_flag);}
-#line 4112 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1386 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->req= (yyvsp[-1].t_pddl_req_flag);}
+#line 4016 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 298:
-#line 1387 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->objects= (yyvsp[-1].t_const_symbol_list);}
-#line 4118 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1387 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->objects= (yyvsp[-1].t_const_symbol_list);}
+#line 4022 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 299:
-#line 1388 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->initial_state= (yyvsp[-1].t_effect_lists);}
-#line 4124 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1388 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->initial_state= (yyvsp[-1].t_effect_lists);}
+#line 4028 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 300:
-#line 1389 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->the_goal= (yyvsp[-1].t_goal);}
-#line 4130 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1389 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->the_goal= (yyvsp[-1].t_goal);}
+#line 4034 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 301:
-#line 1391 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                                        {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->constraints = (yyvsp[-1].t_con_goal);}
-#line 4136 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1391 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->constraints = (yyvsp[-1].t_con_goal);}
+#line 4040 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 302:
-#line 1392 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->metric= (yyvsp[-1].t_metric);}
-#line 4142 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1392 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->metric= (yyvsp[-1].t_metric);}
+#line 4046 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 303:
-#line 1393 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->length= (yyvsp[-1].t_length_spec);}
-#line 4148 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1393 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=(yyvsp[0].t_problem); (yyval.t_problem)->length= (yyvsp[-1].t_length_spec);}
+#line 4052 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 304:
-#line 1394 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                    {(yyval.t_problem)=new problem;}
-#line 4154 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1394 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_problem)=new problem;}
+#line 4058 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 305:
-#line 1397 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                        {(yyval.t_const_symbol_list)=(yyvsp[-1].t_const_symbol_list);}
-#line 4160 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1397 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_const_symbol_list)=(yyvsp[-1].t_const_symbol_list);}
+#line 4064 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 306:
-#line 1400 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                            {(yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists);}
-#line 4166 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1400 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_effect_lists)=(yyvsp[-1].t_effect_lists);}
+#line 4070 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 307:
-#line 1403 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.vtab) = current_analysis->buildOpTab();}
-#line 4172 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1403 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.vtab) = current_analysis->buildOpTab();}
+#line 4076 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 308:
-#line 1406 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                                 {(yyval.t_goal)=(yyvsp[-1].t_goal);delete (yyvsp[-2].vtab);}
-#line 4178 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1406 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_goal)=(yyvsp[-1].t_goal);delete (yyvsp[-2].vtab);}
+#line 4082 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 309:
-#line 1411 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       { (yyval.t_metric)= new metric_spec((yyvsp[-2].t_optimization),(yyvsp[-1].t_expression)); }
-#line 4184 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1411 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_metric)= new metric_spec((yyvsp[-2].t_optimization),(yyvsp[-1].t_expression)); }
+#line 4088 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 310:
-#line 1413 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {yyerrok; 
+#line 1413 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {yyerrok; 
         log_error(E_FATAL,"Syntax error in metric declaration.");
         (yyval.t_metric)= NULL; }
-#line 4192 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4096 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 311:
-#line 1420 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-       {(yyval.t_length_spec)= new length_spec(E_BOTH,(yyvsp[-3].ival),(yyvsp[-1].ival));}
-#line 4198 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1420 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_length_spec)= new length_spec(E_BOTH,(yyvsp[-3].ival),(yyvsp[-1].ival));}
+#line 4102 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 312:
-#line 1423 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_length_spec) = new length_spec(E_SERIAL,(yyvsp[-1].ival));}
-#line 4204 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1423 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_length_spec) = new length_spec(E_SERIAL,(yyvsp[-1].ival));}
+#line 4108 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 313:
-#line 1427 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_length_spec) = new length_spec(E_PARALLEL,(yyvsp[-1].ival));}
-#line 4210 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1427 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_length_spec) = new length_spec(E_PARALLEL,(yyvsp[-1].ival));}
+#line 4114 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 314:
-#line 1433 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-            {(yyval.t_optimization)= E_MINIMIZE;}
-#line 4216 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1433 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_optimization)= E_MINIMIZE;}
+#line 4120 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 315:
-#line 1434 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-            {(yyval.t_optimization)= E_MAXIMIZE;}
-#line 4222 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1434 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_optimization)= E_MAXIMIZE;}
+#line 4126 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 316:
-#line 1439 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                               {(yyval.t_expression)= (yyvsp[-1].t_expression);}
-#line 4228 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1439 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= (yyvsp[-1].t_expression);}
+#line 4132 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 317:
-#line 1440 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                    {(yyval.t_expression)= (yyvsp[0].t_func_term);}
-#line 4234 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1440 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= (yyvsp[0].t_func_term);}
+#line 4138 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 318:
-#line 1441 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.t_expression)= (yyvsp[0].t_num_expression);}
-#line 4240 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1441 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression)= (yyvsp[0].t_num_expression);}
+#line 4144 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 319:
-#line 1442 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-               { (yyval.t_expression)= new special_val_expr(E_TOTAL_TIME); }
-#line 4246 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1442 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new special_val_expr(E_TOTAL_TIME); }
+#line 4150 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 320:
-#line 1444 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_expression) = new violation_term((yyvsp[-1].cp));}
-#line 4252 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1444 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression) = new violation_term((yyvsp[-1].cp));}
+#line 4156 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 321:
-#line 1445 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                   { (yyval.t_expression)= new special_val_expr(E_TOTAL_TIME); }
-#line 4258 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1445 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new special_val_expr(E_TOTAL_TIME); }
+#line 4162 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 322:
-#line 1449 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                  { (yyval.t_expression)= new plus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
-#line 4264 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1449 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new plus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
+#line 4168 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 323:
-#line 1450 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                         { (yyval.t_expression)= new minus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
-#line 4270 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1450 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new minus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
+#line 4174 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 324:
-#line 1451 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                                  { (yyval.t_expression)= new mul_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
-#line 4276 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1451 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new mul_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
+#line 4180 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 325:
-#line 1452 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                                         { (yyval.t_expression)= new div_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
-#line 4282 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1452 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    { (yyval.t_expression)= new div_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression)); }
+#line 4186 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 326:
-#line 1456 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                       {(yyval.t_expression) = (yyvsp[0].t_expression);}
-#line 4288 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1456 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression) = (yyvsp[0].t_expression);}
+#line 4192 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 327:
-#line 1458 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_expression) = new plus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression));}
-#line 4294 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1458 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression) = new plus_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression));}
+#line 4198 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 328:
-#line 1462 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                       {(yyval.t_expression) = (yyvsp[0].t_expression);}
-#line 4300 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1462 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression) = (yyvsp[0].t_expression);}
+#line 4204 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 329:
-#line 1464 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_expression) = new mul_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression));}
-#line 4306 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1464 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_expression) = new mul_expression((yyvsp[-1].t_expression),(yyvsp[0].t_expression));}
+#line 4210 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 330:
-#line 1470 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_plan)= (yyvsp[0].t_plan); 
+#line 1470 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_plan)= (yyvsp[0].t_plan); 
          (yyval.t_plan)->push_front((yyvsp[-1].t_step)); }
-#line 4313 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4217 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 331:
-#line 1473 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_plan) = (yyvsp[0].t_plan);(yyval.t_plan)->insertTime((yyvsp[-1].fval));}
-#line 4319 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1473 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_plan) = (yyvsp[0].t_plan);(yyval.t_plan)->insertTime((yyvsp[-1].fval));}
+#line 4223 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 332:
-#line 1475 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-                {(yyval.t_plan) = (yyvsp[0].t_plan);(yyval.t_plan)->insertTime((yyvsp[-1].ival));}
-#line 4325 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1475 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_plan) = (yyvsp[0].t_plan);(yyval.t_plan)->insertTime((yyvsp[-1].ival));}
+#line 4229 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 333:
-#line 1477 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_plan)= new plan;}
-#line 4331 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1477 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_plan)= new plan;}
+#line 4235 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 334:
-#line 1482 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_step)=(yyvsp[0].t_step); 
+#line 1482 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_step)=(yyvsp[0].t_step); 
          (yyval.t_step)->start_time_given=1; 
          (yyval.t_step)->start_time=(yyvsp[-2].fval);}
-#line 4339 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4243 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 335:
-#line 1486 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_step)=(yyvsp[0].t_step);
+#line 1486 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_step)=(yyvsp[0].t_step);
 	 (yyval.t_step)->start_time_given=0;}
-#line 4346 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4250 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 336:
-#line 1492 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_step)= (yyvsp[-3].t_step); 
+#line 1492 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_step)= (yyvsp[-3].t_step); 
 	 (yyval.t_step)->duration_given=1;
          (yyval.t_step)->duration= (yyvsp[-1].fval);}
-#line 4354 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4258 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 337:
-#line 1496 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-        {(yyval.t_step)= (yyvsp[0].t_step);
+#line 1496 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_step)= (yyvsp[0].t_step);
          (yyval.t_step)->duration_given=0;}
-#line 4361 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4265 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 338:
-#line 1502 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-      {(yyval.t_step)= new plan_step( 
+#line 1502 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.t_step)= new plan_step( 
               current_analysis->op_tab.symbol_get((yyvsp[-2].cp)), 
 	      (yyvsp[-1].t_const_symbol_list)); delete [] (yyvsp[-2].cp);
       }
-#line 4370 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 4274 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 339:
-#line 1509 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.fval)= (yyvsp[0].fval);}
-#line 4376 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1509 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.fval)= (yyvsp[0].fval);}
+#line 4280 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
   case 340:
-#line 1510 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
-             {(yyval.fval)= (float) (yyvsp[0].ival);}
-#line 4382 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
+#line 1510 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1646  */
+    {(yyval.fval)= (float) (yyvsp[0].ival);}
+#line 4286 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
     break;
 
 
-#line 4386 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp"
-
+#line 4290 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/parsing/pddl+.cpp" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -4408,13 +4311,14 @@ yyreduce:
   /* Now 'shift' the result of the reduction.  Determine what state
      that goes to, based on the state we popped back to and the rule
      number reduced by.  */
-  {
-    const int yylhs = yyr1[yyn] - YYNTOKENS;
-    const int yyi = yypgoto[yylhs] + *yyssp;
-    yystate = (0 <= yyi && yyi <= YYLAST && yycheck[yyi] == *yyssp
-               ? yytable[yyi]
-               : yydefgoto[yylhs]);
-  }
+
+  yyn = yyr1[yyn];
+
+  yystate = yypgoto[yyn - YYNTOKENS] + *yyssp;
+  if (0 <= yystate && yystate <= YYLAST && yycheck[yystate] == *yyssp)
+    yystate = yytable[yystate];
+  else
+    yystate = yydefgoto[yyn - YYNTOKENS];
 
   goto yynewstate;
 
@@ -4446,7 +4350,7 @@ yyerrlab:
           {
             if (yymsg != yymsgbuf)
               YYSTACK_FREE (yymsg);
-            yymsg = YY_CAST (char *, YYSTACK_ALLOC (YY_CAST (YYSIZE_T, yymsg_alloc)));
+            yymsg = (char *) YYSTACK_ALLOC (yymsg_alloc);
             if (!yymsg)
               {
                 yymsg = yymsgbuf;
@@ -4497,10 +4401,12 @@ yyerrlab:
 | yyerrorlab -- error raised explicitly by YYERROR.  |
 `---------------------------------------------------*/
 yyerrorlab:
-  /* Pacify compilers when the user code never invokes YYERROR and the
-     label yyerrorlab therefore never appears in user code.  */
-  if (0)
-    YYERROR;
+
+  /* Pacify compilers like GCC when the user code never invokes
+     YYERROR and the label yyerrorlab therefore never appears in user
+     code.  */
+  if (/*CONSTCOND*/ 0)
+     goto yyerrorlab;
 
   /* Do not reclaim the symbols of the rule whose action triggered
      this YYERROR.  */
@@ -4562,14 +4468,12 @@ yyacceptlab:
   yyresult = 0;
   goto yyreturn;
 
-
 /*-----------------------------------.
 | yyabortlab -- YYABORT comes here.  |
 `-----------------------------------*/
 yyabortlab:
   yyresult = 1;
   goto yyreturn;
-
 
 #if !defined yyoverflow || YYERROR_VERBOSE
 /*-------------------------------------------------.
@@ -4581,10 +4485,6 @@ yyexhaustedlab:
   /* Fall through.  */
 #endif
 
-
-/*-----------------------------------------------------.
-| yyreturn -- parsing is finished, return the result.  |
-`-----------------------------------------------------*/
 yyreturn:
   if (yychar != YYEMPTY)
     {
@@ -4601,7 +4501,7 @@ yyreturn:
   while (yyssp != yyss)
     {
       yydestruct ("Cleanup: popping",
-                  yystos[+*yyssp], yyvsp);
+                  yystos[*yyssp], yyvsp);
       YYPOPSTACK (1);
     }
 #ifndef yyoverflow
@@ -4614,7 +4514,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 1513 "/home/canfresco/Documents/AIRo2-ws/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc"
+#line 1513 "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing/pddl+.yacc" /* yacc.c:1906  */
 
 
 #include <cstdio>

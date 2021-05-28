@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ParsePDDL.dir/DebugWriteController.o"
+  "pddl+.cpp"
+  "lex.yy.cc"
   "CMakeFiles/ParsePDDL.dir/pddl+.o"
   "CMakeFiles/ParsePDDL.dir/ptree.o"
-  "lex.yy.cc"
-  "libParsePDDL.a"
+  "CMakeFiles/ParsePDDL.dir/DebugWriteController.o"
   "libParsePDDL.pdb"
-  "pddl+.cpp"
+  "libParsePDDL.a"
 )
 
 # Per-language clean rules from dependency scanning.
