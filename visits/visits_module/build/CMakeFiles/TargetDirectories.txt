@@ -1,0 +1,4 @@
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/build/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/build/CMakeFiles/edit_cache.dir
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/build/CMakeFiles/VisitMain.dir
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/build/CMakeFiles/Visits.dir

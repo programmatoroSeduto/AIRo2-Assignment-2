@@ -1,0 +1,72 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.cpp
+ExternalSolver.h
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+dlfcn.h
+-
+
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+iostream
+-
+map
+-
+list
+-
+
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.cpp
+VisitSolver.h
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+ExternalSolver.h
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+map
+-
+string
+-
+iostream
+-
+sstream
+-
+fstream
+-
+vector
+-
+algorithm
+-
+initializer_list
+-
+
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+ExternalSolver.h
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+string
+-
+vector
+-
+sstream
+-
+iomanip
+-
+queue
+-
+unordered_map
+-
+
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/main.cpp
+iostream
+-
+VisitSolver.h
+/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+fstream
+-
+list
+-
+bits/stdc++.h
+-
+
