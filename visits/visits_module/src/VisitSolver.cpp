@@ -91,6 +91,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
     string parameter = iSIt->first;
     string function = iSIt->first;
     double value = iSIt->second;
+    //cout << endl << "(string) parameter = " << parameter << " value: " << value << endl;
 
     function.erase(0,1);
     function.erase(function.length()-1,function.length());
@@ -129,8 +130,9 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 
 
                double results = calculateExtern(dummy, act_cost);
-               if (ExternalSolver::verbose){
-                cout << "(dummy) " << results << endl;
+               //if (ExternalSolver::verbose){
+               if(1){
+                //cout << "(dummy) " << results << endl;
               }
 
               toReturn["(dummy)"] = results;
@@ -150,29 +152,29 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
             }
 
 
-            void VisitSolver::parseParameters(string parameters){
+void VisitSolver::parseParameters(string parameters){
 
-              int curr, next;
-              string line;
-              ifstream parametersFile(parameters.c_str());
-              if (parametersFile.is_open()){
-                while (getline(parametersFile,line)){
-                 curr=line.find(" ");
-                 string region_name = line.substr(0,curr).c_str();
-                 curr=curr+1;
-                 while(true ){
-                  next=line.find(" ",curr);
-                  region_mapping[region_name].push_back(line.substr(curr,next-curr).c_str());
-                  if (next ==-1)
-                   break;
-                 curr=next+1;
+  int curr, next;
+  string line;
+  ifstream parametersFile(parameters.c_str());
+  if (parametersFile.is_open()){
+	while (getline(parametersFile,line)){
+	 curr=line.find(" ");
+	 string region_name = line.substr(0,curr).c_str();
+	 curr=curr+1;
+	 while(true ){
+	  next=line.find(" ",curr);
+	  region_mapping[region_name].push_back(line.substr(curr,next-curr).c_str());
+	  if (next ==-1)
+	   break;
+	 curr=next+1;
 
-               }                
-             }
+    }                
+   }
 
-           }
+  }
 
-         }
+}
 
          double VisitSolver::calculateExtern(double external, double total_cost){
        //float random1 = static_cast <float> (rand())/static_cast <float>(RAND_MAX);

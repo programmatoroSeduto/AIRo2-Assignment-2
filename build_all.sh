@@ -8,7 +8,7 @@ rm -rf ./popf-tif ./visits/visits_module/build
 git clone https://github.com/popftif/popf-tif ./popf-tif
 mkdir ./popf-tif/logs
 chmod +x ./popf-tif/planner/src/build-instructions.txt
-chmod +x ./buildInstruction.txt
+chmod +x ./visits/visits_module/src/buildInstruction.txt
 
 ## === prima compilazione === ## 
 # rm -rf ./planner/debug ./planner/release
