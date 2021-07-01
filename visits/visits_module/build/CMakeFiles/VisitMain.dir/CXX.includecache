@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.cpp
 ExternalSolver.h
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.h
 dlfcn.h
 -
 
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.h
 iostream
 -
 map
@@ -20,11 +20,11 @@ map
 list
 -
 
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.cpp
 VisitSolver.h
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.h
 ExternalSolver.h
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.h
 map
 -
 string
@@ -42,9 +42,9 @@ algorithm
 initializer_list
 -
 
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.h
 ExternalSolver.h
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/ExternalSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.h
 string
 -
 vector
@@ -58,11 +58,11 @@ queue
 unordered_map
 -
 
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/main.cpp
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/main.cpp
 iostream
 -
 VisitSolver.h
-/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_module/src/VisitSolver.h
+/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.h
 fstream
 -
 list

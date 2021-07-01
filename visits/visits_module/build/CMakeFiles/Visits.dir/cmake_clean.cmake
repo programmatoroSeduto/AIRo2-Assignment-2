@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Visits.dir/ExternalSolver.cpp.o"
   "CMakeFiles/Visits.dir/VisitSolver.cpp.o"
+  "CMakeFiles/Visits.dir/ExternalSolver.cpp.o"
   "libVisits.pdb"
   "libVisits.so"
 )
