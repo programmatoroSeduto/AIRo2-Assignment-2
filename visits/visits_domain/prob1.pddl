@@ -8,7 +8,7 @@
     (robot_in R2D2 r0)
 
     (= (act-cost) 0)
-    (= (dummy) 0)
+    (= (return-act-cost) 0)
 
  
 )

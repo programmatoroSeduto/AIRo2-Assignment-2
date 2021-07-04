@@ -12,16 +12,16 @@
 )
 
 (:functions 
-		(act-cost) (triggered ?from ?to - region) (dummy)
+		(act-cost) (compute-act-cost ?from ?to - region) (return-act-cost)
 )
 
 (:durative-action goto_region
 		:parameters (?v - robot ?from ?to - region)
 		:duration (= ?duration 100)
 		:condition (and (at start (robot_in ?v ?from)))
-	        :effect (and (at start (not (robot_in ?v ?from))) (at start (increase (triggered ?from ?to) 1))
-		(at end (robot_in ?v ?to)) (at end (assign (triggered ?from ?to) 0)) (at end (visited ?to)) 	
-                (at end (increase (act-cost) (dummy))))
+	        :effect (and (at start (not (robot_in ?v ?from))) (at start (increase (compute-act-cost ?from ?to) 1))
+		(at end (robot_in ?v ?to)) (at end (assign (compute-act-cost ?from ?to) 0)) (at end (visited ?to)) 	
+                (at end (increase (act-cost) (return-act-cost))))
 )
 
 
