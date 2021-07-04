@@ -8,11 +8,16 @@
 #include <vector>
 #include <algorithm>
 #include <initializer_list>
+#include <cmath>
 
 #include <errno.h>
 #include <unistd.h>
 
+#define PI 3.14159265
+
 using namespace std;
+using Eigen::MatrixXd;
+using Eigen::VectorXd;
 
 // ------------------------------------ MODULE INTEGRATION WITH POPF-TIF
 
@@ -159,7 +164,7 @@ void VisitSolver::loadSolver(string* parameters, int n)
 	cout << "[visitSolver] parameter file in path: '" << parameters[0] << "'" << endl;
 	if( parseParameters(parameters[0]) )
 	{
-		cout << "FATAL: unable to find file [" << parameters[0] << "]" << endl;
+		cout << "[visitSolver] FATAL: unable to find file [" << parameters[0] << "]" << endl;
 		exit(0);
 	}
 	
@@ -167,7 +172,7 @@ void VisitSolver::loadSolver(string* parameters, int n)
 	cout << "[visitSolver] waypoint file in path: '" << waypoint_file << "'" << endl;
 	if( parseWaypoint(waypoint_file) )
 	{
-		cout << "FATAL: unable to find file [" << waypoint_file << "]" << endl;
+		cout << "[visitSolver] FATAL: unable to find file [" << waypoint_file << "]" << endl;
 		exit(0);
 	}
 	
@@ -175,7 +180,7 @@ void VisitSolver::loadSolver(string* parameters, int n)
 	cout << "[visitSolver] landmark file in path: '" << landmark_file << "'" << endl;
 	if( parseLandmark(landmark_file) )
 	{
-		cout << "FATAL: unable to find file [" << landmark_file << "]" << endl;
+		cout << "[visitSolver] FATAL: unable to find file [" << landmark_file << "]" << endl;
 		exit(0);
 	}
 	
@@ -197,7 +202,7 @@ void VisitSolver::loadSolver(string* parameters, int n)
  * (compute-act-cost ?from ?to):
  * 		(assign (compute-act-cost ?from ?to) 1) : execute the computation
  * 		(assign (compute-act-cost ?from ?to) 0) : don't execute the computation
- * (return_act_cost) : the previously computed act cost
+ * (return-act-cost) : the previously computed act cost
  * 
  * */
 map<string,double> VisitSolver::callExternalSolver(map<string,double> initialState,bool isHeuristic){
@@ -207,6 +212,8 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 	map<string, double>::iterator isEnd = initialState.end();
 	map<string, double> trigger;
 	
+	double distance_cost = 0.f;
+	double conv_cost = 0.f;
 	static double act_cost = 0.f; // the computed cost of the required action
 
 	for(;iSIt!=isEnd;++iSIt)
@@ -228,15 +235,21 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 			function.erase(n,function.length()-1);
 			arg.erase(0,n+1);
 			
-			if(function=="triggered")
+			if(function == "compute-act-cost")
 			{
-				// trigger[arg] = value>0?1:0;
 				if (value>0)
 				{
 					string from = tmp.substr(0,2);
 					string to = tmp.substr(3,2);
+					
 					// compute the distance between the two waypoints
-					// localization and cost due to the covariance matrix
+					distance_cost = distance_between_regions( from, to );
+					
+					// localization and cost due to the uncertaintly
+					conv_cost = KF_localize( from, to );
+					
+					// compute the total cost
+					act_cost = distance_cost + conv_cost;
 				}
 			}
 		}
@@ -253,7 +266,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 	}
 	
 	// return the computed cost
-	toReturn["(return_act_cost)"] = act_cost;
+	toReturn["(return-act-cost)"] = act_cost;
 	
 	return toReturn;
 }
@@ -261,12 +274,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 // get (x, y) coordinates of one waypoint associated to a given region
 vector<double> VisitSolver::get_waypoint_coordinates( string region )
 {
-	vector<double> wp_coord;
-	vector<double> wp_ext = waypoint[region_mapping[region][0]];
-	wp_coord.push_back(wp_ext[0]);
-	wp_coord.push_back(wp_ext[1]);
-	
-	return wp_coord;
+	return waypoint[ region_mapping[region][0] ];
 }
 
 // compute the distance between two waypoints (only x,y)
@@ -281,6 +289,36 @@ double VisitSolver::distance_between_regions( string r1, string r2 )
 // compute the cost due to uncertainty
 double VisitSolver::KF_localize( string region_from, string region_to )
 {
-	// TODO simple Kalman Filter
-	return 0.f;
+	// state vector [x, y, angle]t
+	Eigen::VectorXd x = VectorXd(3);
+	vector<double> p_from = get_waypoint_coordinates( region_from );
+	
+	// init state to from position
+	x(0) = p_from[0];
+	x(1) = p_from[1];
+	
+	// transformation matrix
+	Eigen::MatrixXd F = MatrixXd(3, 3);
+	
+	F << 1,    0,    -sin(p_from[2]),
+	     0,    1,    cos(p_from[2]) ,
+	     0,    0,    1;
+	     
+	
+	// the covariance matrix
+	Eigen::MatrixXd P = MatrixXd(3, 3);
+	
+	P << 0.02, 0,    0,
+         0,    0.02, 0,
+         0,    0,    0.02;
+         
+	
+	// update state
+	x = F * x;
+	
+	// update covariance matrix
+	P = F * P * F.transpose();
+	
+	// return the cost due to uncertaintly
+	return ( P(0,0)+P(1,1)+P(2,2) );
 }

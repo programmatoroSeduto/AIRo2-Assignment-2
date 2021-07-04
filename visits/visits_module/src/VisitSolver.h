@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <queue>
 #include <unordered_map>
+#include "Eigen/Dense"
 
 using namespace std;
 
