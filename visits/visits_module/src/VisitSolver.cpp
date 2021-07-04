@@ -253,7 +253,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 					// compute the total cost
 					act_cost = distance_cost + conv_cost;
 					
-					cout << "[visitSolver] compute-act-cost: " << act_cost << endl;
+					cout << "[visitSolver] compute-act-cost: " << act_cost << " (" << distance_cost << " + " << conv_cost << ")" << endl;
 				}
 			}
 		}
