@@ -1,22 +1,3 @@
-/*
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) 2015  <copyright holder> <email>
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-
 #ifndef TESTSOLVER_H
 #define TESTSOLVER_H
 
@@ -32,36 +13,51 @@ using namespace std;
 
 class VisitSolver : public ExternalSolver
 {
-public:
-    VisitSolver();
-    ~VisitSolver();
-    virtual void loadSolver(string* parameters, int n);
-    virtual map<string,double> callExternalSolver(map<string,double> initialState, bool isHeuristic);
-    virtual  list<string> getParameters();
-    virtual  list<string> getDependencies();
-    map<string, vector<double>> waypoint;
-    map<string, vector<double>> landmark;
-   
-    void parseWaypoint(string waypoint_file);
-    void parseLandmark(string landmark_file);
-     
-    map<string, vector<string>> region_mapping;
-    vector <string> source, target; 
-    string starting_position;
-     
-   
-   
-    void parseParameters(string parameters);
- 
+	public:
+		
+		// ----------------------------------- DATA
+		
+		// names of the data files
+		string waypoint_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/waypoint.txt";
+		string landmark_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/landmark.txt";
+		
+		// starting region (always r0)
+		string starting_position;
+		
+		// waypoints
+		map<string, vector<double>> waypoint;
+		//landmarks
+		map<string, vector<double>> landmark;
+		// association regions-waypoints (1by1)
+		map<string, vector<string>> region_mapping;
+		
+		// ----------------------------------- METHODS
+		
+		// integration with popf-tif
+		virtual list<string> getParameters();
+		virtual list<string> getDependencies();
+		
+		// constructor, destructor
+		VisitSolver();
+		~VisitSolver();
+		
+		// files parsing utilities
+		void parseWaypoint(string waypoint_file);
+		void parseLandmark(string landmark_file);
+		void parseParameters(string parameters);
+		
+		// initilization of the solver
+		virtual void loadSolver(string* parameters, int n);
+		
+		// implementation of the sempatic attachment
+		virtual map<string,double> callExternalSolver(map<string,double> initialState, bool isHeuristic);
 
-private:
-    list<string> affected;
-    list<string> dependencies;
-      
-    double calculateExtern(double external, double total_cost);
-    //void localize(string from, string to);
-    vector<string> findParameters(string line, int&n);
-
+	private:
+	
+		// integration with popf-tif
+		list<string> affected;
+		list<string> dependencies;
+		vector<string> findParameters(string line, int&n);
 };
 
 #endif // TESTSOLVER_H

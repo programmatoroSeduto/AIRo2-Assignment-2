@@ -1,22 +1,3 @@
-    /*
-     <one line to give the program's name and a brief idea of what it does.>
-     Copyright (C) 2015  <copyright holder> <email>
-     
-     This program is free software: you can redistribute it and/or modify
-     it under the terms of the GNU General Public License as published by
-     the Free Software Foundation, either version 3 of the License, or
-     (at your option) any later version.
-     
-     This program is distributed in the hope that it will be useful,
-     but WITHOUT ANY WARRANTY; without even the implied warranty of
-     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-     GNU General Public License for more details.
-     
-     You should have received a copy of the GNU General Public License
-     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-     */
-
-
 #include "VisitSolver.h"
 #include "ExternalSolver.h"
 #include <map>
@@ -26,225 +7,224 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
-
-//include "armadillo"
 #include <initializer_list>
 
 using namespace std;
-//using namespace arma;
 
+// ------------------------------------ MODULE INTEGRATION WITH POPF-TIF
 
-
-    //map <string, vector<double> > region_mapping;
-
+// module integration with popf-tif
 extern "C" ExternalSolver* create_object(){
-  return new VisitSolver();
+return new VisitSolver();
 }
 
 extern "C" void destroy_object(ExternalSolver *externalSolver){
-  delete externalSolver;
+delete externalSolver;
 }
 
+list<string> VisitSolver::getParameters()
+{
+	return affected;
+}
+
+list<string> VisitSolver::getDependencies()
+{
+	return dependencies;
+}
+
+
+
+// ------------------------------------ CONSTRUCTOR, DESTRUCTOR
+
+// empty constructor
 VisitSolver::VisitSolver(){
 
 }
 
+// empty destructor
 VisitSolver::~VisitSolver(){
 
 }
 
-void VisitSolver::loadSolver(string *parameters, int n){
-  starting_position = "r0";
-  string Paramers = parameters[0];
-
-  char const *x[]={"dummy"};
-  char const *y[]={"act-cost","triggered"};
-  parseParameters(Paramers);
-  affected = list<string>(x,x+1);
-  dependencies = list<string>(y,y+2);
-
-  //string waypoint_file = "/home/antony/visits/visits_domain/waypoint.txt";
-  string waypoint_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/waypoint.txt";
-  parseWaypoint(waypoint_file);
-
-  //string landmark_file = "/home/antony/visits/visits_domain/landmark.txt";
-  string landmark_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/landmark.txt";
-  parseLandmark(landmark_file);
 
 
-        //startEKF();
+// ------------------------------------ LOAD SOLVER
+
+// file 'region_poses'
+// format: <region> <waypoint>
+void VisitSolver::parseParameters(string parameters)
+{
+	int curr, next;
+	string line;
+	ifstream parametersFile(parameters.c_str());
+	if (parametersFile.is_open())
+	{
+		while(getline(parametersFile,line))
+		{
+			curr=line.find(" ");
+			string region_name = line.substr(0,curr).c_str();
+			curr=curr+1;
+			while(true)
+			{
+				next=line.find(" ",curr);
+				region_mapping[region_name].push_back(line.substr(curr,next-curr).c_str());
+				
+				if (next ==-1) break;
+				else curr=next+1;
+			}                
+		}
+	}
 }
 
+// file 'waypoints.txt'
+// format: <name>[<x>,<y>,<angle>]
+void VisitSolver::parseWaypoint(string waypoint_file)
+{
+	int curr, next;
+	string line;
+	double pose1, pose2, pose3;
+	ifstream parametersFile(waypoint_file);
+	if (parametersFile.is_open())
+	{
+		while (getline(parametersFile,line))
+		{
+			curr=line.find("[");
+			string waypoint_name = line.substr(0,curr).c_str();
+
+			curr=curr+1;
+			next=line.find(",",curr);
+
+			pose1 = (double)atof(line.substr(curr,next-curr).c_str());
+			curr=next+1; next=line.find(",",curr);
+
+			pose2 = (double)atof(line.substr(curr,next-curr).c_str());
+			curr=next+1; next=line.find("]",curr);
+
+			pose3 = (double)atof(line.substr(curr,next-curr).c_str());
+
+			waypoint[waypoint_name] = vector<double> {pose1, pose2, pose3};
+		}
+	}
+}
+
+// file 'landmarks.txt'
+// format: <name>[<x>,<y>,<angle>]
+void VisitSolver::parseLandmark(string landmark_file)
+{
+	int curr, next;
+	string line;
+	double pose1, pose2, pose3;
+	ifstream parametersFile(landmark_file);
+	if (parametersFile.is_open())
+	{
+		while (getline(parametersFile,line))
+		{
+			curr=line.find("[");
+			string landmark_name = line.substr(0,curr).c_str();
+
+			curr=curr+1;
+			next=line.find(",",curr);
+
+			pose1 = (double)atof(line.substr(curr,next-curr).c_str());
+			curr=next+1; next=line.find(",",curr);
+
+			pose2 = (double)atof(line.substr(curr,next-curr).c_str());
+			curr=next+1; next=line.find("]",curr);
+
+			pose3 = (double)atof(line.substr(curr,next-curr).c_str());
+
+			landmark[landmark_name] = vector<double> {pose1, pose2, pose3};
+		}
+	}
+}
+
+// load the three required files
+void VisitSolver::loadSolver(string* parameters, int n)
+{
+	// parsing region_poses file
+	parseParameters(parameters[0]);
+	
+	// parsing waypoint file 
+	parseWaypoint(waypoint_file);
+	
+	// parsing landmark file
+	parseLandmark(landmark_file);
+	
+	// other inits
+	starting_position = "r0";
+	char const *x[]={"return-act-cost"};
+	char const *y[]={"act-cost","compute-act-cost"};
+	affected = list<string>(x,x+1);
+	dependencies = list<string>(y,y+2);
+}
+
+
+
+// ------------------------------------ SEMANTIC ATTACHMENT
+
+/*
+ * PROVIDED FLUENTS:
+ * (compute-act-cost ?from ?to):
+ * 		(assign (compute-act-cost ?from ?to) 1) : execute the computation
+ * 		(assign (compute-act-cost ?from ?to) 0) : don't execute the computation
+ * (return_act_cost) : the previously computed act cost
+ * 
+ * */
 map<string,double> VisitSolver::callExternalSolver(map<string,double> initialState,bool isHeuristic){
 
-  map<string, double> toReturn;
-  map<string, double>::iterator iSIt = initialState.begin();
-  map<string, double>::iterator isEnd = initialState.end();
-  double dummy;
-  double act_cost;
+	map<string, double> toReturn;
+	map<string, double>::iterator iSIt = initialState.begin();
+	map<string, double>::iterator isEnd = initialState.end();
+	map<string, double> trigger;
+	
+	static double act_cost = 0.f; // the computed cost of the required action
 
+	for(;iSIt!=isEnd;++iSIt)
+	{
+		string parameter = iSIt->first; // name of the fluent
+		string function = iSIt->first;
+		double value = iSIt->second;    // value of the fluent, if any
 
-  map<string, double> trigger;
+		function.erase(0,1);
+		function.erase(function.length()-1,function.length());
+		int n=function.find(" ");
 
-  for(;iSIt!=isEnd;++iSIt){
-
-    string parameter = iSIt->first;
-    string function = iSIt->first;
-    double value = iSIt->second;
-    //cout << endl << "(string) parameter = " << parameter << " value: " << value << endl;
-
-    function.erase(0,1);
-    function.erase(function.length()-1,function.length());
-    int n=function.find(" ");
-
-    if(n!=-1){
-      string arg=function;
-      string tmp = function.substr(n+1,5);
-
-      function.erase(n,function.length()-1);
-      arg.erase(0,n+1);
-      if(function=="triggered"){
-        trigger[arg] = value>0?1:0;
-        if (value>0){
-
-      string from = tmp.substr(0,2);   // from and to are regions, need to extract wps (poses)
-      string to = tmp.substr(3,2);
-
-
-     // localize(from, to);
-
-    }
-  }
-}else{
-  if(function=="dummy"){
-    dummy = value;
-
-  }else if(function=="act-cost"){
-    act_cost = value;
-                 } //else if(function=="dummy1"){
-                    //duy = value;              
-                    ////cout << parameter << " " << value << endl;
-                 //}
-                 }
-               }
-
-
-               double results = calculateExtern(dummy, act_cost);
-               //if (ExternalSolver::verbose){
-               if(1){
-                //cout << "(dummy) " << results << endl;
-              }
-
-              toReturn["(dummy)"] = results;
-
-
-              return toReturn;
-            }
-
-            list<string> VisitSolver::getParameters(){
-
-              return affected;
-            }
-
-            list<string> VisitSolver::getDependencies(){
-
-              return dependencies;
-            }
-
-
-void VisitSolver::parseParameters(string parameters){
-
-  int curr, next;
-  string line;
-  ifstream parametersFile(parameters.c_str());
-  if (parametersFile.is_open()){
-	while (getline(parametersFile,line)){
-	 curr=line.find(" ");
-	 string region_name = line.substr(0,curr).c_str();
-	 curr=curr+1;
-	 while(true ){
-	  next=line.find(" ",curr);
-	  region_mapping[region_name].push_back(line.substr(curr,next-curr).c_str());
-	  if (next ==-1)
-	   break;
-	 curr=next+1;
-
-    }                
-   }
-
-  }
-
+		if(n!=-1)
+		{
+			// fluent con argomenti
+			
+			string arg=function;
+			string tmp = function.substr(n+1,5);
+			function.erase(n,function.length()-1);
+			arg.erase(0,n+1);
+			
+			if(function=="triggered")
+			{
+				// trigger[arg] = value>0?1:0;
+				if (value>0)
+				{
+					string from = tmp.substr(0,2);
+					string to = tmp.substr(3,2);
+					// compute the distance between the two waypoints
+					// localization and cost due to the covariance matrix
+				}
+			}
+		}
+		else
+		{
+			/*
+			if(function == "nome_del_fluent")
+			{
+				// fluent senza argomenti
+				// implementazione del fluent in lettura
+			}
+			* */
+		}
+	}
+	
+	// return the computed cost
+	toReturn["(return_act_cost)"] = act_cost;
+	
+	return toReturn;
 }
-
-         double VisitSolver::calculateExtern(double external, double total_cost){
-       //float random1 = static_cast <float> (rand())/static_cast <float>(RAND_MAX);
-       double cost = 2;//random1;
-       return cost;
-     }
-
-     void VisitSolver::parseWaypoint(string waypoint_file){
-
-       int curr, next;
-       string line;
-       double pose1, pose2, pose3;
-       ifstream parametersFile(waypoint_file);
-       if (parametersFile.is_open()){
-        while (getline(parametersFile,line)){
-         curr=line.find("[");
-         string waypoint_name = line.substr(0,curr).c_str();
-
-         curr=curr+1;
-         next=line.find(",",curr);
-
-         pose1 = (double)atof(line.substr(curr,next-curr).c_str());
-         curr=next+1; next=line.find(",",curr);
-
-         pose2 = (double)atof(line.substr(curr,next-curr).c_str());
-         curr=next+1; next=line.find("]",curr);
-
-         pose3 = (double)atof(line.substr(curr,next-curr).c_str());
-
-         waypoint[waypoint_name] = vector<double> {pose1, pose2, pose3};
-       }
-     }
-
-   }
-
-   void VisitSolver::parseLandmark(string landmark_file){
-
-     int curr, next;
-     string line;
-     double pose1, pose2, pose3;
-     ifstream parametersFile(landmark_file);
-     if (parametersFile.is_open()){
-      while (getline(parametersFile,line)){
-       curr=line.find("[");
-       string landmark_name = line.substr(0,curr).c_str();
-       
-       curr=curr+1;
-       next=line.find(",",curr);
-
-       pose1 = (double)atof(line.substr(curr,next-curr).c_str());
-       curr=next+1; next=line.find(",",curr);
-
-       pose2 = (double)atof(line.substr(curr,next-curr).c_str());
-       curr=next+1; next=line.find("]",curr);
-
-       pose3 = (double)atof(line.substr(curr,next-curr).c_str());
-
-       landmark[landmark_name] = vector<double> {pose1, pose2, pose3};
-     }
-   }
-   
- }
-
-
-  //void VisitSolver::localize( string from, string to){
-  //} 
-
-
-
-
-
-
 
