@@ -19,8 +19,9 @@ class VisitSolver : public ExternalSolver
 		// ----------------------------------- DATA
 		
 		// names of the data files
-		string waypoint_file = "/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_domain/waypoint.txt";
-		string landmark_file = "/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_domain/landmark.txt";
+		string parameter_file = "./visits/visits_domain/region_poses";
+		string waypoint_file = "./visits/visits_domain/waypoint.txt";
+		string landmark_file = "./visits/visits_domain/landmark.txt";
 		
 		// starting region (always r0)
 		string starting_position;

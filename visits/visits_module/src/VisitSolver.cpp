@@ -161,10 +161,10 @@ int VisitSolver::parseLandmark(string landmark_file)
 void VisitSolver::loadSolver(string* parameters, int n)
 {
 	// parsing region_poses file
-	cout << "[visitSolver] parameter file in path: '" << parameters[0] << "'" << endl;
+	cout << "[visitSolver] parameter file in path: '" << parameter_file << "'" << endl;
 	if( parseParameters(parameters[0]) )
 	{
-		cout << "[visitSolver] FATAL: unable to find file [" << parameters[0] << "]" << endl;
+		cout << "[visitSolver] FATAL: unable to find file [" << parameter_file << "]" << endl;
 		exit(0);
 	}
 	
