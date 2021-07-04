@@ -41,6 +41,10 @@ algorithm
 -
 initializer_list
 -
+errno.h
+-
+unistd.h
+-
 
 /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.h
 ExternalSolver.h

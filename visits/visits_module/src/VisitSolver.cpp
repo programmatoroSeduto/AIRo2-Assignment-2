@@ -9,16 +9,21 @@
 #include <algorithm>
 #include <initializer_list>
 
+#include <errno.h>
+#include <unistd.h>
+
 using namespace std;
 
 // ------------------------------------ MODULE INTEGRATION WITH POPF-TIF
 
 // module integration with popf-tif
-extern "C" ExternalSolver* create_object(){
+extern "C" ExternalSolver* create_object()
+{
 return new VisitSolver();
 }
 
-extern "C" void destroy_object(ExternalSolver *externalSolver){
+extern "C" void destroy_object(ExternalSolver *externalSolver)
+{
 delete externalSolver;
 }
 
@@ -52,7 +57,7 @@ VisitSolver::~VisitSolver(){
 
 // file 'region_poses'
 // format: <region> <waypoint>
-void VisitSolver::parseParameters(string parameters)
+int VisitSolver::parseParameters(string parameters)
 {
 	int curr, next;
 	string line;
@@ -74,11 +79,14 @@ void VisitSolver::parseParameters(string parameters)
 			}                
 		}
 	}
+	else return -1;
+	
+	return 0;
 }
 
 // file 'waypoints.txt'
 // format: <name>[<x>,<y>,<angle>]
-void VisitSolver::parseWaypoint(string waypoint_file)
+int VisitSolver::parseWaypoint(string waypoint_file)
 {
 	int curr, next;
 	string line;
@@ -105,11 +113,14 @@ void VisitSolver::parseWaypoint(string waypoint_file)
 			waypoint[waypoint_name] = vector<double> {pose1, pose2, pose3};
 		}
 	}
+	else return -1;
+	
+	return 0;
 }
 
 // file 'landmarks.txt'
 // format: <name>[<x>,<y>,<angle>]
-void VisitSolver::parseLandmark(string landmark_file)
+int VisitSolver::parseLandmark(string landmark_file)
 {
 	int curr, next;
 	string line;
@@ -136,22 +147,41 @@ void VisitSolver::parseLandmark(string landmark_file)
 			landmark[landmark_name] = vector<double> {pose1, pose2, pose3};
 		}
 	}
+	else return -1;
+	
+	return 0;
 }
 
 // load the three required files
 void VisitSolver::loadSolver(string* parameters, int n)
 {
 	// parsing region_poses file
-	parseParameters(parameters[0]);
+	cout << "[visitSolver] parameter file in path: '" << parameters[0] << "'" << endl;
+	if( parseParameters(parameters[0]) )
+	{
+		cout << "FATAL: unable to find file [" << parameters[0] << "]" << endl;
+		exit(0);
+	}
 	
 	// parsing waypoint file 
-	parseWaypoint(waypoint_file);
+	cout << "[visitSolver] waypoint file in path: '" << waypoint_file << "'" << endl;
+	if( parseWaypoint(waypoint_file) )
+	{
+		cout << "FATAL: unable to find file [" << waypoint_file << "]" << endl;
+		exit(0);
+	}
 	
 	// parsing landmark file
-	parseLandmark(landmark_file);
+	cout << "[visitSolver] landmark file in path: '" << landmark_file << "'" << endl;
+	if( parseLandmark(landmark_file) )
+	{
+		cout << "FATAL: unable to find file [" << landmark_file << "]" << endl;
+		exit(0);
+	}
 	
 	// other inits
 	starting_position = "r0";
+	cout << "[visitSolver] starting region: '" << starting_position << "'" << endl;
 	char const *x[]={"return-act-cost"};
 	char const *y[]={"act-cost","compute-act-cost"};
 	affected = list<string>(x,x+1);
@@ -228,18 +258,24 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 	return toReturn;
 }
 
-// get coordinates of a waypoint
+// get (x, y) coordinates of one waypoint associated to a given region
 vector<double> VisitSolver::get_waypoint_coordinates( string region )
 {
-	// TODO get (x,y) of a given waypoint using the region
-	return vector<double>();
+	vector<double> wp_coord;
+	vector<double> wp_ext = waypoint[region_mapping[region][0]];
+	wp_coord.push_back(wp_ext[0]);
+	wp_coord.push_back(wp_ext[1]);
+	
+	return wp_coord;
 }
 
 // compute the distance between two waypoints (only x,y)
 double VisitSolver::distance_between_regions( string r1, string r2 )
 {
-	// TODO eucledian distance between regions (waypoints)
-	return 0.f;
+	vector<double> p1 = get_waypoint_coordinates( r1 );
+	vector<double> p2 = get_waypoint_coordinates( r2 );
+	
+	return ((p2[0]-p1[0])*(p2[0]-p1[0]) + (p2[1]-p1[1])*(p2[1]-p1[1]));
 }
 
 // compute the cost due to uncertainty

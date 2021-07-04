@@ -18,8 +18,8 @@ class VisitSolver : public ExternalSolver
 		// ----------------------------------- DATA
 		
 		// names of the data files
-		string waypoint_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/waypoint.txt";
-		string landmark_file = "/home/kk/Desktop/mnt/hgfs/winshared/AIRo2 Assignment 2/main/visits/visits_domain/landmark.txt";
+		string waypoint_file = "/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_domain/waypoint.txt";
+		string landmark_file = "/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_domain/landmark.txt";
 		
 		// starting region (always r0)
 		string starting_position;
@@ -42,9 +42,9 @@ class VisitSolver : public ExternalSolver
 		~VisitSolver();
 		
 		// files parsing utilities
-		void parseWaypoint(string waypoint_file);
-		void parseLandmark(string landmark_file);
-		void parseParameters(string parameters);
+		int parseWaypoint(string waypoint_file);
+		int parseLandmark(string landmark_file);
+		int parseParameters(string parameters);
 		
 		// initilization of the solver
 		virtual void loadSolver(string* parameters, int n);
