@@ -228,3 +228,23 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 	return toReturn;
 }
 
+// get coordinates of a waypoint
+vector<double> VisitSolver::get_waypoint_coordinates( string region )
+{
+	// TODO get (x,y) of a given waypoint using the region
+	return vector<double>();
+}
+
+// compute the distance between two waypoints (only x,y)
+double VisitSolver::distance_between_regions( string r1, string r2 )
+{
+	// TODO eucledian distance between regions (waypoints)
+	return 0.f;
+}
+
+// compute the cost due to uncertainty
+double VisitSolver::KF_localize( string region_from, string region_to )
+{
+	// TODO simple Kalman Filter
+	return 0.f;
+}

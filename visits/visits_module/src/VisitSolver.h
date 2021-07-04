@@ -58,6 +58,15 @@ class VisitSolver : public ExternalSolver
 		list<string> affected;
 		list<string> dependencies;
 		vector<string> findParameters(string line, int&n);
+		
+		// get coordinates of a waypoint
+		vector<double> get_waypoint_coordinates( string region );
+		
+		// compute the distance between two waypoints (only x,y)
+		double distance_between_regions( string region_from, string region_to );
+		
+		// compute the cost due to uncertainty
+		double KF_localize( string region_from, string region_to );
 };
 
 #endif // TESTSOLVER_H
