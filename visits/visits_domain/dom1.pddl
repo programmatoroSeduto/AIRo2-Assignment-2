@@ -25,9 +25,17 @@
 )
 
 
-;;(:durative-action localize
-;; ...................
-;;)
+(:durative-action localize
+	:parameters (?v - robot ?from ?to - region)
+		:duration (= ?duration 1)
+		:condition (and )
+	        :effect (and
+				(at start (increase (compute-act-cost ?from ?to) 1))
+				(at end (assign (compute-act-cost ?from ?to) 0))
+	        )
+)
+
+
 
 
 
