@@ -7,31 +7,42 @@
 )
 
 (:predicates
-		(robot_in ?v - robot ?r - region) (visited ?r - region )
+		(robot_in ?v - robot ?r - region) (visited ?r - region ) (arrived)
+		(not_arrived) (plan ?from - region ?to - region) (not-planning)
 	      
 )
 
 (:functions 
-		(act-cost) (compute-act-cost ?from ?to - region) (return-act-cost)
+		(act-cost) (triggered ?from ?to - region) (dummy)
 )
 
 (:durative-action goto_region
 		:parameters (?v - robot ?from ?to - region)
 		:duration (= ?duration 100)
-		:condition (and (at start (robot_in ?v ?from)))
-	        :effect (and (at start (not (robot_in ?v ?from))) (at start (increase (compute-act-cost ?from ?to) 1))
-		(at end (robot_in ?v ?to)) (at end (assign (compute-act-cost ?from ?to) 0)) (at end (visited ?to)) 	
-                (at end (increase (act-cost) (return-act-cost))))
+		:condition (and (at start (robot_in ?v ?from)) (at start (not_arrived)) )
+	        :effect (and (at start (not (robot_in ?v ?from)))  
+	        ;(at start (increase (triggered ?from ?to) 1))
+	        (at start ( plan ?from ?to))
+			(at end (robot_in ?v ?to)) 
+			;(at end (assign (triggered ?from ?to) 0)) 
+			(at end (visited ?to)) (at end (not (not_arrived))) (at end (arrived))
+				
+                )
 )
 
 
 (:durative-action localize
 	:parameters (?v - robot ?from ?to - region)
 		:duration (= ?duration 1)
-		:condition (and )
+		:condition (and (at start (arrived)) (at start (plan ?from ?to)))
 	        :effect (and
-				(at start (increase (compute-act-cost ?from ?to) 1))
-				(at end (assign (compute-act-cost ?from ?to) 0))
+				(at start (increase (triggered ?from ?to) 1))
+				(at end (assign (triggered ?from ?to) 0))
+				(at end (not ( plan ?from ?to))) 
+				;(at end (increase (act-cost) (dummy)))
+				(at end (not (arrived))) (at end (not_arrived))
+				(at end (increase (act-cost) (dummy)))
+				
 	        )
 )
 
