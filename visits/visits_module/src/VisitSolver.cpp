@@ -187,8 +187,8 @@ void VisitSolver::loadSolver(string* parameters, int n)
 	// other inits
 	starting_position = "r0";
 	cout << "[visitSolver] starting region: '" << starting_position << "'" << endl;
-	char const *x[]={"return-act-cost"};
-	char const *y[]={"act-cost","compute-act-cost"};
+	char const *x[]={"dummy"};
+	char const *y[]={"act-cost","triggered"};
 	affected = list<string>(x,x+1);
 	dependencies = list<string>(y,y+2);
 }
@@ -235,11 +235,11 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 			function.erase(n,function.length()-1);
 			arg.erase(0,n+1);
 			
-			if(function == "compute-act-cost")
+			if(function == "triggered")
 			{
 				if (value>0)
 				{
-					cout << endl << "[visitSolver] compute-act-cost: " << parameter << endl;
+					cout << endl << "[visitSolver] triggered: " << parameter << endl;
 					
 					string from = tmp.substr(0,2);
 					string to = tmp.substr(3,2);
@@ -253,7 +253,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 					// compute the total cost
 					act_cost = distance_cost + conv_cost;
 					
-					cout << "[visitSolver] compute-act-cost: " << act_cost << " (" << distance_cost << " + " << conv_cost << ")" << endl;
+					cout << "[visitSolver] triggered: " << act_cost << " (" << distance_cost << " + " << conv_cost << ")" << endl;
 				}
 			}
 		}
@@ -270,7 +270,7 @@ map<string,double> VisitSolver::callExternalSolver(map<string,double> initialSta
 	}
 	
 	// return the computed cost
-	toReturn["(return-act-cost)"] = act_cost;
+	toReturn["(dummy)"] = act_cost;
 	
 	return toReturn;
 }
@@ -322,7 +322,8 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	
 	// update covariance matrix
 	P = F * P * F.transpose();
-	
+	//if ( region_from=="r0" && region_to=="r4" ) 
+	//{ 	return 100000;}
 	// return the cost due to uncertaintly
 	return ( P(0,0)+P(1,1)+P(2,2) );
 }

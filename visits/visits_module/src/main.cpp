@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     map<string,double> initialState;
 
     initialState["(act-cost)"] = 0;
-    initialState["(dummy)"] = 0;
+    initialState["(return-act-cost)"] = 0;
     
 
     // Declaring Vector of String type 
@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
     for (int i=0; i<region.size(); i++)   { 
     for(int j=0; j<region.size(); j++){
        if (i != j){       
-        initialState["(triggered " + region[i] + " " + region[j]+")"] = 0;
+        initialState["(compute-act-cost " + region[i] + " " + region[j]+")"] = 0;
        }
     }
     }   
