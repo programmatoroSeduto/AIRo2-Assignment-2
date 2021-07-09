@@ -9,10 +9,12 @@
 #include <algorithm>
 #include <initializer_list>
 #include <cmath>
-
+#include "cstdlib"
 #include <errno.h>
 #include <unistd.h>
+#include <math.h>
 
+#include "armadillo"
 #define PI 3.14159265
 
 using namespace std;
@@ -290,40 +292,142 @@ double VisitSolver::distance_between_regions( string r1, string r2 )
 	return ((p2[0]-p1[0])*(p2[0]-p1[0]) + (p2[1]-p1[1])*(p2[1]-p1[1]));
 }
 
+vector<double> VisitSolver::closest_landmark (vector<double> pos)
+{
+	double temp[4]={0,0,0,0};
+	temp[0]= (pos[0]- landmark["l1"][0])*(pos[0]- landmark["l1"][0])+(pos[1]- landmark["l1"][1])*(pos[1]- landmark["l1"][1]);
+	temp[1]= (pos[0]- landmark["l2"][0])*(pos[0]- landmark["l2"][0])+(pos[1]- landmark["l2"][1])*(pos[1]- landmark["l2"][1]);
+	temp[2]= (pos[0]- landmark["l3"][0])*(pos[0]- landmark["l3"][0])+(pos[1]- landmark["l3"][1])*(pos[1]- landmark["l3"][1]);
+	temp[3]= (pos[0]- landmark["l4"][0])*(pos[0]- landmark["l4"][0])+(pos[1]- landmark["l4"][1])*(pos[1]- landmark["l4"][1]);
+
+    double minimum=temp[0];
+    int j = 0;
+
+    for (int i = 0; i < 3; i++)
+    {
+      if(temp[i]>temp[i+1])
+      {
+        minimum = temp[i + 1];
+        j = i + 1;
+      }
+    }
+    
+    if (j==0)
+    {
+		return landmark["l1"];
+		}
+	else if (j==1)
+	{
+		return landmark["l2"];
+	}
+	else if (j==2)
+	{
+		return landmark["l3"];
+	}
+	else if (j==3)
+	{
+		return landmark["l4"];
+	}	
+	
+}
+
 // compute the cost due to uncertainty
 double VisitSolver::KF_localize( string region_from, string region_to )
 {
+	// Init Matrices
+	Eigen::MatrixXd F = MatrixXd(3, 3);
+	Eigen::MatrixXd P = MatrixXd(3, 3);
+	Eigen::MatrixXd C = MatrixXd(2, 3);
+	Eigen::MatrixXd Q = MatrixXd(3, 3);
+	Eigen::MatrixXd R = MatrixXd(3, 3);
+	Eigen::MatrixXd S = MatrixXd(3, 3);
+	Eigen::MatrixXd K = MatrixXd(3, 2);
+	Eigen::MatrixXd I = MatrixXd(3, 3);
+	
+	F << 1,    0,    0,
+	     0,    1,    0 ,
+	     0,    0,    1;
 	// state vector [x, y, angle]t
 	Eigen::VectorXd x = VectorXd(3);
 	vector<double> p_from = get_waypoint_coordinates( region_from );
+	vector<double> p_to = get_waypoint_coordinates( region_to );
+	vector<double> land_near;
+	vector<double> land_near_clean;
 	
 	// init state to from position
 	x(0) = p_from[0];
 	x(1) = p_from[1];
+	x(2)= p_from[2];
 	
 	// transformation matrix
-	Eigen::MatrixXd F = MatrixXd(3, 3);
-	
-	F << 1,    0,    -sin(p_from[2]),
-	     0,    1,    cos(p_from[2]) ,
+	F << 1,    0,    -sin(x(2)),
+	     0,    1,    cos(x(2)) ,
 	     0,    0,    1;
 	     
-	
 	// the covariance matrix
-	Eigen::MatrixXd P = MatrixXd(3, 3);
-	
 	P << 0.02, 0,    0,
          0,    0.02, 0,
          0,    0,    0.02;
+   
+   // calculate the white noise      
+     land_near = closest_landmark(p_from);
+     land_near_clean=land_near;
+   double mean = 0;
+   double stddev = 0.5;
+   std::default_random_engine generator;
+   std::normal_distribution<double> gaussian(mean, stddev);
+
+   for (int i = 0; i < 25; i++)
+   {
+     land_near[0] += gaussian(generator);
+     land_near[1] += gaussian(generator);
+   }
+   
+       mean = 0;
+    stddev = 0.2;
+   std::default_random_engine generator1;
+   std::normal_distribution<double> gaussian1(mean, stddev);
+
+   for (int i = 0; i < 25; i++)
+   {
+     land_near[2] += gaussian1(generator1);
+   }
+       
+    // the measurment matrix
+	C << 2*(x[0]-land_near[0]), 2*(x[1]-land_near[1]),    0,
+         0,    0, 1;
          
-	
-	// update state
+    // Q alpha
+    Q << 0, 0, 0,
+       0, 0, 0,
+       0, 0, 0;  
+            
+    Eigen::VectorXd alpha = VectorXd(3);
+    alpha[0] = 0.5 * 0.5;
+    alpha[1] = 0.5 * 0.5;
+    alpha[2] = 0.2 * 0.2;
+        
+    //Process noise covariance matrix, measurment error
+    R << alpha[0], 0, 0,
+       0, alpha[1], 0,
+       0, 0, alpha[2];     
+         
+	//PREDICT 
 	x = F * x;
+	P = F * P * F.transpose() + Q;
 	
-	// update covariance matrix
-	P = F * P * F.transpose();
-	//if ( region_from=="r0" && region_to=="r4" ) 
-	//{ 	return 100000;}
-	// return the cost due to uncertaintly
-	return ( P(0,0)+P(1,1)+P(2,2) );
+	//UPDATE
+	Eigen::VectorXd y = VectorXd(2);
+	y(0)= ( pow((x[0]-land_near[0]),2)+pow((x[1]-land_near[1]),2))- ( pow((x[0]-land_near_clean[0]),2)+pow((x[1]-land_near_clean[1]),2));
+	y(1)= (x[2]-land_near[2])-(x[2]-land_near_clean[2]);
+	
+	// CALCULATE K
+	S=(C * P* C.transpose() +R);
+	K= P* C.transpose() * S.inverse();
+	P= ( I - K*C)*P;
+	if ( (abs(P(0,0)+P(1,1)+P(2,2))) >20)
+		{return 20;}
+	else {	
+	return (abs(P(0,0)+P(1,1)+P(2,2)));
+}
 }
