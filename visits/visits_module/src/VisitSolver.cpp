@@ -344,7 +344,7 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	Eigen::MatrixXd K = MatrixXd(3, 2);
 	Eigen::MatrixXd I = MatrixXd(3, 3);
 	
-	F << 1,    0,    0,
+	I << 1,    0,    0,
 	     0,    1,    0 ,
 	     0,    0,    1;
 	// state vector [x, y, angle]t
@@ -416,6 +416,8 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	x = F * x;
 	P = F * P * F.transpose() + Q;
 	
+
+   
 	//UPDATE
 	Eigen::VectorXd y = VectorXd(2);
 	y(0)= ( pow((x[0]-land_near[0]),2)+pow((x[1]-land_near[1]),2))- ( pow((x[0]-land_near_clean[0]),2)+pow((x[1]-land_near_clean[1]),2));
@@ -425,6 +427,56 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	S=(C * P* C.transpose() +R);
 	K= P* C.transpose() * S.inverse();
 	P= ( I - K*C)*P;
+	
+	// I do the same calculations for when the robot reached the goal position
+	
+		// calculate the white noise      
+     land_near = closest_landmark(p_to);
+     land_near_clean=land_near;
+    mean = 0;
+   stddev = 0.5;
+   std::default_random_engine generator2;
+   std::normal_distribution<double> gaussian2(mean, stddev);
+
+   for (int i = 0; i < 25; i++)
+   {
+     land_near[0] += gaussian2(generator2);
+     land_near[1] += gaussian2(generator2);
+   }
+   
+       mean = 0;
+    stddev = 0.2;
+   std::default_random_engine generator3;
+   std::normal_distribution<double> gaussian3(mean, stddev);
+
+   for (int i = 0; i < 25; i++)
+   {
+     land_near[2] += gaussian3(generator3);
+   }
+	
+	//to  position
+	x(0) = p_to[0];
+	x(1) = p_to[1];
+	x(2)= p_to[2];
+	
+		//PREDICT 
+	x = F * x;
+	P = F * P * F.transpose() + Q;
+	
+		//UPDATE
+	y(0)= ( pow((x[0]-land_near[0]),2)+pow((x[1]-land_near[1]),2))- ( pow((x[0]-land_near_clean[0]),2)+pow((x[1]-land_near_clean[1]),2));
+	y(1)= (x[2]-land_near[2])-(x[2]-land_near_clean[2]);
+	
+	    // the measurment matrix
+	C << 2*(x[0]-land_near[0]), 2*(x[1]-land_near[1]),    0,
+         0,    0, 1;
+	
+		// CALCULATE K
+	S=(C * P* C.transpose() +R);
+	K= P* C.transpose() * S.inverse();
+	P= ( I - K*C)*P;
+	
+	
 	if ( (abs(P(0,0)+P(1,1)+P(2,2))) >20)
 		{return 20;}
 	else {	
