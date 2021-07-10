@@ -354,6 +354,7 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	vector<double> land_near;
 	vector<double> land_near_clean;
 	
+	double orientation= atan2((p_to[1]-p_from[1]),(p_to[0]-p_from[0])); 
 	// init state to from position
 	x(0) = p_from[0];
 	x(1) = p_from[1];
@@ -428,13 +429,18 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	K= P* C.transpose() * S.inverse();
 	P= ( I - K*C)*P;
 	
+	
 	// I do the prediction 10 times, assumin odometry performs the calclations 10 times while the robot moves
-	for ( int i=0;i<10; i++)
+		F << 1,    0,    -sin(orientation),
+	     0,    1,    cos(orientation) ,
+	     0,    0,    1;
+	for ( int i=0;i<100; i++)
 	{
 		P = F * P * F.transpose() + Q;
 	}
 	
 	// I do the same calculations for when the robot reached the goal position
+	
 	
 		// calculate the white noise      
      land_near = closest_landmark(p_to);
@@ -464,6 +470,10 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	x(0) = p_to[0];
 	x(1) = p_to[1];
 	x(2)= p_to[2];
+	
+			F << 1,    0,    -sin(x(2)),
+	     0,    1,    cos(x(2)) ,
+	     0,    0,    1;
 	
 		//PREDICT 
 	x = F * x;
