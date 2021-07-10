@@ -344,23 +344,26 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	Eigen::MatrixXd K = MatrixXd(3, 2);
 	Eigen::MatrixXd I = MatrixXd(3, 3);
 	
+	// Identity matrix
 	I << 1,    0,    0,
 	     0,    1,    0 ,
 	     0,    0,    1;
+	     
 	// state vector [x, y, angle]t
 	Eigen::VectorXd x = VectorXd(3);
 	vector<double> p_from = get_waypoint_coordinates( region_from );
 	vector<double> p_to = get_waypoint_coordinates( region_to );
 	vector<double> land_near;
 	vector<double> land_near_clean;
-	
+	// angle to reach the new position
 	double orientation= atan2((p_to[1]-p_from[1]),(p_to[0]-p_from[0])); 
-	// init state to from position
+	
+	// init state from position
 	x(0) = p_from[0];
 	x(1) = p_from[1];
 	x(2)= p_from[2];
 	
-	// transformation matrix
+	// state transition model
 	F << 1,    0,    -sin(x(2)),
 	     0,    1,    cos(x(2)) ,
 	     0,    0,    1;
@@ -370,29 +373,29 @@ double VisitSolver::KF_localize( string region_from, string region_to )
          0,    0.02, 0,
          0,    0,    0.02;
    
-   // calculate the white noise      
-     land_near = closest_landmark(p_from);
-     land_near_clean=land_near;
-   double mean = 0;
-   double stddev = 0.5;
-   std::default_random_engine generator;
-   std::normal_distribution<double> gaussian(mean, stddev);
+	// calculate the white noise      
+	land_near = closest_landmark(p_from);
+	land_near_clean=land_near;
+	double mean = 0;
+	double stddev = 0.5;
+	std::default_random_engine generator;
+	std::normal_distribution<double> gaussian(mean, stddev);
 
-   for (int i = 0; i < 25; i++)
-   {
-     land_near[0] += gaussian(generator);
-     land_near[1] += gaussian(generator);
-   }
+	for (int i = 0; i < 25; i++)
+		{
+			land_near[0] += gaussian(generator);
+			land_near[1] += gaussian(generator);
+		}
    
-       mean = 0;
+	mean = 0;
     stddev = 0.2;
-   std::default_random_engine generator1;
-   std::normal_distribution<double> gaussian1(mean, stddev);
+	std::default_random_engine generator1;
+	std::normal_distribution<double> gaussian1(mean, stddev);
 
-   for (int i = 0; i < 25; i++)
-   {
-     land_near[2] += gaussian1(generator1);
-   }
+	for (int i = 0; i < 25; i++)
+		{
+			land_near[2] += gaussian1(generator1);
+		}
        
     // the measurment matrix
 	C << 2*(x[0]-land_near[0]), 2*(x[1]-land_near[1]),    0,
@@ -416,9 +419,7 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	//PREDICT 
 	x = F * x;
 	P = F * P * F.transpose() + Q;
-	
 
-   
 	//UPDATE
 	Eigen::VectorXd y = VectorXd(2);
 	y(0)= ( pow((x[0]-land_near[0]),2)+pow((x[1]-land_near[1]),2))- ( pow((x[0]-land_near_clean[0]),2)+pow((x[1]-land_near_clean[1]),2));
@@ -430,72 +431,79 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	P= ( I - K*C)*P;
 	
 	
-	// I do the prediction 10 times, assumin odometry performs the calclations 10 times while the robot moves
-		F << 1,    0,    -sin(orientation),
+	// I do the prediction step 10 times
+	// assumptions: the orientation is constant and I repeat the odometry 10 times
+	
+	// state transition model
+	F << 1,    0,    -sin(orientation),
 	     0,    1,    cos(orientation) ,
 	     0,    0,    1;
-	for ( int i=0;i<100; i++)
-	{
-		P = F * P * F.transpose() + Q;
-	}
+	     
+	for ( int i=0;i<10; i++)
+		{
+			P = F * P * F.transpose() + Q;
+			//cout << "[visitSolver] P: " << P(0,0) << " +" << P(1,1) << " + " << P(2,2) << endl;
+		}
 	
-	// I do the same calculations for when the robot reached the goal position
-	
-	
-		// calculate the white noise      
-     land_near = closest_landmark(p_to);
-     land_near_clean=land_near;
+	// The robot is in the goal region and detects a landmark
+
+	// calculate the white noise      
+    land_near = closest_landmark(p_to);
+    land_near_clean=land_near;
     mean = 0;
-   stddev = 0.5;
-   std::default_random_engine generator2;
-   std::normal_distribution<double> gaussian2(mean, stddev);
+	stddev = 0.5;
+	std::default_random_engine generator2;
+	std::normal_distribution<double> gaussian2(mean, stddev);
 
-   for (int i = 0; i < 25; i++)
-   {
-     land_near[0] += gaussian2(generator2);
-     land_near[1] += gaussian2(generator2);
-   }
+	for (int i = 0; i < 25; i++)
+		{
+			land_near[0] += gaussian2(generator2);
+			land_near[1] += gaussian2(generator2);
+		}
    
-       mean = 0;
+	mean = 0;
     stddev = 0.2;
-   std::default_random_engine generator3;
-   std::normal_distribution<double> gaussian3(mean, stddev);
+	std::default_random_engine generator3;
+	std::normal_distribution<double> gaussian3(mean, stddev);
 
-   for (int i = 0; i < 25; i++)
-   {
-     land_near[2] += gaussian3(generator3);
-   }
+	for (int i = 0; i < 25; i++)
+		{
+			land_near[2] += gaussian3(generator3);
+		}
 	
-	//to  position
+	//goal  position
 	x(0) = p_to[0];
 	x(1) = p_to[1];
 	x(2)= p_to[2];
 	
-			F << 1,    0,    -sin(x(2)),
+	// state transition model
+	F << 1,    0,    -sin(x(2)),
 	     0,    1,    cos(x(2)) ,
 	     0,    0,    1;
 	
-		//PREDICT 
+	//PREDICT 
 	x = F * x;
 	P = F * P * F.transpose() + Q;
 	
-		//UPDATE
+	//UPDATE
 	y(0)= ( pow((x[0]-land_near[0]),2)+pow((x[1]-land_near[1]),2))- ( pow((x[0]-land_near_clean[0]),2)+pow((x[1]-land_near_clean[1]),2));
 	y(1)= (x[2]-land_near[2])-(x[2]-land_near_clean[2]);
 	
-	    // the measurment matrix
+	// the measurment matrix
 	C << 2*(x[0]-land_near[0]), 2*(x[1]-land_near[1]),    0,
          0,    0, 1;
 	
-		// CALCULATE K
+	// CALCULATE K
 	S=(C * P* C.transpose() +R);
 	K= P* C.transpose() * S.inverse();
 	P= ( I - K*C)*P;
 	
 	
 	if ( (abs(P(0,0)+P(1,1)+P(2,2))) >20)
-		{return 20;}
+		{
+			return 20;
+		}
 	else {	
-	return (abs(P(0,0)+P(1,1)+P(2,2)));
-}
+			return (abs(P(0,0)+P(1,1)+P(2,2)));
+		 }
 }
