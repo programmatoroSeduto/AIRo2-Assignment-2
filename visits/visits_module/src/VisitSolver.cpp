@@ -428,6 +428,12 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	K= P* C.transpose() * S.inverse();
 	P= ( I - K*C)*P;
 	
+	// I do the prediction 10 times, assumin odometry performs the calclations 10 times while the robot moves
+	for ( int i=0;i<10; i++)
+	{
+		P = F * P * F.transpose() + Q;
+	}
+	
 	// I do the same calculations for when the robot reached the goal position
 	
 		// calculate the white noise      
