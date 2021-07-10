@@ -6,11 +6,11 @@ Round #2. SaS.
 
 Run the planner with this command: from the main folder, replace *domain_file* and *problem_file* with the proper paths.
 
->./popf-tif/planner/release/popf/popf3-clp -x *domain_file* *problem_file* ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
+>./popf-tif/planner/release/popf/popf3-clp -x -n -t10 *domain_file* *problem_file* ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
 
 Here is the output you should obtain from the following command:
 
->./popf-tif/planner/release/popf/popf3-clp -x ./visits/visits_domain/dom1.pddl ./visits/visits_domain/prob1.pddl ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
+>./popf-tif/planner/release/popf/popf3-clp -x -n -t10 ./visits/visits_domain/dom1.pddl ./visits/visits_domain/prob1.pddl ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
 
 ```sh
 Number of literals: 10
