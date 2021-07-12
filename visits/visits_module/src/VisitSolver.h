@@ -53,6 +53,7 @@ class VisitSolver : public ExternalSolver
 		
 		// implementation of the sempatic attachment
 		virtual map<string,double> callExternalSolver(map<string,double> initialState, bool isHeuristic);
+		vector<double> closest_landmark (vector<double> pos);
 
 	private:
 	
