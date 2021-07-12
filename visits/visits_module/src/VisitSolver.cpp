@@ -379,22 +379,22 @@ double VisitSolver::KF_localize( string region_from, string region_to )
 	double mean = 0;
 	double stddev = 0.5;
 	std::default_random_engine generator;
-	std::normal_distribution<double> gaussian(mean, stddev);
+	std::normal_distribution<double> dist(mean, stddev);
 
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i < 100; i++)
 		{
-			land_near[0] += gaussian(generator);
-			land_near[1] += gaussian(generator);
+			land_near[0] += dist(generator);
+			land_near[1] += dist(generator);
 		}
    
 	mean = 0;
     stddev = 0.2;
 	std::default_random_engine generator1;
-	std::normal_distribution<double> gaussian1(mean, stddev);
+	std::normal_distribution<double> dist1(mean, stddev);
 
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i < 100; i++)
 		{
-			land_near[2] += gaussian1(generator1);
+			land_near[2] += dist1(generator1);
 		}
        
     // the measurment matrix
@@ -453,22 +453,22 @@ double VisitSolver::KF_localize( string region_from, string region_to )
     mean = 0;
 	stddev = 0.5;
 	std::default_random_engine generator2;
-	std::normal_distribution<double> gaussian2(mean, stddev);
+	std::normal_distribution<double> dist2(mean, stddev);
 
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i <100; i++)
 		{
-			land_near[0] += gaussian2(generator2);
-			land_near[1] += gaussian2(generator2);
+			land_near[0] += dist2(generator2);
+			land_near[1] += dist2(generator2);
 		}
    
 	mean = 0;
     stddev = 0.2;
 	std::default_random_engine generator3;
-	std::normal_distribution<double> gaussian3(mean, stddev);
+	std::normal_distribution<double> dist3(mean, stddev);
 
-	for (int i = 0; i < 25; i++)
+	for (int i = 0; i < 100; i++)
 		{
-			land_near[2] += gaussian3(generator3);
+			land_near[2] += dist3(generator3);
 		}
 	
 	//goal  position
