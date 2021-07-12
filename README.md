@@ -34,11 +34,13 @@ The project uses the extensible temporal planner *popf-tif*. Here is the link to
 
 > [Popf-tif planner - GitHUb](https://github.com/popftif/popf-tif)
 
-The planner is already included into our workspace, so you don't need to re-download it. 
+The planner is already included into this workspace, so you don't need to re-download it. 
 
 ## How to built the project
 
-## Build the entire project
+Here are how to build the project. You don't need to compile everything at turn: scripts are provided to speed-up the build process. 
+
+### Build the entire project
 
 A script is provided in order to build the whole project. Run this from the main folder of the repository:
 
