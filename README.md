@@ -25,7 +25,7 @@ The project is compatible with **Ubuntu 18**. This isn't tested yet with other p
 You can install all you need running the following command:
 
 ```sh
-sudo apt-get install build-essential cmake coinor-libclp-dev coinor-libcbc-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev doxygen bison flex
+sudo apt-get install build-essential cmake coinor-libclp-dev coinor-libcbc-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev bison flex
 ```
 
 ### Popf-tif
@@ -45,7 +45,7 @@ Here are how to build the project. You don't need to compile everything at turn:
 A script is provided in order to build the whole project. Run this from the main folder of the repository:
 
 ```sh
-./build\_all.sh
+./build_all.sh
 ```
 
 Usually, the compiling process requires a bit, at least 50 seconds. 
@@ -57,7 +57,7 @@ Usually, the compiling process requires a bit, at least 50 seconds.
 If you don't want to build the entire project, it is possible to build the only part of the external module running this command from the main folder of this repository:
 
 ```sh
-./build\_visits\_only.sh
+./build_visits_only.sh
 ```
 
 ### Testing the build
