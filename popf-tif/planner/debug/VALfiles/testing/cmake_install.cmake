@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/testing
+# Install script for directory: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/testing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/pat/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/tpp1/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/storage3/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/storage1/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/satellite-til-1/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/pipes-strips-1/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/cafe-1/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/airport20/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/spanner/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/landing/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/logisticsinst/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/pat/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/tpp1/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/storage3/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/storage1/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/satellite-til-1/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/pipes-strips-1/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/cafe-1/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/airport20/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/spanner/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/landing/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles/testing/logisticsinst/cmake_install.cmake")
 
 endif()
 

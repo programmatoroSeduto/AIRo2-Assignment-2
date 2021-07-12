@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/testcases/TILTests
+# Install script for directory: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/testcases/TILTests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

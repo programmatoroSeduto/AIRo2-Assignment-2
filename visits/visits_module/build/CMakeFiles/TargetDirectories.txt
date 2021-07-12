@@ -1,4 +1,4 @@
-/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/edit_cache.dir
-/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/Visits.dir
-/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/rebuild_cache.dir
-/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/VisitMain.dir
+/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/edit_cache.dir
+/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/Visits.dir
+/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/VisitMain.dir

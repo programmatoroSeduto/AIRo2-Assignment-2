@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/testing/tpp1
+# Install script for directory: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/testing/tpp1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

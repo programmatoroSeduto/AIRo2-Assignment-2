@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src
+CMAKE_SOURCE_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release
+CMAKE_BINARY_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/CMakeFiles /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/testing/CMakeFiles/progress.marks
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/CMakeFiles 0
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/CMakeFiles /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/testing/CMakeFiles/progress.marks
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/clean
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/preinstall
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/preinstall
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 VALfiles/testing/CMakeFiles/insttest.dir/rule:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/CMakeFiles/insttest.dir/rule
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/CMakeFiles/insttest.dir/rule
 .PHONY : VALfiles/testing/CMakeFiles/insttest.dir/rule
 
 # Convenience name for target.
@@ -125,22 +125,22 @@ insttest: VALfiles/testing/CMakeFiles/insttest.dir/rule
 
 # fast build rule for target.
 insttest/fast:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/build
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/build
 .PHONY : insttest/fast
 
 # target to build an object file
 pat/insttest.o:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.o
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.o
 .PHONY : pat/insttest.o
 
 # target to preprocess a source file
 pat/insttest.i:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.i
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.i
 .PHONY : pat/insttest.i
 
 # target to generate assembly for a file
 pat/insttest.s:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.s
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/pat/insttest.s
 .PHONY : pat/insttest.s
 
 # Help Target
@@ -166,6 +166,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

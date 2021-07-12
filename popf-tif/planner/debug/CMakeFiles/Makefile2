@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src
+CMAKE_SOURCE_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug
+CMAKE_BINARY_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug
 
 #=============================================================================
 # Directory level rules for directory VALfiles
@@ -96,7 +96,7 @@ VALfiles/preinstall: VALfiles/testing/preinstall
 VALfiles/CMakeFiles/parser.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f VALfiles/CMakeFiles/parser.dir/build.make VALfiles/CMakeFiles/parser.dir/depend
 	$(MAKE) -f VALfiles/CMakeFiles/parser.dir/build.make VALfiles/CMakeFiles/parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=80 "Built target parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=80 "Built target parser"
 .PHONY : VALfiles/CMakeFiles/parser.dir/all
 
 # Include target in all.
@@ -106,9 +106,9 @@ all: VALfiles/CMakeFiles/parser.dir/all
 
 # Build rule for subdir invocation for target.
 VALfiles/CMakeFiles/parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 VALfiles/CMakeFiles/parser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : VALfiles/CMakeFiles/parser.dir/rule
 
 # Convenience name for target.
@@ -133,7 +133,7 @@ clean: VALfiles/CMakeFiles/parser.dir/clean
 VALfiles/CMakeFiles/Inst.dir/all:
 	$(MAKE) -f VALfiles/CMakeFiles/Inst.dir/build.make VALfiles/CMakeFiles/Inst.dir/depend
 	$(MAKE) -f VALfiles/CMakeFiles/Inst.dir/build.make VALfiles/CMakeFiles/Inst.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=12,13,14,15,16,17,18,19 "Built target Inst"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=12,13,14,15,16,17,18,19 "Built target Inst"
 .PHONY : VALfiles/CMakeFiles/Inst.dir/all
 
 # Include target in all.
@@ -143,9 +143,9 @@ all: VALfiles/CMakeFiles/Inst.dir/all
 
 # Build rule for subdir invocation for target.
 VALfiles/CMakeFiles/Inst.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 VALfiles/CMakeFiles/Inst.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : VALfiles/CMakeFiles/Inst.dir/rule
 
 # Convenience name for target.
@@ -170,7 +170,7 @@ clean: VALfiles/CMakeFiles/Inst.dir/clean
 VALfiles/CMakeFiles/validate.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f VALfiles/CMakeFiles/validate.dir/build.make VALfiles/CMakeFiles/validate.dir/depend
 	$(MAKE) -f VALfiles/CMakeFiles/validate.dir/build.make VALfiles/CMakeFiles/validate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target validate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target validate"
 .PHONY : VALfiles/CMakeFiles/validate.dir/all
 
 # Include target in all.
@@ -180,9 +180,9 @@ all: VALfiles/CMakeFiles/validate.dir/all
 
 # Build rule for subdir invocation for target.
 VALfiles/CMakeFiles/validate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 VALfiles/CMakeFiles/validate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : VALfiles/CMakeFiles/validate.dir/rule
 
 # Convenience name for target.
@@ -225,7 +225,7 @@ VALfiles/parsing/preinstall:
 VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all:
 	$(MAKE) -f VALfiles/parsing/CMakeFiles/ParsePDDL.dir/build.make VALfiles/parsing/CMakeFiles/ParsePDDL.dir/depend
 	$(MAKE) -f VALfiles/parsing/CMakeFiles/ParsePDDL.dir/build.make VALfiles/parsing/CMakeFiles/ParsePDDL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=54,55,56,57 "Built target ParsePDDL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=54,55,56,57 "Built target ParsePDDL"
 .PHONY : VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 
 # Include target in all.
@@ -235,9 +235,9 @@ all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 
 # Build rule for subdir invocation for target.
 VALfiles/parsing/CMakeFiles/ParsePDDL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : VALfiles/parsing/CMakeFiles/ParsePDDL.dir/rule
 
 # Convenience name for target.
@@ -313,7 +313,7 @@ VALfiles/testing/CMakeFiles/insttest.dir/all: VALfiles/CMakeFiles/Inst.dir/all
 VALfiles/testing/CMakeFiles/insttest.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/depend
 	$(MAKE) -f VALfiles/testing/CMakeFiles/insttest.dir/build.make VALfiles/testing/CMakeFiles/insttest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=78,79 "Built target insttest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=78,79 "Built target insttest"
 .PHONY : VALfiles/testing/CMakeFiles/insttest.dir/all
 
 # Include target in all.
@@ -323,9 +323,9 @@ all: VALfiles/testing/CMakeFiles/insttest.dir/all
 
 # Build rule for subdir invocation for target.
 VALfiles/testing/CMakeFiles/insttest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 VALfiles/testing/CMakeFiles/insttest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : VALfiles/testing/CMakeFiles/insttest.dir/rule
 
 # Convenience name for target.
@@ -582,7 +582,7 @@ popf/CMakeFiles/popf3-clp.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 popf/CMakeFiles/popf3-clp.dir/all: popf/CMakeFiles/POPF3Common.dir/all
 	$(MAKE) -f popf/CMakeFiles/popf3-clp.dir/build.make popf/CMakeFiles/popf3-clp.dir/depend
 	$(MAKE) -f popf/CMakeFiles/popf3-clp.dir/build.make popf/CMakeFiles/popf3-clp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=83,84,85 "Built target popf3-clp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=83,84,85 "Built target popf3-clp"
 .PHONY : popf/CMakeFiles/popf3-clp.dir/all
 
 # Include target in all.
@@ -592,9 +592,9 @@ all: popf/CMakeFiles/popf3-clp.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/popf3-clp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 32
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/popf3-clp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/popf3-clp.dir/rule
 
 # Convenience name for target.
@@ -620,7 +620,7 @@ popf/CMakeFiles/POPF2Common.dir/all: VALfiles/CMakeFiles/Inst.dir/all
 popf/CMakeFiles/POPF2Common.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f popf/CMakeFiles/POPF2Common.dir/build.make popf/CMakeFiles/POPF2Common.dir/depend
 	$(MAKE) -f popf/CMakeFiles/POPF2Common.dir/build.make popf/CMakeFiles/POPF2Common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target POPF2Common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target POPF2Common"
 .PHONY : popf/CMakeFiles/POPF2Common.dir/all
 
 # Include target in all.
@@ -630,9 +630,9 @@ all: popf/CMakeFiles/POPF2Common.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/POPF2Common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/POPF2Common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/POPF2Common.dir/rule
 
 # Convenience name for target.
@@ -658,7 +658,7 @@ popf/CMakeFiles/ColinCommon.dir/all: VALfiles/CMakeFiles/Inst.dir/all
 popf/CMakeFiles/ColinCommon.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f popf/CMakeFiles/ColinCommon.dir/build.make popf/CMakeFiles/ColinCommon.dir/depend
 	$(MAKE) -f popf/CMakeFiles/ColinCommon.dir/build.make popf/CMakeFiles/ColinCommon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target ColinCommon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target ColinCommon"
 .PHONY : popf/CMakeFiles/ColinCommon.dir/all
 
 # Include target in all.
@@ -668,9 +668,9 @@ all: popf/CMakeFiles/ColinCommon.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/ColinCommon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/ColinCommon.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/ColinCommon.dir/rule
 
 # Convenience name for target.
@@ -697,7 +697,7 @@ popf/CMakeFiles/colin-clp.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 popf/CMakeFiles/colin-clp.dir/all: popf/CMakeFiles/ColinCommon.dir/all
 	$(MAKE) -f popf/CMakeFiles/colin-clp.dir/build.make popf/CMakeFiles/colin-clp.dir/depend
 	$(MAKE) -f popf/CMakeFiles/colin-clp.dir/build.make popf/CMakeFiles/colin-clp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=76,77 "Built target colin-clp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=76,77 "Built target colin-clp"
 .PHONY : popf/CMakeFiles/colin-clp.dir/all
 
 # Include target in all.
@@ -707,9 +707,9 @@ all: popf/CMakeFiles/colin-clp.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/colin-clp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 25
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/colin-clp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/colin-clp.dir/rule
 
 # Convenience name for target.
@@ -735,7 +735,7 @@ popf/CMakeFiles/POPF3Common.dir/all: VALfiles/CMakeFiles/Inst.dir/all
 popf/CMakeFiles/POPF3Common.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f popf/CMakeFiles/POPF3Common.dir/build.make popf/CMakeFiles/POPF3Common.dir/depend
 	$(MAKE) -f popf/CMakeFiles/POPF3Common.dir/build.make popf/CMakeFiles/POPF3Common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target POPF3Common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target POPF3Common"
 .PHONY : popf/CMakeFiles/POPF3Common.dir/all
 
 # Include target in all.
@@ -745,9 +745,9 @@ all: popf/CMakeFiles/POPF3Common.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/POPF3Common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/POPF3Common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/POPF3Common.dir/rule
 
 # Convenience name for target.
@@ -773,7 +773,7 @@ popf/CMakeFiles/StochasticPOPF2Common.dir/all: VALfiles/CMakeFiles/Inst.dir/all
 popf/CMakeFiles/StochasticPOPF2Common.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 	$(MAKE) -f popf/CMakeFiles/StochasticPOPF2Common.dir/build.make popf/CMakeFiles/StochasticPOPF2Common.dir/depend
 	$(MAKE) -f popf/CMakeFiles/StochasticPOPF2Common.dir/build.make popf/CMakeFiles/StochasticPOPF2Common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75 "Built target StochasticPOPF2Common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75 "Built target StochasticPOPF2Common"
 .PHONY : popf/CMakeFiles/StochasticPOPF2Common.dir/all
 
 # Include target in all.
@@ -783,9 +783,9 @@ all: popf/CMakeFiles/StochasticPOPF2Common.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/StochasticPOPF2Common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/StochasticPOPF2Common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/StochasticPOPF2Common.dir/rule
 
 # Convenience name for target.
@@ -812,7 +812,7 @@ popf/CMakeFiles/popf2-clp.dir/all: VALfiles/parsing/CMakeFiles/ParsePDDL.dir/all
 popf/CMakeFiles/popf2-clp.dir/all: popf/CMakeFiles/POPF2Common.dir/all
 	$(MAKE) -f popf/CMakeFiles/popf2-clp.dir/build.make popf/CMakeFiles/popf2-clp.dir/depend
 	$(MAKE) -f popf/CMakeFiles/popf2-clp.dir/build.make popf/CMakeFiles/popf2-clp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=81,82 "Built target popf2-clp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=81,82 "Built target popf2-clp"
 .PHONY : popf/CMakeFiles/popf2-clp.dir/all
 
 # Include target in all.
@@ -822,9 +822,9 @@ all: popf/CMakeFiles/popf2-clp.dir/all
 
 # Build rule for subdir invocation for target.
 popf/CMakeFiles/popf2-clp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 popf/CMakeFiles/popf2-clp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles 0
 .PHONY : popf/CMakeFiles/popf2-clp.dir/rule
 
 # Convenience name for target.

@@ -14,44 +14,44 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build
-/usr/bin/cmake -H/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src -B/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build --check-build-system CMakeFiles/Makefile.cmake 0
-/usr/bin/cmake -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/progress.marks
+-- Build files have been written to: /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build
+/usr/bin/cmake -H/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src -B/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
-make[1]: Entering directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[1]: Entering directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 make -f CMakeFiles/Visits.dir/build.make CMakeFiles/Visits.dir/depend
-make[2]: Entering directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
-cd /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/Visits.dir/DependInfo.cmake --color=
+make[2]: Entering directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
+cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/Visits.dir/DependInfo.cmake --color=
 Scanning dependencies of target Visits
-make[2]: Leaving directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Leaving directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 make -f CMakeFiles/Visits.dir/build.make CMakeFiles/Visits.dir/build
-make[2]: Entering directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Entering directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 [ 14%] Building CXX object CMakeFiles/Visits.dir/VisitSolver.cpp.o
-/usr/bin/c++  -DVisits_EXPORTS  -Wall -std=gnu++11  -O3 -DNDEBUG -fPIC   -o CMakeFiles/Visits.dir/VisitSolver.cpp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.cpp
+/usr/bin/c++  -DVisits_EXPORTS  -Wall -std=gnu++11  -O3 -DNDEBUG -fPIC   -o CMakeFiles/Visits.dir/VisitSolver.cpp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.cpp
 [ 28%] Building CXX object CMakeFiles/Visits.dir/ExternalSolver.cpp.o
-/usr/bin/c++  -DVisits_EXPORTS  -Wall -std=gnu++11  -O3 -DNDEBUG -fPIC   -o CMakeFiles/Visits.dir/ExternalSolver.cpp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.cpp
+/usr/bin/c++  -DVisits_EXPORTS  -Wall -std=gnu++11  -O3 -DNDEBUG -fPIC   -o CMakeFiles/Visits.dir/ExternalSolver.cpp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.cpp
 [ 42%] Linking CXX shared library libVisits.so
 /usr/bin/cmake -E cmake_link_script CMakeFiles/Visits.dir/link.txt --verbose=1
 /usr/bin/c++ -fPIC -Wall -std=gnu++11  -O3 -DNDEBUG  -shared -Wl,-soname,libVisits.so -o libVisits.so CMakeFiles/Visits.dir/VisitSolver.cpp.o CMakeFiles/Visits.dir/ExternalSolver.cpp.o 
-make[2]: Leaving directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Leaving directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 [ 42%] Built target Visits
 make -f CMakeFiles/VisitMain.dir/build.make CMakeFiles/VisitMain.dir/depend
-make[2]: Entering directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
-cd /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/VisitMain.dir/DependInfo.cmake --color=
+make[2]: Entering directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
+cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles/VisitMain.dir/DependInfo.cmake --color=
 Scanning dependencies of target VisitMain
-make[2]: Leaving directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Leaving directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 make -f CMakeFiles/VisitMain.dir/build.make CMakeFiles/VisitMain.dir/build
-make[2]: Entering directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Entering directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 [ 57%] Building CXX object CMakeFiles/VisitMain.dir/VisitSolver.cpp.o
-/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/VisitSolver.cpp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.cpp
+/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/VisitSolver.cpp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src/VisitSolver.cpp
 [ 71%] Building CXX object CMakeFiles/VisitMain.dir/ExternalSolver.cpp.o
-/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/ExternalSolver.cpp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.cpp
+/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/ExternalSolver.cpp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src/ExternalSolver.cpp
 [ 85%] Building CXX object CMakeFiles/VisitMain.dir/main.cpp.o
-/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/main.cpp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/src/main.cpp
+/usr/bin/c++    -Wall -std=gnu++11  -O3 -DNDEBUG   -o CMakeFiles/VisitMain.dir/main.cpp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/src/main.cpp
 [100%] Linking CXX executable VisitMain
 /usr/bin/cmake -E cmake_link_script CMakeFiles/VisitMain.dir/link.txt --verbose=1
 /usr/bin/c++  -Wall -std=gnu++11  -O3 -DNDEBUG  -rdynamic CMakeFiles/VisitMain.dir/VisitSolver.cpp.o CMakeFiles/VisitMain.dir/ExternalSolver.cpp.o CMakeFiles/VisitMain.dir/main.cpp.o  -o VisitMain 
-make[2]: Leaving directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
+make[2]: Leaving directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
 [100%] Built target VisitMain
-make[1]: Leaving directory '/home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build'
-/usr/bin/cmake -E cmake_progress_start /home/ubuntu18/Documents/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles 0
+make[1]: Leaving directory '/home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build'
+/usr/bin/cmake -E cmake_progress_start /home/ubuntu18/Desktop/AIRo2-Assignment-2/visits/visits_module/build/CMakeFiles 0

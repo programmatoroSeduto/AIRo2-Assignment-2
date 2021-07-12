@@ -21,7 +21,7 @@
 -- Could NOT find cplex (missing: CPLEX_INCLUDES CPLEX ILOCPLEX) 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug
+-- Build files have been written to: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug
 -- The C compiler identification is GNU 7.5.0
 -- The CXX compiler identification is GNU 7.5.0
 -- Check for working C compiler: /usr/bin/cc
@@ -45,7 +45,7 @@
 -- Could NOT find cplex (missing: CPLEX_INCLUDES CPLEX ILOCPLEX) 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release
+-- Build files have been written to: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release
 If cmake succeeded (i.e. no errors such as missing libraries were reported),
 you can make a debug build by:
 

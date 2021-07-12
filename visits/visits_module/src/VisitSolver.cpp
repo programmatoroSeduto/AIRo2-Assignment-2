@@ -13,8 +13,9 @@
 #include <errno.h>
 #include <unistd.h>
 #include <math.h>
+#include <random>
 
-#include "armadillo"
+//include "armadillo"
 #define PI 3.14159265
 
 using namespace std;

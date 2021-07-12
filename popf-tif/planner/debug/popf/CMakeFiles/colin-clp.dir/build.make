@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src
+CMAKE_SOURCE_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug
+CMAKE_BINARY_DIR = /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug
 
 # Include any dependencies generated for this target.
 include popf/CMakeFiles/colin-clp.dir/depend.make
@@ -61,17 +61,17 @@ include popf/CMakeFiles/colin-clp.dir/progress.make
 include popf/CMakeFiles/colin-clp.dir/flags.make
 
 popf/CMakeFiles/colin-clp.dir/popfMain.o: popf/CMakeFiles/colin-clp.dir/flags.make
-popf/CMakeFiles/colin-clp.dir/popfMain.o: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object popf/CMakeFiles/colin-clp.dir/popfMain.o"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/colin-clp.dir/popfMain.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp
+popf/CMakeFiles/colin-clp.dir/popfMain.o: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object popf/CMakeFiles/colin-clp.dir/popfMain.o"
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/colin-clp.dir/popfMain.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp
 
 popf/CMakeFiles/colin-clp.dir/popfMain.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/colin-clp.dir/popfMain.i"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp > CMakeFiles/colin-clp.dir/popfMain.i
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp > CMakeFiles/colin-clp.dir/popfMain.i
 
 popf/CMakeFiles/colin-clp.dir/popfMain.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/colin-clp.dir/popfMain.s"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp -o CMakeFiles/colin-clp.dir/popfMain.s
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/popfMain.cpp -o CMakeFiles/colin-clp.dir/popfMain.s
 
 popf/CMakeFiles/colin-clp.dir/popfMain.o.requires:
 
@@ -85,17 +85,17 @@ popf/CMakeFiles/colin-clp.dir/popfMain.o.provides.build: popf/CMakeFiles/colin-c
 
 
 popf/CMakeFiles/colin-clp.dir/solver-clp.o: popf/CMakeFiles/colin-clp.dir/flags.make
-popf/CMakeFiles/colin-clp.dir/solver-clp.o: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object popf/CMakeFiles/colin-clp.dir/solver-clp.o"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/colin-clp.dir/solver-clp.o -c /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp
+popf/CMakeFiles/colin-clp.dir/solver-clp.o: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object popf/CMakeFiles/colin-clp.dir/solver-clp.o"
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/colin-clp.dir/solver-clp.o -c /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp
 
 popf/CMakeFiles/colin-clp.dir/solver-clp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/colin-clp.dir/solver-clp.i"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp > CMakeFiles/colin-clp.dir/solver-clp.i
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp > CMakeFiles/colin-clp.dir/solver-clp.i
 
 popf/CMakeFiles/colin-clp.dir/solver-clp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/colin-clp.dir/solver-clp.s"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp -o CMakeFiles/colin-clp.dir/solver-clp.s
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf/solver-clp.cpp -o CMakeFiles/colin-clp.dir/solver-clp.s
 
 popf/CMakeFiles/colin-clp.dir/solver-clp.o.requires:
 
@@ -130,8 +130,8 @@ popf/colin-clp: /usr/lib/x86_64-linux-gnu/libCoinUtils.so
 popf/colin-clp: VALfiles/parsing/libParsePDDL.a
 popf/colin-clp: VALfiles/libInst.a
 popf/colin-clp: popf/CMakeFiles/colin-clp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable colin-clp"
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/colin-clp.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable colin-clp"
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/colin-clp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 popf/CMakeFiles/colin-clp.dir/build: popf/colin-clp
@@ -144,10 +144,10 @@ popf/CMakeFiles/colin-clp.dir/requires: popf/CMakeFiles/colin-clp.dir/solver-clp
 .PHONY : popf/CMakeFiles/colin-clp.dir/requires
 
 popf/CMakeFiles/colin-clp.dir/clean:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf && $(CMAKE_COMMAND) -P CMakeFiles/colin-clp.dir/cmake_clean.cmake
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf && $(CMAKE_COMMAND) -P CMakeFiles/colin-clp.dir/cmake_clean.cmake
 .PHONY : popf/CMakeFiles/colin-clp.dir/clean
 
 popf/CMakeFiles/colin-clp.dir/depend:
-	cd /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/popf /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/popf/CMakeFiles/colin-clp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/popf /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/popf/CMakeFiles/colin-clp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : popf/CMakeFiles/colin-clp.dir/depend
 

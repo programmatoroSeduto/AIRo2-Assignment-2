@@ -1,34 +1,91 @@
-# AIRo2-Assignment-2
+# AI4Ro2 - Assignment no.2 - Robot Bar - Motion Planning 
 
-Round #2. SaS.
+*Francesco Ganci, Zoe Betta, Federico Zecchi, Litong Huang*
 
-# Running the planner
+Here is the repository for the second assignment for the course in Artificial Intelligence for Robotics 2, A.A. 2020/2021. 
 
-Run the planner with this command: from the main folder, replace *domain_file* and *problem_file* with the proper paths.
+You can find here:
 
->./popf-tif/planner/release/popf/popf3-clp -x -n -t10 *domain_file* *problem_file* ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
+- *compatibility and dependencies*
+- *how to compile the project*
+- *how to run the project*
 
-Here is the output you should obtain from the following command:
+For further informations, please refer to the report attached to this project. 
 
->./popf-tif/planner/release/popf/popf3-clp -x -n -t10 ./visits/visits_domain/dom1.pddl ./visits/visits_domain/prob1.pddl ./visits/visits_module/build/libVisits.so ./visits/visits_domain/region_poses
+## Before building the project - dependencies
+
+Before making and running the project, you need some depts. 
+
+### Compatibility
+
+The project is compatible with **Ubuntu 18**. This isn't tested yet with other previous distros. It doesn't work with **Ubuntu 20** because of lack of retro-compatibility with some components needed to build and run the project. 
+
+### Packages
+
+You can install all you need running the following command:
 
 ```sh
-Number of literals: 10
-Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%]
-Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%]
-No semaphore facts found, returning
-No analytic limits found, not considering limit effects of goal-only operators
-Not looking for earlier-is-better time-dependent rewards: no goal limits
-None of the ground temporal actions in this problem have been recognised as compression-safe
-Initial heuristic = 8.000
-b (7.000 | 100.000)b (6.000 | 100.000)b (5.000 | 200.001)b (4.000 | 200.001)b (3.000 | 300.002)b (2.000 | 300.002)b (1.000 | 400.003);;;; Solution Found
-; States evaluated: 9
-; Cost: 8.000
-; External Solver: 0.000
-; Time 0.00
-0.000: (goto_region r2d2 r0 r4)  [100.000]
-100.001: (goto_region r2d2 r4 r3)  [100.000]
-200.002: (goto_region r2d2 r3 r2)  [100.000]
-300.003: (goto_region r2d2 r2 r1)  [100.000]
+sudo apt-get install build-essential cmake coinor-libclp-dev coinor-libcbc-dev coinor-libcoinutils-dev coinor-libosi-dev coinor-libcgl-dev doxygen bison flex
 ```
+
+### Popf-tif
+
+The project uses the extensible temporal planner *popf-tif*. Here is the link to the repository:
+
+> [Popf-tif planner - GitHUb](https://github.com/popftif/popf-tif)
+
+The planner is already included into our workspace, so you don't need to re-download it. 
+
+## How to built the project
+
+## Build the entire project
+
+A script is provided in order to build the whole project. Run this from the main folder of the repository:
+
+```sh
+./build\_all.sh
+```
+
+Usually, the compiling process requires a bit, at least 50 seconds. 
+
+*Remember*: make the script executable before calling it. 
+
+### Build only the external module
+
+If you don't want to build the entire project, it is possible to build the only part of the external module running this command from the main folder of this repository:
+
+```sh
+./build\_visits\_only.sh
+```
+
+### Testing the build
+
+You can find the outputs of the compiler in three log files:
+
+- **/popf-tif/logs/log1-first-build.log** : the build log for the planner, first step
+- **/popf-tif/logs/log2-popf3-clp.log** : the second step for building the planner
+- **/popf-tif/logs/log3-visits-build.log** : the making of the external module *VisitSolver*. 
+
+If everything works well, you should see two folders: 
+
+- **/popf-tif/planner/release** : the folder containing the compiled *popf-tif* planner. In particular, you should see a file named *popf3-clp*: if there is no file with this name, the command 'make' failed for some reason. The best you can do in this case is to check the dependencies. 
+- **/visits/visits_module/build** : the folder contains all the executables for running the external module *visitSolver*. 
+
+## How to run the project
+
+There is a handy script for running the project, located in the main folder:
+
+```sh
+./call.sh
+```
+
+The command runs the planner with the external module, using these files:
+
+- **visits/visits\_domain/dom1.pddl** : the domain file (Temporal PDDL).
+- **visits/visits\_domain/prob1.pddl** : the problem file (Temporal PDDL).
+- **visits/visits\_domain/region\_poses** : the list of all the regions. 
+- **visits/visits\_domain/landmarks.txt** : coordinates of the landmarks for the motion planning. 
+- **visits/visits\_domain/waypoints.txt** : coordinates of the waypoint associated with one region.
+
+An example of output is located into the folder */docs* along with the project. 
 

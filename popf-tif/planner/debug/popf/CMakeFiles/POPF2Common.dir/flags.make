@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall  -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles -I/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing -I/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles -I/usr/include/coin 
+CXX_INCLUDES = -I/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles -I/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src/VALfiles/parsing -I/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/debug/VALfiles -I/usr/include/coin 
 

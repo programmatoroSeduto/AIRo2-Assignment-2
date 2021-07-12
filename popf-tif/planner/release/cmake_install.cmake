@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/src
+# Install script for directory: /home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/cmake_install.cmake")
-  include("/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/popf/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/VALfiles/cmake_install.cmake")
+  include("/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/popf/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ubuntu18/Documents/AIRo2-Assignment-2/popf-tif/planner/release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu18/Desktop/AIRo2-Assignment-2/popf-tif/planner/release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
