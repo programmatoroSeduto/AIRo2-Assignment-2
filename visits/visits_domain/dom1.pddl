@@ -20,11 +20,9 @@
 		:parameters (?v - robot ?from ?to - region)
 		:duration (= ?duration 100)
 		:condition (and (at start (robot_in ?v ?from)) (at start (not_arrived)) )
-	        :effect (and (at start (not (robot_in ?v ?from)))  
-	        ;(at start (increase (triggered ?from ?to) 1))
+	        :effect (and (at start (not (robot_in ?v ?from)))
 	        (at start ( plan ?from ?to))
 			(at end (robot_in ?v ?to)) 
-			;(at end (assign (triggered ?from ?to) 0)) 
 			(at end (visited ?to)) (at end (not (not_arrived))) (at end (arrived))
 				
                 )
