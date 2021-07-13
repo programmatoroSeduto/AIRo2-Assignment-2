@@ -37,7 +37,6 @@
 				(at start (increase (triggered ?from ?to) 1))
 				(at end (assign (triggered ?from ?to) 0))
 				(at end (not ( plan ?from ?to))) 
-				;(at end (increase (act-cost) (dummy)))
 				(at end (not (arrived))) (at end (not_arrived))
 				(at end (increase (act-cost) (dummy)))
 				
