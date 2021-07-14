@@ -4,6 +4,9 @@
 
 Here is the repository for the second assignment for the course in Artificial Intelligence for Robotics 2, A.A. 2020/2021. 
 
+- SPECIFICATIONS: [Specs Here](https://raw.githubusercontent.com/programmatoroSeduto/AIRo2-Assignment-2/main/docs/Assignment2.pdf)
+- OUR REPORT: [Report Here](https://raw.githubusercontent.com/programmatoroSeduto/AIRo2-Assignment-2/main/docs/REPORT%20-%20Assignment2_AIRO2.pdf)
+
 You can find here:
 
 - *compatibility and dependencies*
